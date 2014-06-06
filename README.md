@@ -2,7 +2,8 @@
 
 ![Lyte Theme clean][3]
 
-***Font**: Consolas 9*
+Font: Consolas 9
+Color Scheme: Lyte (included in this theme)
 
 Lyte is a minimal, aesthetically pleasing theme for Sublime Text 3.
 
