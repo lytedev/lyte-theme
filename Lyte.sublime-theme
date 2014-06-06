@@ -123,14 +123,14 @@
 		"class": "tab_control",
 		"attributes": ["hover"],
 		"layer0.tint": [43, 43, 43],
-		"layer1.tint": [51, 180, 255]
+		"layer1.tint": [119, 255, 255]
 	},
 	{
 		// Modified tab state
 		// "settings": ["highlight_modified_tabs"],
 		"class": "tab_control",
 		"attributes": ["dirty"],
-		"layer1.tint": [255, 43, 43]
+		"layer1.tint": [255, 119, 68]
 	},
 
 	// Tab labels
@@ -187,7 +187,7 @@
 		// Tab button close dirty
 		"class": "tab_close_button",
 		"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-		"layer0.tint": [255, 43, 43, 255]
+		"layer0.tint": [255, 119, 68]
 	},
 	{
 		// Tab close hover action
@@ -199,13 +199,13 @@
 		// Tab close press action
 		"class": "tab_close_button",
 		"attributes": ["hover"],
-		"layer0.tint": [43, 180, 255, 255]
+		"layer0.tint": [119, 255, 255, 255]
 	},
 	{
 		// Tab close press action
 		"class": "tab_close_button",
 		"attributes": ["pressed"],
-		"layer0.tint": [255, 43, 43, 255]
+		"layer0.tint": [255, 119, 68]
 	},
 
 	// #######################################################
@@ -303,7 +303,7 @@
 		// Scrollbar puck (overlay, vertical)
 		"class": "puck_control",
 		"settings": ["overlay_scroll_bars"],
-		"layer0.tint": [43, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"content_margin": [1, 0]
 	},
 	{
@@ -311,7 +311,7 @@
 		"class": "puck_control",
 		"settings": ["overlay_scroll_bars"],
 		"attributes": ["horizontal"],
-		"layer0.tint": [43, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"content_margin": [0, 1]
 	},
 	{
@@ -506,14 +506,14 @@
 		"class": "tree_row",
 		"attributes": ["hover"],
 		"layer0.tint": [43, 43, 43],
-		"layer1.tint": [43, 180, 255],
+		"layer1.tint": [119, 255, 255],
 		"layer1.opacity": 1
 	},
 	{
 		// Sidebar row dirty
 		"class": "tree_row",
 		"attributes": ["dirty"],
-		"layer1.tint": [255, 43, 43]
+		"layer1.tint": [255, 119, 68]
 	},
 	{
 		// Sidebar row selected dirty
@@ -528,7 +528,7 @@
 	{
 		// Sidebar heading
 		"class": "sidebar_heading",
-		"color": [43, 180, 255],
+		"color": [119, 255, 255],
 		"shadow_color": [0, 0, 0],
 		"shadow_offset": [0, 1],
 		"font.size": 16
@@ -583,7 +583,7 @@
 		"class": "close_button",
 		"attributes": ["dirty"],
 		"layer0.opacity": 1,
-		"layer0.tint": [255, 43, 43]
+		"layer0.tint": [255, 119, 68]
 	},
 	{
 		// Sidebar close button hover
@@ -728,25 +728,25 @@
 		"class": "quick_panel_row",
 		"attributes": ["selected"],
 		"layer0.tint": [34, 34, 34],
-		"layer1.tint": [43, 180, 255]
+		"layer1.tint": [119, 255, 255]
 	},
 	{
 		// Quick panel row label
 		"class": "quick_panel_label",
 		"fg": [200, 200, 200, 255],
-		"match_fg": [43, 180, 255, 255],
+		"match_fg": [119, 255, 255, 255],
 		"bg": [34, 34, 34, 255],
 		"selected_fg": [255, 255, 255, 255],
-		"selected_match_fg": [43, 180, 255, 255],
+		"selected_match_fg": [119, 255, 255, 255],
 		"selected_bg": [134, 134, 134, 255]
 	},
 	{
 		// Quick panel row path label
 		"class": "quick_panel_path_label",
 		"fg": [160, 160, 160, 255],
-		"match_fg": [43, 180, 255, 255],
+		"match_fg": [119, 255, 255, 255],
 		"selected_fg": [255, 255, 255, 255],
-		"selected_match_fg": [43, 180, 255, 255],
+		"selected_match_fg": [119, 255, 255, 255],
 		"bg": [41, 41, 41, 255],
 		"selected_bg": [24, 24, 255, 255]
 	},
@@ -775,7 +775,7 @@
 		"class": "mini_quick_panel_row",
 		"attributes": ["selected"],
 		"layer0.tint": [34, 34, 34],
-		"layer1.tint": [43, 180, 255]
+		"layer1.tint": [119, 255, 255]
 	},
 
 	// #######################################################
@@ -802,10 +802,10 @@
 	{
 		"class": "auto_complete_label",
 		"fg": [200, 200, 200],
-		"match_fg": [43, 180, 255],
+		"match_fg": [119, 255, 255],
 		"bg": [34, 34, 34],
 		"selected_fg": [255, 255, 255],
-		"selected_match_fg": [43, 180, 255],
+		"selected_match_fg": [119, 255, 255],
 		"selected_bg": [86, 86, 86]
 	},
 	{
@@ -822,7 +822,7 @@
 		"class": "table_row",
 		"attributes": ["selected"],
 		"layer0.opacity": 1.0,
-		"layer1.tint": [43, 180, 255]
+		"layer1.tint": [119, 255, 255]
 	},
 
 	// #######################################################
@@ -847,7 +847,7 @@
 	{
 		"class": "icon_regex",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -861,7 +861,7 @@
 	{
 		"class": "icon_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -875,7 +875,7 @@
 	{
 		"class": "icon_whole_word",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -889,7 +889,7 @@
 	{
 		"class": "icon_reverse",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -904,7 +904,7 @@
 	{
 		"class": "icon_wrap",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -919,7 +919,7 @@
 	{
 		"class": "icon_in_selection",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -934,7 +934,7 @@
 	{
 		"class": "icon_preserve_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -949,7 +949,7 @@
 	{
 		"class": "icon_highlight",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -963,7 +963,7 @@
 	{
 		"class": "icon_context",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	},
 	{
@@ -977,7 +977,7 @@
 	{
 		"class": "icon_use_buffer",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [51, 180, 255],
+		"layer0.tint": [119, 255, 255],
 		"layer0.opacity": 1.0,
 	}
 

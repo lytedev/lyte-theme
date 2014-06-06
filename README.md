@@ -2,15 +2,13 @@
 
 ![Lyte Theme clean][3]
 
-[Alternative screenshot with all default preferences except theme and color_scheme][4]
-
 Lyte is a minimal, aesthetically pleasing theme for Sublime Text 3.
 
 Lyte also contains a simple Python script for constructing .tmTheme syntax highlighting files. Hopefully soon it will also contain functionality for constructing .sublime-theme Sublime theme files!
 
 ## Installation
 
-### Package Control
+### Package Controls
 
 **Note**: Not yet available!
 
@@ -45,6 +43,24 @@ But you probably already have syntax highlighting you prefer. =) Hopefully this 
 ### Customization
 
 If you're looking to customize the theme, I suggest installation via the Git method. Once you have access to the files, check out `Lyte.sublime-theme` and two python scripts in the `src` directory, `lyte.py` and `theme_builder.py`.
+
+### Recommendations
+
+This is just my preference, but I very much prefer a clean environment. This theme, though made with everybody in mind, must have some bias towards my preferences. So, if you like what's in the screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
+
+    "color_scheme": "Packages/Lyte/Lyte.tmTheme",
+    "theme": "Lyte.sublime-theme",
+	"overlay_scroll_bars": "enabled",
+	"show_tab_close_buttons": false,
+    "draw_minimap_border": false,
+    "enable_tab_scrolling": false,
+    "fade_fold_buttons": false,
+    "font_face": "Consolas",
+	"highlight_line": true,
+    "font_size": 9,
+    "caret_style": "phase",
+
+Yeah, if you couldn't tell from what's above, the font is Consolas 9.
 
 ## Credits
 
