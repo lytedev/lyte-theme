@@ -2,6 +2,8 @@
 
 ![Lyte Theme clean][3]
 
+***Font**: Consolas 9*
+
 Lyte is a minimal, aesthetically pleasing theme for Sublime Text 3.
 
 Lyte also contains a simple Python script for constructing .tmTheme syntax highlighting files. Hopefully soon it will also contain functionality for constructing .sublime-theme Sublime theme files!
@@ -59,8 +61,6 @@ This is just my preference, but I very much prefer a clean environment. This the
 	"highlight_line": true,
     "font_size": 9,
     "caret_style": "phase",
-
-Yeah, if you couldn't tell from what's above, the font is Consolas 9.
 
 ## Credits
 
