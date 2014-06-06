@@ -51,5 +51,5 @@ If you're looking to customize the theme, I suggest installation via the Git met
 
 [1]: https://github.com/EleazarCrusader/nexus-theme
 [2]: https://github.com/vlakarados/devastate
-[3]: https://github.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-small-clean.png
-[4]: https://github.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-fhd-grid.png
+[3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-small-clean.png
+[4]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-fhd-grid.png
