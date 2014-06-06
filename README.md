@@ -12,7 +12,9 @@ Lyte also contains a simple Python script for constructing .tmTheme syntax highl
 
 ### Package Control
 
-If you have the Package Control plugin installed, you can install this theme via the `Package Control: Install Package` command. The listing
+**Note**: Not yet available!
+
+If you have the Package Control plugin installed, you can install this theme via the `Package Control: Install Package` command. Then look for the `Theme - Lyte` listing and install it!
 
 ### Git
 
@@ -20,7 +22,7 @@ If you'd like easier access to the code, to keep up to date faster, or customize
 
 Open your Packages directory with the command `Preferences: Browse Packages`. While in the Packages directory, you just need to clone the repo as follows:
 
-	git clone https://github.com/lytedev/lyte-theme/ "Lyte"
+	git clone https://github.com/lytedev/lyte-theme/ Lyte
 
 ## Usage
 
