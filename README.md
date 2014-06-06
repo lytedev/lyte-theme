@@ -31,7 +31,7 @@ Open your Packages directory with the command `Preferences: Browse Packages`. Wh
 
 Add this to your `Preferences: Settings - User` file:
 
-    "color_scheme": "Packages/Lyte/Lyte.tmTheme",
+    "theme": "Lyte.sublime-theme",
 
 You will need to restart Sublime for all changes to take effect.
 
