@@ -13,9 +13,9 @@ Lyte also contains a simple Python script for constructing .tmTheme syntax highl
 
 ### Package Controls
 
-**Note**: Not yet available!
-
 If you have the Package Control plugin installed, you can install this theme via the `Package Control: Install Package` command. Then look for the `Theme - Lyte` listing and install it!
+
+If you *don't* have the Package Control plugin, well, you just should. [Here are the installation instructions.][4]
 
 ### Git
 
@@ -71,3 +71,4 @@ This is just my preference, but I very much prefer a clean environment. This the
 [1]: https://github.com/EleazarCrusader/nexus-theme
 [2]: https://github.com/vlakarados/devastate
 [3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-small-clean.png
+[4]: https://sublime.wbond.net/installation
