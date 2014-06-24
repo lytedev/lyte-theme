@@ -5,6 +5,6 @@
 	text inputs as seen in the console, find menu, etc.
 
 	*/
-	"color_scheme": "Packages/Lyte/Widgets.stTheme",
+	"color_scheme": "Packages/Theme - Lyte/Widgets.stTheme",
 	"draw_shadows": false
 }
