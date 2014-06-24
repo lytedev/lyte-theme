@@ -23,7 +23,7 @@ If you'd like easier access to the code, to keep up to date faster, or customize
 
 Open your Packages directory with the command `Preferences: Browse Packages`. While in the Packages directory, you just need to clone the repo as follows:
 
-	git clone https://github.com/lytedev/lyte-theme/ Lyte
+    git clone https://github.com/lytedev/lyte-theme/ "Theme - Lyte"
 
 ## Usage
 
@@ -39,7 +39,7 @@ You will need to restart Sublime for all changes to take effect.
 
 Add this to your `Preferences: Settings - User` file:
 
-    "color_scheme": "Packages/Lyte/Lyte.tmTheme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte.tmTheme",
 
 But you probably already have syntax highlighting you prefer. =) Hopefully this theme fits it well! If not, I suggest changing your syntax highlight background to `#111111`. Should make a world of difference.
 
@@ -51,15 +51,15 @@ If you're looking to customize the theme, I suggest installation via the Git met
 
 This is just my preference, but I very much prefer a clean environment. This theme, though made with everybody in mind, must have some bias towards my preferences. So, if you like what's in the screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
 
-    "color_scheme": "Packages/Lyte/Lyte.tmTheme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte.tmTheme",
     "theme": "Lyte.sublime-theme",
-	"overlay_scroll_bars": "enabled",
-	"show_tab_close_buttons": false,
+    "overlay_scroll_bars": "enabled",
+    "show_tab_close_buttons": false,
     "draw_minimap_border": false,
     "enable_tab_scrolling": false,
     "fade_fold_buttons": false,
     "font_face": "Consolas",
-	"highlight_line": true,
+    "highlight_line": true,
     "font_size": 9,
     "caret_style": "phase",
 
