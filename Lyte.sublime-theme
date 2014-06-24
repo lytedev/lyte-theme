@@ -41,7 +41,6 @@
 	{
 		// Tabset control scrolling
 		"class": "tabset_control",
-		"layer0.opacity": 0,
 		"settings": ["mouse_wheel_switches_tabs"],
 		"mouse_wheel_switch": true
 	},
