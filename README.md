@@ -68,7 +68,18 @@ This is just my preference, but I very much prefer a clean environment. This the
 * Inspired by the [Nexus theme][1] and the [Devastate theme][2]
 * Icons are shameless edits of the icons in the [Nexus theme][1]
 
+## License
+
+This theme is licensed under the [Creative Commons Attribution-ShareAlike 3.0 License][6]. You are free to share and remix the theme, however please abide by the license terms when doing so.
+
+The following details apply to the Creative Commons license "author specified" components:
+
+* Attribution example: Based on the Lyte theme by [@lytedev](https://github.com/lytedev)
+
+* Naming guidelines: If you create and distribute a derivative theme, please give your theme a unique and original name that does not directly include "Lyte" (or a close variant) in the main project title, repo name or Package Control name.
+
 [1]: https://github.com/EleazarCrusader/nexus-theme
 [2]: https://github.com/vlakarados/devastate
 [3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-small-clean.png
 [4]: https://sublime.wbond.net/installation
+[6]: http://creativecommons.org/licenses/by-sa/3.0/
