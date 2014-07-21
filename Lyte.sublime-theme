@@ -669,7 +669,6 @@
 	{
 		// Text input field item
 		"class": "text_line_control",
-		"layer0.texture": "Lyte/btn.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 5, 4, 3],
         "layer1.opacity": 1.0,
