@@ -44,7 +44,6 @@
 		"settings": ["mouse_wheel_switches_tabs"],
 		"mouse_wheel_switch": true
 	},
-
     {
     	// Scroll tabs left button
         "class": "scroll_tabs_left_button",
@@ -602,8 +601,14 @@
 		"layer0.opacity": 1
 	},
 
+	// Disable old sidebar icons
+	/* {
+		"class": "disclosure_button_control",
+		"content_margin": [0],
+		"layer0.opacity": 0,
+	}, */
+	// Sidebar FOLDERS closed
 	{
-		// Sidebar FOLDERS closed
 		"class": "disclosure_button_control",
 		"content_margin": [9, 7, 8, 6],
 		"layer0.texture": "Theme - Lyte/assets/arrow-right.png",
@@ -619,8 +624,9 @@
 		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
 		"layer0.opacity": 0.8
 	},
+
+	// Sidebar FOLDERS open
 	{
-		// Sidebar Folders open
 		"class": "disclosure_button_control",
 		"attributes": ["expanded"],
 		"layer0.texture": "Theme - Lyte/assets/arrow-down.png"
@@ -637,6 +643,89 @@
 		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
 		"layer0.opacity": 0.8
 	},
+
+	// Folder/File Icons
+    {
+        "class": "icon_file_type",
+        // layer0.texture is filled in by code with the relevant icon name
+        "layer0.opacity": 0.3,
+        "content_margin": [8, 8]
+    },
+    {
+        "class": "icon_file_type",
+		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+		"layer0.opacity": 0.6
+    },
+    {
+        "class": "icon_file_type",
+		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+		"layer0.opacity": 0.8
+    },
+    {
+        "class": "icon_file_type",
+		"parents": [{"class": "tree_row", "attributes": ["dirty"]}],
+		"layer0.opacity": 1.0
+    },
+	{
+		"class": "icon_folder",
+		"content_margin": [8, 8],
+		"layer0.texture": "Theme - Lyte/assets/icons/folder.png",
+		"layer0.opacity": 0.3
+	},
+	{
+		"class": "icon_folder",
+		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+		"layer0.opacity": 0.6
+	},
+	{
+		"class": "icon_folder",
+		"parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+		"layer0.texture": "Theme - Lyte/assets/icons/folder_open.png",
+	},
+	{
+		"class": "icon_folder_dup",
+		"content_margin": [8, 8],
+		"layer0.texture": "Theme - Lyte/assets/icons/folder_dup.png",
+		"layer0.opacity": 0.3
+	},
+	{
+		"class": "icon_folder_dup",
+		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+		"layer0.opacity": 0.6
+	},
+	{
+		"class": "icon_folder_dup",
+		"parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+		"layer0.texture": "Theme - Lyte/assets/icons/folder_open.png",
+	},
+	{
+		"class": "icon_folder_loading",
+        "content_margin": [9, 7, 8, 6],
+		"layer0.opacity": 0.3,
+        "layer0.texture":
+        {
+            "keyframes":
+            [
+                "Theme - Lyte/assets/spinner/spinner1.png",
+                "Theme - Lyte/assets/spinner/spinner2.png",
+                "Theme - Lyte/assets/spinner/spinner3.png",
+                "Theme - Lyte/assets/spinner/spinner4.png",
+                "Theme - Lyte/assets/spinner/spinner5.png",
+                "Theme - Lyte/assets/spinner/spinner6.png",
+                "Theme - Lyte/assets/spinner/spinner7.png",
+                "Theme - Lyte/assets/spinner/spinner8.png",
+            ],
+            "loop": true,
+            "frame_time": 0.15,
+        },
+	},
+	{
+		"class": "icon_folder_loading",
+		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+		"layer0.opacity": 1.0,
+
+	},
+
 
 	// #######################################################
 	// # BUTTONS
