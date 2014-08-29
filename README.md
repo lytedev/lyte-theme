@@ -1,4 +1,4 @@
-s# Lyte Theme
+# Lyte Theme
 
 Lyte is a minimal, aesthetically pleasing theme for Sublime Text. Don't believe me? Check it out.
 
