@@ -1,4 +1,4 @@
-# Lyte Theme
+s# Lyte Theme
 
 Lyte is a minimal, aesthetically pleasing theme for Sublime Text. Don't believe me? Check it out.
 
@@ -85,7 +85,7 @@ The following details apply to the Creative Commons license "author specified" c
 
 [1]: https://github.com/EleazarCrusader/nexus-theme
 [2]: https://github.com/vlakarados/devastate
-[3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/lyte-theme-small-clean.png
+[3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/lyte-theme-small-clean-file-folder-icons.png
 [4]: https://sublime.wbond.net/installation
 [6]: http://creativecommons.org/licenses/by-sa/3.0/
 [7]: https://github.com/jisaacks/GitGutter
