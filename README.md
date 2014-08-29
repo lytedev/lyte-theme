@@ -6,6 +6,7 @@ Lyte is a minimal, aesthetically pleasing theme for Sublime Text. Don't believe 
 
 * **Font**: Consolas 9
 * **Color Scheme**: Lyte (included in this theme)
+* **Icons in Gutter**: [Git Gutter Plugin][7]
 
 Lyte also contains a simple Python script for constructing .tmTheme syntax highlighting files. Hopefully soon it will also contain functionality for constructing .sublime-theme Sublime theme files!
 
@@ -87,4 +88,4 @@ The following details apply to the Creative Commons license "author specified" c
 [3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-small-clean.png
 [4]: https://sublime.wbond.net/installation
 [6]: http://creativecommons.org/licenses/by-sa/3.0/
-
+[7]: https://github.com/jisaacks/GitGutter
