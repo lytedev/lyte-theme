@@ -68,6 +68,10 @@ This is just my preference, but I very much prefer a clean environment. This the
 * Inspired by the [Nexus theme][1] and the [Devastate theme][2]
 * Icons are shameless edits of the icons in the [Nexus theme][1]
 
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md)
+
 ## License
 
 This theme is licensed under the [Creative Commons Attribution-ShareAlike 3.0 License][6]. You are free to share and remix the theme, however please abide by the license terms when doing so.
@@ -83,3 +87,4 @@ The following details apply to the Creative Commons license "author specified" c
 [3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/assets/screenshots/lyte-theme-small-clean.png
 [4]: https://sublime.wbond.net/installation
 [6]: http://creativecommons.org/licenses/by-sa/3.0/
+
