@@ -1,8 +1,12 @@
 # Lyte Theme
 
-Lyte is a minimal, aesthetically pleasing theme for Sublime Text. Don't believe me? Check it out.
+Lyte is a minimal, aesthetically pleasing theme for Sublime Text with fancy-schmancy border status indicators. Don't believe me? Check it out.
 
 ![Lyte Theme clean][3]
+
+Maybe you don't like fancy-schmancy border status indicators, but you like flat, dark minimalism.
+
+![Lyte Theme NoBorder][8]
 
 * **Font**: Consolas 9
 * **Color Scheme**: Lyte (included in this theme)
@@ -34,6 +38,10 @@ Add this to your `Preferences: Settings - User` file:
 
     "theme": "Lyte.sublime-theme",
 
+Or, for no colorful indicator borders,
+
+    "theme": "Lyte-NoBorder.sublime-theme",
+
 You will need to restart Sublime for all changes to take effect.
 
 ### Syntax Highlighting
@@ -64,6 +72,8 @@ This is just my preference, but I very much prefer a clean environment. This the
     "font_size": 9,
     "caret_style": "phase",
 
+If you don't like the colored border indicators, you can edit the theme and basically change all `layer1.opacity` values to 0. Or istead of `"theme": "Lyte.sublime-theme",`, use `"theme": "Lyte-NoBorder.sublime-theme",` in your User Settings.
+
 ## Credits
 
 * Inspired by the [Nexus theme][1] and the [Devastate theme][2]
@@ -89,3 +99,4 @@ The following details apply to the Creative Commons license "author specified" c
 [4]: https://sublime.wbond.net/installation
 [6]: http://creativecommons.org/licenses/by-sa/3.0/
 [7]: https://github.com/jisaacks/GitGutter
+[8]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/lyte-theme-small-clean-file-folder-icons-noborder.png

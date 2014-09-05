@@ -7,7 +7,7 @@
 	Based on the Nexus theme (https://github.com/EleazarCrusader/nexus-theme)
 	Inspired by the Devastate theme (https://github.com/vlakarados/devastate)
 
-	// TODO: Generate this file using the same/similar script used for building
+	TODO: Generate this file using the same/similar script used for building
 		the syntax files.
 
 	*/
@@ -29,7 +29,7 @@
 		"layer1.tint": [34, 34, 34],
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [0, 0, 0, 1],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 
 		"content_margin": 0,
 		"tab_overlap": 0,
@@ -99,7 +99,7 @@
 		// Tab border
 		"layer1.tint": [34, 34, 34],
 		"layer1.inner_margin": [0, 0, 0, 1],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 		"layer1.draw_center": false,
 
 		"hit_test_level": 0.5
@@ -386,7 +386,7 @@
 		"layer1.tint": [68, 68, 68],
 		"layer1.inner_margin": 1,
 		"layer1.draw_center": false,
-		"layer1.opacity": 1,
+		"layer1.opacity": 0,
 		"content_margin": [8, 6],
 	},
 	{
@@ -462,7 +462,7 @@
 		"layer0.opacity": 1.0,
 		"layer1.tint": [34, 34, 34],
 		"layer1.inner_margin": [0, 0, 1, 0],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 		"layer1.draw_center": false,
 		"row_padding": [8, 1],
 		"indent": 12,
@@ -479,7 +479,7 @@
 		"layer0.tint": [25, 25, 25],
 
 		// Border
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 		"layer1.inner_margin": [0, 0, 1, 0],
 		"layer1.draw_center": false,
 		"layer1.tint": [34, 34, 34]
@@ -803,7 +803,7 @@
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [4, 4, 4, 4],
 		"layer1.tint": [34, 34, 34],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [1, 0, 0, 0]
 	},
@@ -851,7 +851,7 @@
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [4, 4, 4, 4],
 		"layer1.tint": [34, 34, 34],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [1, 0, 0, 0]
 	},
@@ -881,7 +881,7 @@
 	{
 		"class": "auto_complete",
 		"attributes": ["selected"],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 	},
 	{
 		"class": "auto_complete_label",
@@ -898,7 +898,7 @@
 		"layer0.opacity": 0.0,
 		"layer0.inner_margin": 0,
 		"layer1.tint": [43, 43, 43],
-		"layer1.opacity": 1.0,
+		"layer1.opacity": 0.0,
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [1, 0, 0, 0]
 	},
