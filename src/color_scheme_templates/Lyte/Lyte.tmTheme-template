@@ -5,9 +5,7 @@
     <key>name</key>
     <string>Lyte</string>
     <!--
-
     Shamelessly ripped from Monokai Bright included with Sublime.
-
     -->
     <key>settings</key>
     <array>
@@ -21,19 +19,19 @@
                 <key>foreground</key>
                 <string>{fg}</string>
                 <key>invisibles</key>
-                <string>{dark1}</string>
+                <string>{secondary1}</string>
                 <key>lineHighlight</key>
-                <string>{dark1}</string>
+                <string>{secondary1}</string>
                 <key>selection</key>
-                <string>{dark2}</string>
+                <string>{secondary2}</string>
                 <key>selectionBorder</key>
-                <string>{dark3}</string>
+                <string>{secondary3}</string>
                 <key>findHighlight</key>
-                <string>{dark3}</string>
+                <string>{secondary3}</string>
                 <key>findHighlightForeground</key>
                 <string>{fg}</string>
                 <key>activeGuide</key>
-                <string>{dark2}</string>
+                <string>{secondary2}</string>
 
                 <key>bracketsForeground</key>
                 <string>{fg}</string>
@@ -313,7 +311,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#cfcfcf</string>
+                <string>{red}</string>
             </dict>
         </dict>
 

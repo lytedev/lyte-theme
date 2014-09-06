@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0
+* ThemeBuilder overhaul
+* Added noborder and light themes
+
 ## 1.0.2
 * Added File/Folder icons to sidebar for ST3 build 3065
 

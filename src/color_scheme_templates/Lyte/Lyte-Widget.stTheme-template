@@ -4,11 +4,9 @@
 <dict>
 	<key>name</key>
 	<string>Sublime Widgets</string>
-	<!-- 
-
-	The Widget.sublime-settings and Widgets.stTheme files are used to style the 
-	text inputs as seen in the console, find menu, etc. 
-	
+	<!--
+	The Widget.sublime-settings and Widgets.stTheme files are used to style
+	the text inputs as seen in the console, find menu, etc.
 	-->
 	<key>settings</key>
 	<array>
@@ -22,15 +20,15 @@
 				<key>foreground</key>
 				<string>{fg}</string>
 				<key>invisibles</key>
-				<string>{dark1}</string>
+				<string>{secondary1}</string>
 				<key>lineHighlight</key>
 				<string>{comment}</string>
 				<key>selection</key>
-				<string>{dark3}</string>
+				<string>{secondary3}</string>
 				<key>selectionBorder</key>
-				<string>{dark4}</string>
+				<string>{secondary4}</string>
 				<key>inactiveSelection</key>
-				<string>{dark3}</string>
+				<string>{secondary3}</string>
 			</dict>
 		</dict>
 		<dict>

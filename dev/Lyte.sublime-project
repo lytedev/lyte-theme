@@ -8,5 +8,11 @@
 			"file_exclude_patterns": [ ".no-sublime-package" ],
 			"path": "../"
 		}
-	]
+	],
+	"settings":
+	{
+		"tab_size": 2,
+		"detect_indentation": false,
+		"translate_tabs_to_spaces": false,
+	}
 }

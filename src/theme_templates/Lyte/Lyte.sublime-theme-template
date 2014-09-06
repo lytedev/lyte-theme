@@ -2,21 +2,15 @@
 	/*
 
 	`Lyte` theme for Sublime Text
-	https://github.com/Lytedev/Lyte-sublime
+	https://github.com/lytedev/lyte-theme
 
-	Based on the Nexus theme (https://github.com/EleazarCrusader/nexus-theme)
-	Inspired by the Devastate theme (https://github.com/vlakarados/devastate)
-
-	TODO: Generate this file using the same/similar script used for building
-		the syntax files.
+	Credits:
+		Nexus Theme: https://github.com/EleazarCrusader/nexus-theme
+		Devastate Theme: https://github.com/vlakarados/devastate
 
 	*/
 
-	// #######################################################
-	// # TABS
-	// #######################################################
-
-	// Tabset
+	// Tabset (Tab Container)
 	{
 		// Tabset control
 		"class": "tabset_control",
@@ -29,7 +23,7 @@
 		"layer1.tint": [34, 34, 34],
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [0, 0, 0, 1],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 
 		"content_margin": 0,
 		"tab_overlap": 0,
@@ -44,47 +38,47 @@
 		"settings": ["mouse_wheel_switches_tabs"],
 		"mouse_wheel_switch": true
 	},
-    {
-    	// Scroll tabs left button
-        "class": "scroll_tabs_left_button",
-        "content_margin": [9, 7, 8, 6],
-        "layer0.texture": "Theme - Lyte/icons/gui/arrow-left.png",
-        "layer0.opacity": 0.3,
-        "layer0.tint": [255, 255, 255, 255]
-    },
-    {
-        "class": "scroll_tabs_left_button",
-        "attributes": ["hover"],
-        "layer0.opacity": 0.6
-    },
+		{
+			// Scroll tabs left button
+				"class": "scroll_tabs_left_button",
+				"content_margin": [9, 7, 8, 6],
+				"layer0.texture": "Theme - Lyte/icons/gui/arrow-left.png",
+				"layer0.opacity": 0.3,
+				"layer0.tint": [255, 255, 255, 255]
+		},
+		{
+				"class": "scroll_tabs_left_button",
+				"attributes": ["hover"],
+				"layer0.opacity": 0.6
+		},
 
-    {
-    	// Scroll tabs right button
-        "class": "scroll_tabs_right_button",
-        "content_margin": [9, 7, 8, 6],
-        "layer0.texture": "Theme - Lyte/icons/gui/arrow-right.png",
-        "layer0.opacity": 0.3,
-        "layer0.tint": [255, 255, 255, 255]
-    },
-    {
-        "class": "scroll_tabs_right_button",
-        "attributes": ["hover"],
-        "layer0.opacity": 0.6
-    },
+		{
+			// Scroll tabs right button
+				"class": "scroll_tabs_right_button",
+				"content_margin": [9, 7, 8, 6],
+				"layer0.texture": "Theme - Lyte/icons/gui/arrow-right.png",
+				"layer0.opacity": 0.3,
+				"layer0.tint": [255, 255, 255, 255]
+		},
+		{
+				"class": "scroll_tabs_right_button",
+				"attributes": ["hover"],
+				"layer0.opacity": 0.6
+		},
 
-    {
-    	// Scroll tabs dropdown button
-        "class": "show_tabs_dropdown_button",
-        "content_margin": [9, 7, 8, 6],
-        "layer0.texture": "Theme - Lyte/icons/gui/arrow-down.png",
-        "layer0.opacity": 0.3,
-        "layer0.tint": [255, 255, 255, 255]
-    },
-    {
-        "class": "show_tabs_dropdown_button",
-        "attributes": ["hover"],
-        "layer0.opacity": 0.6
-    },
+		{
+			// Scroll tabs dropdown button
+				"class": "show_tabs_dropdown_button",
+				"content_margin": [9, 7, 8, 6],
+				"layer0.texture": "Theme - Lyte/icons/gui/arrow-down.png",
+				"layer0.opacity": 0.3,
+				"layer0.tint": [255, 255, 255, 255]
+		},
+		{
+				"class": "show_tabs_dropdown_button",
+				"attributes": ["hover"],
+				"layer0.opacity": 0.6
+		},
 
 	// Tab element
 	{
@@ -99,7 +93,7 @@
 		// Tab border
 		"layer1.tint": [34, 34, 34],
 		"layer1.inner_margin": [0, 0, 0, 1],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 		"layer1.draw_center": false,
 
 		"hit_test_level": 0.5
@@ -386,7 +380,7 @@
 		"layer1.tint": [68, 68, 68],
 		"layer1.inner_margin": 1,
 		"layer1.draw_center": false,
-		"layer1.opacity": 0,
+		"layer1.opacity": 1,
 		"content_margin": [8, 6],
 	},
 	{
@@ -462,7 +456,7 @@
 		"layer0.opacity": 1.0,
 		"layer1.tint": [34, 34, 34],
 		"layer1.inner_margin": [0, 0, 1, 0],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 		"layer1.draw_center": false,
 		"row_padding": [8, 1],
 		"indent": 12,
@@ -479,7 +473,7 @@
 		"layer0.tint": [25, 25, 25],
 
 		// Border
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 		"layer1.inner_margin": [0, 0, 1, 0],
 		"layer1.draw_center": false,
 		"layer1.tint": [34, 34, 34]
@@ -643,27 +637,27 @@
 	},
 
 	// Folder/File Icons
-    {
-        "class": "icon_file_type",
-        // layer0.texture is filled in by code with the relevant icon name
-        "layer0.opacity": 0.3,
-        "content_margin": [8, 8]
-    },
-    {
-        "class": "icon_file_type",
+		{
+				"class": "icon_file_type",
+				// layer0.texture is filled in by code with the relevant icon name
+				"layer0.opacity": 0.3,
+				"content_margin": [8, 8]
+		},
+		{
+				"class": "icon_file_type",
 		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
 		"layer0.opacity": 0.6
-    },
-    {
-        "class": "icon_file_type",
+		},
+		{
+				"class": "icon_file_type",
 		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
 		"layer0.opacity": 0.8
-    },
-    {
-        "class": "icon_file_type",
+		},
+		{
+				"class": "icon_file_type",
 		"parents": [{"class": "tree_row", "attributes": ["dirty"]}],
 		"layer0.opacity": 1.0
-    },
+		},
 	{
 		"class": "icon_folder",
 		"content_margin": [8, 8],
@@ -698,24 +692,24 @@
 	},
 	{
 		"class": "icon_folder_loading",
-        "content_margin": [9, 7, 8, 6],
+				"content_margin": [9, 7, 8, 6],
 		"layer0.opacity": 0.3,
-        "layer0.texture":
-        {
-            "keyframes":
-            [
-                "Theme - Lyte/assets/spinner/spinner1.png",
-                "Theme - Lyte/assets/spinner/spinner2.png",
-                "Theme - Lyte/assets/spinner/spinner3.png",
-                "Theme - Lyte/assets/spinner/spinner4.png",
-                "Theme - Lyte/assets/spinner/spinner5.png",
-                "Theme - Lyte/assets/spinner/spinner6.png",
-                "Theme - Lyte/assets/spinner/spinner7.png",
-                "Theme - Lyte/assets/spinner/spinner8.png",
-            ],
-            "loop": true,
-            "frame_time": 0.15,
-        },
+				"layer0.texture":
+				{
+						"keyframes":
+						[
+								"Theme - Lyte/assets/spinner/spinner1.png",
+								"Theme - Lyte/assets/spinner/spinner2.png",
+								"Theme - Lyte/assets/spinner/spinner3.png",
+								"Theme - Lyte/assets/spinner/spinner4.png",
+								"Theme - Lyte/assets/spinner/spinner5.png",
+								"Theme - Lyte/assets/spinner/spinner6.png",
+								"Theme - Lyte/assets/spinner/spinner7.png",
+								"Theme - Lyte/assets/spinner/spinner8.png",
+						],
+						"loop": true,
+						"frame_time": 0.15,
+				},
 	},
 	{
 		"class": "icon_folder_loading",
@@ -756,11 +750,11 @@
 	{
 		// Text input field item
 		"class": "text_line_control",
-        "layer0.opacity": 1.0,
-        "layer0.inner_margin": [4, 5, 4, 3],
-        "layer1.opacity": 1.0,
-        "layer1.inner_margin": [4, 5, 4, 3],
-        "tint_index": 1,
+				"layer0.opacity": 1.0,
+				"layer0.inner_margin": [4, 5, 4, 3],
+				"layer1.opacity": 1.0,
+				"layer1.inner_margin": [4, 5, 4, 3],
+				"tint_index": 1,
 		"content_margin": 3
 	},
 
@@ -803,7 +797,7 @@
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [4, 4, 4, 4],
 		"layer1.tint": [34, 34, 34],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [1, 0, 0, 0]
 	},
@@ -851,7 +845,7 @@
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [4, 4, 4, 4],
 		"layer1.tint": [34, 34, 34],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [1, 0, 0, 0]
 	},
@@ -881,7 +875,7 @@
 	{
 		"class": "auto_complete",
 		"attributes": ["selected"],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 	},
 	{
 		"class": "auto_complete_label",
@@ -898,7 +892,7 @@
 		"layer0.opacity": 0.0,
 		"layer0.inner_margin": 0,
 		"layer1.tint": [43, 43, 43],
-		"layer1.opacity": 0.0,
+		"layer1.opacity": 1.0,
 		"layer1.draw_center": false,
 		"layer1.inner_margin": [1, 0, 0, 0]
 	},

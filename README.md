@@ -1,6 +1,6 @@
 # Lyte Theme
 
-Lyte is a minimal, aesthetically pleasing theme for Sublime Text with fancy-schmancy border status indicators. Don't believe me? Check it out.
+Lyte is a minimal, aesthetically-pleasing, flat, dark, misleadingly-titled theme for Sublime Text with fancy-schmancy border status indicators. Don't believe me? Check it out.
 
 ![Lyte Theme clean][3]
 
@@ -9,7 +9,7 @@ Maybe you don't like fancy-schmancy border status indicators, but you like flat,
 ![Lyte Theme NoBorder][8]
 
 * **Font**: Consolas 9
-* **Color Scheme**: Lyte (included in this theme)
+* **Color Scheme**: Lyte-Dark (included in this theme)
 * **Icons in Gutter**: [Git Gutter Plugin][7]
 
 Lyte also contains a simple Python script for constructing .tmTheme syntax highlighting files. Hopefully soon it will also contain functionality for constructing .sublime-theme Sublime theme files!
@@ -36,11 +36,11 @@ Open your Packages directory with the command `Preferences: Browse Packages`. Wh
 
 Add this to your `Preferences: Settings - User` file:
 
-    "theme": "Lyte.sublime-theme",
+    "theme": "Lyte-Dark.sublime-theme",
 
 Or, for no colorful indicator borders,
 
-    "theme": "Lyte-NoBorder.sublime-theme",
+    "theme": "Lyte-Dark-NoBorder.sublime-theme",
 
 You will need to restart Sublime for all changes to take effect.
 
@@ -48,7 +48,7 @@ You will need to restart Sublime for all changes to take effect.
 
 Add this to your `Preferences: Settings - User` file:
 
-    "color_scheme": "Packages/Theme - Lyte/Lyte.tmTheme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
 
 But you probably already have syntax highlighting you prefer. =) Hopefully this theme fits it well! If not, I suggest changing your syntax highlight background to `#111111`. Should make a world of difference.
 
@@ -58,10 +58,10 @@ If you're looking to customize the theme, I suggest installation via the Git met
 
 ### Recommendations
 
-This is just my preference, but I very much prefer a clean environment. This theme, though made with everybody in mind, must have some bias towards my preferences. So, if you like what's in the screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
+This is just my preference, but I very much prefer a clean and dark environment. This theme, though made with everybody in mind, must have some bias towards my preferences. So, if you like what's in the first screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
 
-    "color_scheme": "Packages/Theme - Lyte/Lyte.tmTheme",
-    "theme": "Lyte.sublime-theme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
+    "theme": "Lyte-Dark.sublime-theme",
     "overlay_scroll_bars": "enabled",
     "show_tab_close_buttons": false,
     "draw_minimap_border": false,
@@ -72,7 +72,7 @@ This is just my preference, but I very much prefer a clean environment. This the
     "font_size": 9,
     "caret_style": "phase",
 
-If you don't like the colored border indicators, you can edit the theme and basically change all `layer1.opacity` values to 0. Or istead of `"theme": "Lyte.sublime-theme",`, use `"theme": "Lyte-NoBorder.sublime-theme",` in your User Settings.
+If you don't like the colored border indicators, you can edit the theme and basically change all `layer1.opacity` values to 0. Or istead of `"theme": "Lyte-Dark.sublime-theme",`, use `"theme": "Lyte-Dark-NoBorder.sublime-theme",` in your User Settings.
 
 ## Credits
 
