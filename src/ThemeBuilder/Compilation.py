@@ -43,8 +43,6 @@ class Compilation(ThemeFileInterface):
 		print("\tTheme: '%s'" % self.theme.name)
 		print("\tColor Scheme: '%s'" % self.colorScheme.name)
 
-		print(directory)
-
 		self.theme.options.update(self.options)
 		self.theme.export(directory, package)
 

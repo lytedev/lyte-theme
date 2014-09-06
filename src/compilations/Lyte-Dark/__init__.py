@@ -26,4 +26,3 @@ colors = {
 
 comp.theme.options.update(colors)
 
-print(comp.colorScheme.templateDirectory)

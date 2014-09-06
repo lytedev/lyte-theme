@@ -12,21 +12,21 @@ from ThemeBuilder.ThemeFileInterface import ThemeFileInterface
 from ThemeBuilder.Color import Color
 
 class Theme(ThemeFileInterface):
-	def __init__(self, name, iconsDirectory = None, templateDirectory = None, templates = None):
+	def __init__(self, name, iconsDirectory = None, themeTemplateDirectory = None, themeTemplates = None):
 		self.name = name
 
-		if templateDirectory is None:
-			templateDirectory = themeDir(self.name)
+		if themeTemplateDirectory is None:
+			themeTemplateDirectory = themeDir(self.name)
 
 		if iconsDirectory is None:
 			iconsDirectory = iconsDir(self.name)
 
-		if templates is None:
-			templates = basicThemeTemplates(self.name)
+		if themeTemplates is None:
+			themeTemplates = basicThemeTemplates(self.name)
 
 		self.iconsDirectory = iconsDirectory
-		self.templateDirectory = templateDirectory
-		self.templates = templates
+		self.themeTemplateDirectory = themeTemplateDirectory
+		self.themeTemplates = themeTemplates
 
 		self.options = {
 			"ThemeName": self.name,
@@ -47,8 +47,8 @@ class Theme(ThemeFileInterface):
 			if isinstance(sublimeThemeOptions[key], Color):
 				sublimeThemeOptions[key] = sublimeThemeOptions[key].rgba_array()
 
-		# Process templates
-		for template in self.templates:
+		# Process themeTemplates
+		for template in self.themeTemplates:
 
 			key = template
 			curOpts = self.options
@@ -56,8 +56,8 @@ class Theme(ThemeFileInterface):
 				template = template[2:]
 				curOpts = sublimeThemeOptions
 
-			templateFile = os.path.abspath(self.templateDirectory + os.sep + template)
-			targetFile = os.path.abspath(directory + os.sep + self.templates[key])
+			templateFile = os.path.abspath(self.themeTemplateDirectory + os.sep + template)
+			targetFile = os.path.abspath(directory + os.sep + self.themeTemplates[key])
 			file = open(templateFile, 'r')
 			template = Template(file.read())
 			file.close()
