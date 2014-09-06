@@ -9,6 +9,16 @@
 			"path": "../"
 		}
 	],
+	"build_systems": [
+		{
+			"name": "Compile Themes",
+			"cmd":
+			[
+				"python",
+				"${project_path}\\..\\src\\lyte.py"
+			],
+		}
+	],
 	"settings":
 	{
 		"tab_size": 2,

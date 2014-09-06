@@ -14,21 +14,21 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>{bg}</string>
+				<string>#191919</string>
 				<key>caret</key>
-				<string>{fg}</string>
+				<string>#f8f8f8</string>
 				<key>foreground</key>
-				<string>{fg}</string>
+				<string>#f8f8f8</string>
 				<key>invisibles</key>
-				<string>{secondary1}</string>
+				<string>#1d1d1d</string>
 				<key>lineHighlight</key>
-				<string>{comment}</string>
+				<string>#777777</string>
 				<key>selection</key>
-				<string>{secondary3}</string>
+				<string>#333333</string>
 				<key>selectionBorder</key>
-				<string>{secondary4}</string>
+				<string>#444444</string>
 				<key>inactiveSelection</key>
-				<string>{secondary3}</string>
+				<string>#333333</string>
 			</dict>
 		</dict>
 		<dict>
@@ -41,7 +41,7 @@
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>{comment}</string>
+				<string>#777777</string>
 			</dict>
 		</dict>
 		<dict>
@@ -52,7 +52,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{blue}</string>
+				<string>#77aaff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -61,7 +61,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{blue}</string>
+				<string>#77aaff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -70,7 +70,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{red}</string>
+				<string>#ff7744</string>
 			</dict>
 		</dict>
 		<dict>
@@ -79,7 +79,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>{indigo}</string>
+				<string>#aa77ff</string>
 			</dict>
 		</dict>
 	</array>

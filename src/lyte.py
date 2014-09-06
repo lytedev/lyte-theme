@@ -15,7 +15,7 @@ def main():
 
 	# The themes to generate
 	compilations = [
-		"Lyte", # For legacy purposes - should stay the same as Lyte-Dark
+		"Lyte", # For legacy purposes - should be the same as Lyte-Dark
 		"Lyte-Dark",
 		# "Lyte-Light",
 		# "Lyte-Dark-NoBorder",

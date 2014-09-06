@@ -15,7 +15,7 @@
 		// Tabset control
 		"class": "tabset_control",
 
-		"layer0.tint": [25, 25, 25],
+		"layer0.tint": [29, 29, 29],
 		"layer0.inner_margin": [0, 0, 0, 1],
 		"layer0.opacity": 1.0,
 		"layer0.draw_center": true,
@@ -42,7 +42,7 @@
 			// Scroll tabs left button
 				"class": "scroll_tabs_left_button",
 				"content_margin": [9, 7, 8, 6],
-				"layer0.texture": "Theme - Lyte/icons/gui/arrow-left.png",
+				"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-left.png",
 				"layer0.opacity": 0.3,
 				"layer0.tint": [255, 255, 255, 255]
 		},
@@ -56,7 +56,7 @@
 			// Scroll tabs right button
 				"class": "scroll_tabs_right_button",
 				"content_margin": [9, 7, 8, 6],
-				"layer0.texture": "Theme - Lyte/icons/gui/arrow-right.png",
+				"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-right.png",
 				"layer0.opacity": 0.3,
 				"layer0.tint": [255, 255, 255, 255]
 		},
@@ -70,7 +70,7 @@
 			// Scroll tabs dropdown button
 				"class": "show_tabs_dropdown_button",
 				"content_margin": [9, 7, 8, 6],
-				"layer0.texture": "Theme - Lyte/icons/gui/arrow-down.png",
+				"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-down.png",
 				"layer0.opacity": 0.3,
 				"layer0.tint": [255, 255, 255, 255]
 		},
@@ -165,7 +165,7 @@
 		"content_margin": [0, 0],
 
 		// Tab close hover settings
-		"layer0.texture": "Theme - Lyte/icons/gui/x.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/x.png",
 		"layer0.opacity": 1.0,
 		"layer0.tint": [255, 255, 255, 100]
 	},
@@ -206,7 +206,7 @@
 
 	{
 		"class": "fold_button_control",
-		"layer0.texture": "Theme - Lyte/icons/gui/arrow-right.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-right.png",
 		"layer0.opacity": 0.3,
 		"content_margin": [9, 7, 8, 6]
 	},
@@ -223,7 +223,7 @@
 	{
 		"class": "fold_button_control",
 		"attributes": ["expanded"],
-		"layer0.texture": "Theme - Lyte/icons/gui/arrow-down.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-down.png",
 	},
 
 	// #######################################################
@@ -561,7 +561,7 @@
 	{
 		// Sidebar close button
 		"class": "close_button",
-		"layer0.texture": "Theme - Lyte/icons/gui/x.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/x.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.3,
 		"layer0.inner_margin": 4,
@@ -603,7 +603,7 @@
 	{
 		"class": "disclosure_button_control",
 		"content_margin": [9, 7, 8, 6],
-		"layer0.texture": "Theme - Lyte/icons/gui/arrow-right.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-right.png",
 		"layer0.opacity": 0.3,
 	},
 	{
@@ -621,7 +621,7 @@
 	{
 		"class": "disclosure_button_control",
 		"attributes": ["expanded"],
-		"layer0.texture": "Theme - Lyte/icons/gui/arrow-down.png"
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/arrow-down.png"
 	},
 	{
 		"class": "disclosure_button_control",
@@ -661,7 +661,7 @@
 	{
 		"class": "icon_folder",
 		"content_margin": [8, 8],
-		"layer0.texture": "Theme - Lyte/icons/folder.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/folder.png",
 		"layer0.opacity": 0.3
 	},
 	{
@@ -672,12 +672,12 @@
 	{
 		"class": "icon_folder",
 		"parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-		"layer0.texture": "Theme - Lyte/icons/folder_open.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/folder_open.png",
 	},
 	{
 		"class": "icon_folder_dup",
 		"content_margin": [8, 8],
-		"layer0.texture": "Theme - Lyte/icons/folder_dup.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/folder_dup.png",
 		"layer0.opacity": 0.3
 	},
 	{
@@ -688,7 +688,7 @@
 	{
 		"class": "icon_folder_dup",
 		"parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-		"layer0.texture": "Theme - Lyte/icons/folder_open.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/folder_open.png",
 	},
 	{
 		"class": "icon_folder_loading",
@@ -698,14 +698,14 @@
 				{
 						"keyframes":
 						[
-								"Theme - Lyte/assets/spinner/spinner1.png",
-								"Theme - Lyte/assets/spinner/spinner2.png",
-								"Theme - Lyte/assets/spinner/spinner3.png",
-								"Theme - Lyte/assets/spinner/spinner4.png",
-								"Theme - Lyte/assets/spinner/spinner5.png",
-								"Theme - Lyte/assets/spinner/spinner6.png",
-								"Theme - Lyte/assets/spinner/spinner7.png",
-								"Theme - Lyte/assets/spinner/spinner8.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner1.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner2.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner3.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner4.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner5.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner6.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner7.png",
+								"Theme - Lyte\\Lyte-Dark\\icons/spinner/spinner8.png",
 						],
 						"loop": true,
 						"frame_time": 0.15,
@@ -917,7 +917,7 @@
 	{
 		// Regex search button
 		"class": "icon_regex",
-		"layer0.texture": "Theme - Lyte/icons/panel/regex.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/regex.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
 		"content_margin": [8, 8]
@@ -931,7 +931,7 @@
 	{
 		// Case sensitive search button
 		"class": "icon_case",
-		"layer0.texture": "Theme - Lyte/icons/panel/case.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/case.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
 		"content_margin": [8, 8]
@@ -945,7 +945,7 @@
 	{
 		// Match whole word search button
 		"class": "icon_whole_word",
-		"layer0.texture": "Theme - Lyte/icons/panel/whole-word.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/whole-word.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
 		"content_margin": [8, 8]
@@ -959,7 +959,7 @@
 	{
 		// Reverse search direction button
 		"class": "icon_reverse",
-		"layer0.texture": "Theme - Lyte/icons/panel/reverse.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/reverse.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
 		"content_margin": [8, 8]
@@ -973,7 +973,7 @@
 	{
 		// Search wrap button
 		"class": "icon_wrap",
-		"layer0.texture": "Theme - Lyte/icons/panel/wrap.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/wrap.png",
 
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
@@ -988,7 +988,7 @@
 	{
 		// Search in selection button
 		"class": "icon_in_selection",
-		"layer0.texture": "Theme - Lyte/icons/panel/selection.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/selection.png",
 
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
@@ -1003,7 +1003,7 @@
 	{
 		// Preserve case button
 		"class": "icon_preserve_case",
-		"layer0.texture": "Theme - Lyte/icons/panel/preserve-case.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/preserve-case.png",
 
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
@@ -1018,7 +1018,7 @@
 	{
 		// Highlight results button
 		"class": "icon_highlight",
-		"layer0.texture": "Theme - Lyte/icons/panel/highlight.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/highlight.png",
 
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
@@ -1033,7 +1033,7 @@
 	{
 		// Show search context button
 		"class": "icon_context",
-		"layer0.texture": "Theme - Lyte/icons/panel/context.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/context.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
 		"content_margin": [8, 8]
@@ -1047,7 +1047,7 @@
 	{
 		// Use search buffer
 		"class": "icon_use_buffer",
-		"layer0.texture": "Theme - Lyte/icons/panel/buffer.png",
+		"layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/panel/buffer.png",
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 0.15,
 		"content_margin": [8, 8]
