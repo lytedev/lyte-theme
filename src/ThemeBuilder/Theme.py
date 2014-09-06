@@ -22,7 +22,7 @@ class Theme(ThemeFileInterface):
 			iconsDirectory = iconsDir(self.name)
 
 		if templates is None:
-			templates = basicTemplates(self.name)
+			templates = basicThemeTemplates(self.name)
 
 		self.iconsDirectory = iconsDirectory
 		self.templateDirectory = templateDirectory
@@ -72,7 +72,7 @@ def themeDir(name):
 def iconsDir(name):
 	return os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.path.pardir + os.sep + "iconsets" + os.sep + name + os.sep)
 
-def basicTemplates(name, targetName = None):
+def basicThemeTemplates(name, targetName = None):
 	if targetName is None:
 		targetName = name
 	return {

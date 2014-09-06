@@ -1,10 +1,12 @@
-from ThemeBuilder.Theme import Theme, themeDir, iconsDir, basicTemplates
+from ThemeBuilder.Theme import Theme, themeDir, iconsDir, basicThemeTemplates
+from ThemeBuilder.ColorScheme import ColorScheme, basicColorSchemeTemplates
 from ThemeBuilder.Color import Color
 from ThemeBuilder.Compilation import Compilation
 
-theme = Theme("Lyte-Dark", iconsDir("lyte"), themeDir("Lyte"), basicTemplates("Lyte", "Lyte-Dark"))
+theme = Theme("Lyte-Dark", iconsDir("lyte"), themeDir("Lyte"), basicThemeTemplates("Lyte", "Lyte-Dark"))
+colorScheme = ColorScheme("Lyte-Dark", themeDir("Lyte"), basicColorSchemeTemplates("Lyte", "Lyte-Dark"))
 
-comp = Compilation("Lyte-Dark", theme, "Lyte")
+comp = Compilation("Lyte-Dark", theme, colorScheme)
 
 colors = {
 	"bg":         Color(25, 25, 25),
@@ -23,3 +25,5 @@ colors = {
 }
 
 comp.theme.options.update(colors)
+
+print(comp.colorScheme.templateDirectory)

@@ -5,5 +5,5 @@ darkcomp = getattr(__import__("compilations." + "Lyte-Dark", globals(), locals()
 comp = Compilation("Lyte")
 
 comp.theme.options = darkcomp.theme.options
-comp.colorscheme.options = darkcomp.colorscheme.options
+comp.colorScheme.options = darkcomp.colorScheme.options
 comp.options = darkcomp.options
