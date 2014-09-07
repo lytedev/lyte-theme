@@ -65,23 +65,28 @@ Credits:
         "class": "tab_control",
         "settings": ["show_tab_close_buttons"]
     },
+    { // Tab [Hover]
+        "class": "tab_control",
+        "attributes": ["hover"],
+
+        "layer0.tint": ${secondary1},
+        "layer1.tint": ${cyan}
+    },
+    { // Tab [Dirty]
+        "class": "tab_control",
+        "attributes": ["dirty"],
+
+        // Always respect user settings
+        "settings": ["highlight_modified_tabs"],
+
+        "layer1.tint": ${red}
+    },
     { // Tab [Active]
         "class": "tab_control",
         "attributes": ["selected"],
+        
         "layer0.tint": ${secondary1},
         "layer1.tint": ${secondary2}
-    },
-    { // Hover tab state
-        "class": "tab_control",
-        "attributes": ["hover"],
-        "layer0.tint": ${secondary3},
-        "layer1.tint": [119, 255, 255]
-    },
-    { // Modified tab state
-        // "settings": ["highlight_modified_tabs"],
-        "class": "tab_control",
-        "attributes": ["dirty"],
-        "layer1.tint": [255, 119, 68]
     },
 
     // Tab labels
@@ -147,29 +152,6 @@ Credits:
         "class": "tab_close_button",
         "attributes": ["pressed"],
         "layer0.tint": [255, 119, 68]
-    },
-
-    { // Tab Show Close Buttons
-        "class": "tab_control",
-        "settings": ["show_tab_close_buttons"],
-    },
-    { // Tab [Active]
-        "class": "tab_control",
-        "attributes": ["selected"],
-        "layer0.tint": ${secondary1},
-        "layer1.tint": ${secondary2}
-    },
-    { // Hover tab state
-        "class": "tab_control",
-        "attributes": ["hover"],
-        "layer0.tint": [43, 43, 43],
-        "layer1.tint": [119, 255, 255]
-    },
-    { // Modified tab state
-        // "settings": ["highlight_modified_tabs"],
-        "class": "tab_control",
-        "attributes": ["dirty"],
-        "layer1.tint": [255, 119, 68]
     },
 
     // Tab labels

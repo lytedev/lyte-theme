@@ -23,15 +23,15 @@
                 <key>lineHighlight</key>
                 <string>#191919</string>
                 <key>selection</key>
-                <string>#222222</string>
+                <string>#212121</string>
                 <key>selectionBorder</key>
-                <string>#333333</string>
+                <string>#292929</string>
                 <key>findHighlight</key>
-                <string>#333333</string>
+                <string>#292929</string>
                 <key>findHighlightForeground</key>
                 <string>#f8f8f8</string>
                 <key>activeGuide</key>
-                <string>#222222</string>
+                <string>#212121</string>
 
                 <key>bracketsForeground</key>
                 <string>#f8f8f8</string>
