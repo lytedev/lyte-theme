@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """The script for generating all Lyte Sublime theme files.
 
@@ -7,33 +8,40 @@ See imported modules for details.
 """
 
 import os.path
-import importlib
 
 def main():
-	# The Sublime package name
-	package = "Theme - Lyte"
+    """Application entry point"""
 
-	# The themes to generate
-	compilations = [
-		"Lyte", # For legacy purposes - should be the same as Lyte-Dark
-		"Lyte-Dark",
-		# "Lyte-Light",
-		# "Lyte-Dark-NoBorder",
-		# "Lyte-NoBorder-Light",
-	]
+    # The Sublime package name
+    package = "Theme - Lyte"
 
-	# The directory to output the compilations to
-	directory = os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.path.pardir + os.sep + os.path.pardir + os.sep + package)
+    # The themes to generate
+    compilations = [
+        "Lyte-Dark",
+        # "Lyte-Light",
+        # "Lyte-Dark-NoBorder",
+        # "Lyte-NoBorder-Light",
+        "Lyte", # For legacy purposes - should be the same as Lyte-Dark
+    ]
 
-	for compilationName in compilations:
-		compileScriptedCompilation(compilationName, directory, package)
+    # The directory to output the compilations to
+    directory = os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.path.pardir + os.sep + os.path.pardir + os.sep + package)
 
-def compileScriptedCompilation(name, directory, package, key = "comp"):
-	c = getattr(__import__("compilations." + name, globals(), locals(), [key], 0), key, None)
-	if c is not None:
-		c.export(directory, package)
-	else:
-		raise Exception("Failed to import/load compilation '%s'" % name)
+    for compilation_name in compilations:
+        compile_scripted_compilation(compilation_name, directory, package)
+
+def compile_scripted_compilation(name, directory, package, key="comp"):
+    """Compiles a script-based Compilation"""
+
+    comp_module = __import__("compilations." + name, globals(), locals(), [key], 0)
+    if comp_module is not None:
+        compilation = getattr(comp_module, key, None)
+        if compilation is not None:
+            compilation.export(directory, package)
+        else:
+            raise Exception("Failed to load compilation '%s' from imported module '%s'" % (key, name))
+    else:
+        raise Exception("Failed to import compilation module '%s'" % name)
 
 if __name__ == "__main__":
-	main()
+    main()

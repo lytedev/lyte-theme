@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+
+"""See class `Theme`
+
+"""
+
+import copy, os, shutil
+
+from string import Template
+
+from theme_builder.color import Color
+
+class Theme():
+    """A class for creating a Sublime Text theme."""
+
+    def __init__(self, name, icons_directory=None, theme_template_directory=None, theme_templates=None):
+        """Theme constructor."""
+
+        self.name = name
+
+        if theme_template_directory is None:
+            theme_template_directory = theme_dir(self.name)
+
+        if icons_directory is None:
+            icons_directory = icons_dir(self.name)
+
+        if theme_templates is None:
+            theme_templates = basic_theme_templates(self.name)
+
+        self.icons_directory = icons_directory
+        self.theme_template_directory = theme_template_directory
+        self.theme_templates = theme_templates
+
+        self.options = {
+            "ThemeName": self.name,
+        }
+
+    def export(self, directory, package):
+        """Exports the Theme to a file."""
+
+        self.options["Package"] = package
+
+        # Copy icons
+        target_icons_directory = os.path.abspath(directory + os.sep + "icons" + os.sep)
+        if os.access(target_icons_directory, os.F_OK):
+            shutil.rmtree(target_icons_directory)
+        shutil.copytree(self.icons_directory, target_icons_directory)
+        self.options["IconsDirectory"] = target_icons_directory[target_icons_directory.index(package):].replace("\\", "/")
+
+        sublime_theme_options = copy.copy(self.options)
+        for key in sublime_theme_options:
+            if isinstance(sublime_theme_options[key], Color):
+                sublime_theme_options[key] = sublime_theme_options[key].rgba_array()
+
+        # Process theme_templates
+        for template in self.theme_templates:
+
+            key = template
+            current_options = self.options
+            if template[0:2] == "[]":
+                template = template[2:]
+                current_options = sublime_theme_options
+
+            template_file = os.path.abspath(self.theme_template_directory + os.sep + template)
+            target_file = os.path.abspath(directory + os.sep + self.theme_templates[key])
+            file = open(template_file, 'r')
+            template = Template(file.read())
+            file.close()
+            content = template.substitute(current_options)
+            file = open(target_file, 'w')
+            file.write(content)
+            file.close()
+
+def theme_dir(name):
+    """Returns the standard theme template directory."""
+
+    return os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.path.pardir + os.sep + "theme_templates" + os.sep + name + os.sep)
+
+def icons_dir(name):
+    """Returns the standard icon-sets directory."""
+
+    return os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + os.sep + os.path.pardir + os.sep + "iconsets" + os.sep + name + os.sep)
+
+def basic_theme_templates(name, target_name=None):
+    """Returns the standard theme template array."""
+
+    if target_name is None:
+        target_name = name
+    return {
+                "[]" + name + ".sublime-theme-template": target_name + ".sublime-theme",
+                name + "-Widget.sublime-settings-template": "Widget.sublime-settings",
+                name + "-Widget.stTheme-template": "Widget.stTheme"
+            }
