@@ -87,7 +87,9 @@ def basic_theme_templates(name, target_name=None):
     if target_name is None:
         target_name = name
     return {
-                "[]" + name + ".sublime-theme-template": target_name + ".sublime-theme",
+                # TODO: Remove the need for the "[]" prepended by moving the
+                # Widget files to color schemes
+                "[]" + name + ".sublime-theme-template": ".." + os.sep + target_name + ".sublime-theme",
                 name + "-Widget.sublime-settings-template": "Widget.sublime-settings",
                 name + "-Widget.stTheme-template": "Widget.stTheme"
             }
