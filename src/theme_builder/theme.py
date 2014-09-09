@@ -8,7 +8,7 @@ import copy, os, shutil
 
 from string import Template
 
-from theme_builder.color import Color
+from .color import Color
 
 class Theme():
     """A class for creating a Sublime Text theme."""
@@ -35,28 +35,31 @@ class Theme():
             "ThemeName": self.name,
         }
 
-    def export(self, directory, package):
+    def export(self, directory, package, opts=None):
         """Exports the Theme to a file."""
 
-        self.options["Package"] = package
+        if opts is None:
+            opts = copy.copy(self.options)
+
+        opts["Package"] = package
 
         # Copy icons
         target_icons_directory = os.path.abspath(directory + os.sep + "icons" + os.sep)
         if os.access(target_icons_directory, os.F_OK):
             shutil.rmtree(target_icons_directory)
         shutil.copytree(self.icons_directory, target_icons_directory)
-        self.options["IconsDirectory"] = target_icons_directory[target_icons_directory.index(package):].replace("\\", "/")
+        opts["IconsDirectory"] = target_icons_directory[target_icons_directory.index(package):].replace("\\", "/")
 
-        sublime_theme_options = copy.copy(self.options)
+        sublime_theme_options = copy.copy(opts)
         for key in sublime_theme_options:
             if isinstance(sublime_theme_options[key], Color):
-                sublime_theme_options[key] = sublime_theme_options[key].rgba_array()
+                sublime_theme_options[key] = sublime_theme_options[key].rgba_array_string()
 
         # Process theme_templates
         for template in self.theme_templates:
 
+            current_options = opts
             key = template
-            current_options = self.options
             if template[0:2] == "[]":
                 template = template[2:]
                 current_options = sublime_theme_options

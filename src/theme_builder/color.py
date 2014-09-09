@@ -51,11 +51,12 @@ class Color:
             if alpha < 0:
                 self.has_alpha = False
                 alpha = 255
+            else: 
+                self.has_alpha = True
             self.red = red
             self.green = green
             self.blue = blue
             self.alpha = alpha
-            self.has_alpha = False
 
     def __str__(self):
         """The class's string format callback.
@@ -121,15 +122,21 @@ class Color:
                 color using `Color.convert()`. Refer to `Color.convert()` for
                 details.
 
+        If self `has_alpha`, the resulting color will never have alpha. 
+
         Returns:
             The average of two colors.
 
         """
 
         color = Color.convert(color)
-        tmp_color = self + color
+        color_rgba = color.rgba()
+        self_rgba = self.rgba()
+        tmp_color = ()
+        for i in range(len(self_rgba)):
+            tmp_color += (((self_rgba[i] + color_rgba[i]) / 2),)
 
-        return tmp_color / 2
+        return Color(tmp_color)
 
     def __truediv__(self, color):
         """Divides two colors.
@@ -146,21 +153,34 @@ class Color:
 
         tmp_color = Color(self)
         if isinstance(color, float) or isinstance(color, int):
-            tmp_color.red = tmp_color.red / color
-            tmp_color.green = tmp_color.green / color
-            tmp_color.blue = tmp_color.blue / color
+            tmp_color.red = int(tmp_color.red / color)
+            tmp_color.green = int(tmp_color.green / color)
+            tmp_color.blue = int(tmp_color.blue / color)
             if tmp_color.has_alpha:
-                tmp_color.alpha = tmp_color.alpha / color
-        if isinstance(color, str):
-            color = Color(color)
-        if isinstance(color, Color):
-            tmp_color.red = tmp_color.red * max(color.red, 1)
-            tmp_color.green = tmp_color.green * max(color.green, 1)
-            tmp_color.blue = tmp_color.blue * max(color.blue, 1)
-            if tmp_color.has_alpha:
-                tmp_color.alpha = tmp_color.alpha * max(color.alpha, 1)
+                tmp_color.alpha = int(tmp_color.alpha / color)
+        else:
+            if isinstance(color, str):
+                color = Color(color)
+            if isinstance(color, Color):
+                tmp_color.red = int(tmp_color.red * max(color.red, 1))
+                tmp_color.green = int(tmp_color.green * max(color.green, 1))
+                tmp_color.blue = int(tmp_color.blue * max(color.blue, 1))
+                if tmp_color.has_alpha:
+                    tmp_color.alpha = int(tmp_color.alpha * max(color.alpha, 1))
+
+        tmp_color.check_color_range()
 
         return tmp_color
+
+    def check_color_range(self):
+        self.red = min(self.red, 255)
+        self.red = max(self.red, 0)
+        self.green = min(self.green, 255)
+        self.green = max(self.green, 0)
+        self.blue = min(self.blue, 255)
+        self.blue = max(self.blue, 0)
+        self.alpha = min(self.alpha, 255)
+        self.alpha = max(self.alpha, 0)
 
     def set_alpha(self, alpha):
         """Sets the `alpha` (or alpha value) attribute
@@ -197,6 +217,7 @@ class Color:
         if val_len % 4 == 0:
             vals = tuple(int(val[i:i + val_len / 4], 16) for i in range(0, int(val_len), int(val_len / 4)))
             self.red, self.green, self.blue, self.alpha = vals
+            self.has_alpha = True
         if val_len % 3 == 0:
             self.has_alpha = False
             self.alpha = 255
@@ -214,8 +235,10 @@ class Color:
         """
         if len(rgba) > 3 and self.has_alpha:
             self.red, self.green, self.blue, self.alpha = rgba
+            self.has_alpha = True
         else:
             self.red, self.green, self.blue = rgba
+            self.has_alpha = False
 
         return self
 
@@ -284,7 +307,7 @@ class Color:
         else:
             return (int(self.red), int(self.green), int(self.blue))
 
-    def rgba_array(self):
+    def rgba_array_string(self):
         """Returns a tuple containing the attributes of the color.
 
         Returns:
@@ -312,7 +335,12 @@ class Color:
         if self.has_alpha:
             length = 4
 
-        return ('#' + ("%02x" * length)) % self.rgba()
+        hex_string = "#"
+        rgba = self.rgba()
+        for i in range(length):
+            hex_string = hex_string + hex(rgba[i])[2:]
+
+        return hex_string
 
     # Manipulations
     def blend(self, color, ratio=0.5):
@@ -334,10 +362,15 @@ class Color:
         tmp_vals = ()
         for i in range(length):
             diff = color_vals[i] - self_vals[i]
-            red = self_vals[i] + (diff * ratio)
-            tmp_vals = tmp_vals + (red,)
+            tmp_val = self_vals[i] + (diff * ratio)
+            tmp_vals = tmp_vals + (tmp_val,)
 
-        return Color(tmp_vals)
+        red, green, blue = tmp_vals
+        if length == 4:
+            alpha = tmp_vals[3]
+            return Color(red, green, blue, alpha)
+        else:
+            return Color(red, green, blue)
 
     def reverse_blend(self, color, ratio=0.5):
         """"Pushes" the color away from the specified color.

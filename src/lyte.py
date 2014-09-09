@@ -9,6 +9,9 @@ See imported modules for details.
 
 import os.path
 
+from theme_builder.color import Color
+from theme_builder.compilation import Compilation
+
 def main():
     """Application entry point"""
 
@@ -33,15 +36,8 @@ def main():
 def compile_scripted_compilation(name, directory, package, key="comp"):
     """Compiles a script-based Compilation"""
 
-    comp_module = __import__("compilations." + name, globals(), locals(), [key], 0)
-    if comp_module is not None:
-        compilation = getattr(comp_module, key, None)
-        if compilation is not None:
-            compilation.export(directory, package)
-        else:
-            raise Exception("Failed to load compilation '%s' from imported module '%s'" % (key, name))
-    else:
-        raise Exception("Failed to import compilation module '%s'" % name)
+    compilation = Compilation.get_by_name(name, key)
+    compilation.export(directory, package)
 
 if __name__ == "__main__":
     main()

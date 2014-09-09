@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+# -*-  coding: utf-8 -*-
 """Contains the Color Scheme class"""
-
-import os
+ 
+import os, copy
 
 from string import Template
 
@@ -24,10 +24,13 @@ class ColorScheme():
 
         self.options = {"ColorSchemeName": self.name}
 
-    def export(self, directory, package):
-        """Exports the color scheme to a file"""
+    def export(self, directory, package, opts=None):
+        """Exports the color scheme to a file."""
 
-        self.options["Package"] = package
+        if opts is None:
+            opts = copy.copy(self.options)
+
+        opts["Package"] = package
 
         # Process color_scheme_templates
         for template in self.color_scheme_templates:
@@ -36,7 +39,7 @@ class ColorScheme():
             file = open(template_file, 'r')
             template = Template(file.read())
             file.close()
-            content = template.substitute(self.options)
+            content = template.substitute(opts)
             file = open(target_file, 'w')
             file.write(content)
             file.close()

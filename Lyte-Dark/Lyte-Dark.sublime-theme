@@ -10,8 +10,6 @@ Credits:
 */
 
 [
-    /* TABS */
-
     // Tabset (Tabs Container)
     { 
         // Tabset
@@ -21,20 +19,20 @@ Credits:
         "content_margin": 0, 
 
         // Background
-        "layer0.tint": [17, 17, 17],
+        "layer0.tint": [16, 16, 16],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [0, 0, 0, 1],
         "layer0.draw_center": true,
 
         // Bottom Border
-        "layer1.tint": [25, 25, 25],
+        "layer1.tint": [24, 24, 24],
         "layer1.draw_center": false,
         "layer1.inner_margin": [0, 0, 0, 1],
         "layer1.opacity": 1.0,
 
         // Tab Configuration
         "tab_overlap": 0,
-        "tab_width": 80,
+        "tab_width": 40,
         "tab_min_width": 40,
         "tab_height": 25,
         "mouse_wheel_switch": false
@@ -52,11 +50,11 @@ Credits:
         "content_margin": [5, 5],
 
         // Tab background
-        "layer0.tint": [17, 17, 17],
+        "layer0.tint": [16, 16, 16],
         "layer0.opacity": 1.0,
 
         // Tab border
-        "layer1.tint": [25, 25, 25],
+        "layer1.tint": [24, 24, 24],
         "layer1.opacity": 1.0,
         "layer1.inner_margin": [0, 0, 0, 1],
         "layer1.draw_center": false
@@ -69,612 +67,438 @@ Credits:
         "class": "tab_control",
         "attributes": ["hover"],
 
-        "layer0.tint": [25, 25, 25],
-        "layer1.tint": [119, 255, 255]
-    },
-    { // Tab [Dirty]
-        "class": "tab_control",
-        "attributes": ["dirty"],
-        "settings": ["highlight_modified_tabs"],
-
-        "layer1.tint": [255, 119, 68]
+        "layer0.tint": [24, 24, 24],
+        "layer1.tint": [42, 42, 42]
     },
     { // Tab [Active]
         "class": "tab_control",
         "attributes": ["selected"],
         
-        "layer0.tint": [25, 25, 25],
-        "layer1.tint": [33, 33, 33]
+        "layer0.tint": [24, 24, 24],
+        "layer1.tint": [119, 255, 255]
+    },
+    { // Tab [Dirty]
+        "class": "tab_control",
+        "attributes": ["dirty"],
+
+        // Always respect user settings
+        "settings": ["highlight_modified_tabs"],
+
+        "layer1.tint": [255, 119, 68]
     },
 
-    // Tab labels
-    { // Inactive tab label
+    // Tab Label
+    { // Tab Label
         "class": "tab_label",
-        "fg": [120, 120, 120],
-        "shadow_color": [0, 0, 0, 200],
-        "shadow_offset": [0, 1]
-    },
-    { // Active tab label
-        "class": "tab_label",
-        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-        "shadow_color": [0, 0, 0, 165],
+
+        // Text Shadow
+        "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1],
-        "fg": [200, 200, 200, 255]
+
+        "fg": [138, 138, 138]
     },
-    { // Hover tab label
+    { // Tab Label [Hover]
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-        "shadow_color": [0, 0, 0, 165],
-        "shadow_offset": [0, 1],
-        "fg": [240, 240, 240, 255]
+
+        "fg": [202, 202, 202]
     },
-    { // Dirty Hover tab label
+    { // Tab Label [Active]
         "class": "tab_label",
-        "parents": [{"class": "tab_control", "attributes": ["hover", "dirty"]}],
-        "shadow_color": [0, 0, 0, 165],
-        "shadow_offset": [0, 1],
-        "fg": [240, 240, 240, 255]
+        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+
+        "fg": [250, 250, 250]
+    },
+    { // Tab Label [Dirty]
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+
+        "fg": [250, 250, 250]
     },
 
-    // Tab buttons
-    { // Tab button
+    // Tab Buttons
+    { // Tab Close Button
         "class": "tab_close_button",
         "content_margin": [0, 0],
 
-        // Tab close hover settings
         "layer0.texture": "Theme - Lyte/Lyte-Dark/icons/gui/x.png",
-        "layer0.opacity": 1.0,
-        "layer0.tint": [255, 255, 255, 100]
+        "layer0.opacity": 0.3,
+        "layer0.tint": [250, 250, 250]
     },
-    { // Tab button size
+    { // Tab Close Button Size
         "class": "tab_close_button",
         "settings": ["show_tab_close_buttons"],
         "content_margin": [8, 8, 7, 7]
     },
-    { // Tab button close dirty
+    { // Tab Close Button [Dirty]
         "class": "tab_close_button",
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+
+        "layer0.opacity": 1,
         "layer0.tint": [255, 119, 68]
     },
-    { // Tab close hover action
+    { // Tab Close Button [Hover]
         "class": "tab_close_button",
         "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-        "layer0.tint": [255, 255, 255, 255]
+
+        "layer0.opacity": 1,
+        "layer0.tint": [119, 255, 255]
     },
-    { // Tab close press action
-        "class": "tab_close_button",
-        "attributes": ["hover"],
-        "layer0.tint": [119, 255, 255, 255]
-    },
-    { // Tab close press action
+    { // Tab Close Button
         "class": "tab_close_button",
         "attributes": ["pressed"],
+
         "layer0.tint": [255, 119, 68]
     },
 
-    // Tab labels
-    { // Inactive tab label
-        "class": "tab_label",
-        "fg": [120, 120, 120],
-        "shadow_color": [0, 0, 0, 200],
-        "shadow_offset": [0, 1],
-    },
-    { // Active tab label
-        "class": "tab_label",
-        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-        "shadow_color": [0, 0, 0, 165],
-        "shadow_offset": [0, 1],
-        "fg": [200, 200, 200, 255]
-    },
-    { // Hover tab label
-        "class": "tab_label",
-        "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-        "shadow_color": [0, 0, 0, 165],
-        "shadow_offset": [0, 1],
-        "fg": [240, 240, 240, 255]
-    },
-    { // Dirty Hover tab label
-        "class": "tab_label",
-        "parents": [{"class": "tab_control", "attributes": ["hover", "dirty"]}],
-        "shadow_color": [0, 0, 0, 165],
-        "shadow_offset": [0, 1],
-        "fg": [240, 240, 240, 255]
-    },
-
-    // Tab buttons
-    { // Tab button
-        "class": "tab_close_button",
-        "content_margin": [0, 0],
-
-        // Tab close hover settings
-        "layer0.texture": "Theme - Lyte\\Lyte-Dark\\icons/gui/x.png",
-        "layer0.opacity": 1.0,
-        "layer0.tint": [255, 255, 255, 100]
-    },
-    { // Tab button size
-        "class": "tab_close_button",
-        "settings": ["show_tab_close_buttons"],
-        "content_margin": [8, 8, 7, 7]
-    },
-    { // Tab button close dirty
-        "class": "tab_close_button",
-        "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-        "layer0.tint": [255, 119, 68]
-    },
-    { // Tab close hover action
-        "class": "tab_close_button",
-        "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-        "layer0.tint": [255, 255, 255, 255]
-    },
-    { // Tab close press action
-        "class": "tab_close_button",
-        "attributes": ["hover"],
-        "layer0.tint": [119, 255, 255, 255]
-    },
-    { // Tab close press action
-        "class": "tab_close_button",
-        "attributes": ["pressed"],
-        "layer0.tint": [255, 119, 68]
-    },
-
-    // #######################################################
-    // # FOLD BUTTONS
-    // #######################################################
-
-    {
+    // Fold Buttons
+    { // Fold Button
         "class": "fold_button_control",
+        "content_margin": [9, 7, 8, 6],
+
         "layer0.texture": "Theme - Lyte/Lyte-Dark/icons/gui/arrow-right.png",
         "layer0.opacity": 0.3,
-        "content_margin": [9, 7, 8, 6]
     },
-    {
-        "class": "fold_button_control",
-        "attributes": ["hover"],
-        "layer0.opacity": 0.6
-    },
-    {
-        "class": "fold_button_control",
-        "attributes": ["pressed"],
-        "layer0.opacity": 0.8
-    },
-    {
+    { // Fold Button [Active]
         "class": "fold_button_control",
         "attributes": ["expanded"],
+
         "layer0.texture": "Theme - Lyte/Lyte-Dark/icons/gui/arrow-down.png",
     },
+    { // Fold Button [Hover]
+        "class": "fold_button_control",
+        "attributes": ["hover"],
 
-    // #######################################################
-    // # SCROLLBARS (from default theme)
-    // #######################################################
-    {
-        // Scrollbar corner
+        "layer0.opacity": 0.6
+    },
+    { // Fold Button [Pressed]
+        "class": "fold_button_control",
+        "attributes": ["pressed"],
+
+        "layer0.opacity": 0.8
+    },
+
+    // Scrollbars
+    { // Scrollbar Corner
         "class": "scroll_corner_control",
-        "layer0.tint": [17, 17, 17],
+
+        "layer0.tint": [16, 16, 16],
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
     },
-    {
-        // Scrollbar background (vertical)
+    { // Scrollbar Background
         "class": "scroll_bar_control",
-        "layer0.tint": [17, 17, 17],
+
+        "layer0.tint": [16, 16, 16],
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
     },
-    {
-        // Scrollbar background (horizontal)
-        "class": "scroll_bar_control",
-        "attributes": ["horizontal"],
-        "layer0.tint": [17, 17, 17],
+    { // Scrollbar Puck
+        "class": "puck_control",
+        "content_margin": 4,
+
+        "layer0.tint": [24, 24, 24],
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
     },
-    {
-        // Scrollbar puck (vertical)
-        "class": "puck_control",
-        "layer0.tint": [34, 34, 34],
-        "layer0.opacity": 1,
-        "layer0.inner_margin": 0,
-        "content_margin": 4
-    },
-    {
-        // Scrollbar puck (horizontal)
-        "class": "puck_control",
-        "attributes": ["horizontal"],
-        "layer0.tint": [34, 34, 34],
-        "layer0.opacity": 1,
-        "layer0.inner_margin": 0,
-        "content_margin": 4
-    },
-    {
-        // Non-overlayed scrollbars
+    { // Non-Overlay Scrollbar
         "class": "scroll_area_control",
         "settings": ["!overlay_scroll_bars"],
+
         "overlay": false
     },
-    {
-        // Overlayed scrollbars
+    { // Overlay Scrollbar
         "class": "scroll_area_control",
         "settings": ["overlay_scroll_bars"],
+
         "overlay": true
     },
-    {
-        // Scrollbar background (overlay, horizontal)
+    { // Overlay Scrollbar Background
         "class": "scroll_bar_control",
         "settings": ["overlay_scroll_bars"]
     },
-    {
-        // Scrollbar background (overlay, vertical)
-        "class": "scroll_bar_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal"],
-    },
-    {
-        // Scrollbar puck (overlay, vertical)
+    { // Overlay Scrollbar Puck [Vertical]
         "class": "puck_control",
+        "content_margin": [1, 0],
         "settings": ["overlay_scroll_bars"],
-        "layer0.tint": [119, 255, 255],
-        "content_margin": [1, 0]
+
+        "layer0.tint": [119, 255, 255]
     },
-    {
-        // Scrollbar background (overlay, horizontal)
+    { // Overlay Scrollbar Background [Horizontal]
         "class": "puck_control",
+        "content_margin": [0, 1],
         "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal"],
-        "layer0.tint": [119, 255, 255],
-        "content_margin": [0, 1]
-    },
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["dark"],
-    },
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal", "dark"],
+        "attributes": ["horizontal"]
     },
 
-    // #######################################################
-    // # EMPTY WINDOW BACKGROUND
-    // #######################################################
-    {
-        "class": "sheet_container_control",
-        "layer0.tint": [17, 17, 17],
-        "layer0.opacity": 1.0
-    },
-
-    // #######################################################
-    // # GRID LAYOUT
-    // #######################################################
-    {
-        "class": "grid_layout_control",
-        "border_size": 1,
-        "border_color": [34, 34, 34]
-    },
-
-    // #######################################################
-    // # MINI MAP
-    // #######################################################
-    {
-        "class": "minimap_control",
-        "viewport_color": [255, 255, 255, 20]
-    },
-
-    // #######################################################
-    // # LABELS
-    // #######################################################
-    {
-        // General labels
+    // Labels
+    { // Label
         "class": "label_control",
-        "color": [240, 240, 240],
+
+        "color": [250, 250, 250]
     },
-    {
-        // Text field labels
+    { // Text Field Labels
         "class": "label_control",
         "parents": [{"class": "panel_control"}],
-        "color": [240, 240, 240],
-        "shadow_color": [0, 0, 0],
+
+        "color": [250, 250, 250],        
+        "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1]
     },
     {
         // Button labels
         "class": "label_control",
         "parents": [{"class": "button_control"}],
-        "color": [240, 240, 240],
-        "shadow_color": [0, 0, 0],
+
+        "color": [250, 250, 250],
+        "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1]
     },
 
-    // #######################################################
-    // # TOOLTIP
-    // #######################################################
-    {
-        // Tooltip container
+    // Tooltip
+    { // Tooltip Container
         "class": "tool_tip_control",
-        "layer0.inner_margin": [4, 4],
-        "layer0.tint": [34, 34, 34],
-        "layer0.opacity": 1,
-        "layer1.tint": [68, 68, 68],
-        "layer1.inner_margin": 1,
-        "layer1.draw_center": false,
-        "layer1.opacity": 1,
         "content_margin": [8, 6],
+
+        // Background
+        "layer0.inner_margin": [4, 4],
+        "layer0.tint": [24, 24, 24], 
+        "layer0.opacity": 1,
+
+        // Border
+        "layer1.tint": [94, 94, 94],
+        "layer1.inner_margin": [1, 1, 1, 1],
+        "layer1.draw_center": false,
+        "layer1.opacity": 1.0
     },
-    {
-        // Tooltip content
+    { // Tooltip Content
         "class": "tool_tip_label_control",
-        "color": [200, 200, 200],
-        "shadow_offset": [0, 1],
-        "shadow_color": [0, 0, 0, 255],
+        "color": [202, 202, 202],
+
+        "shadow_color": [16, 16, 16, 255],
+        "shadow_offset": [0, 1]
     },
 
-    // #######################################################
-    // # STATUS BAR
-    // #######################################################
-    {
-        // Status bar container
+    // Status Bar
+    { // Status Bar Container
         "class": "status_bar",
+        "content_margin": [5, 3],
+
+        // Background
+        "layer0.inner_margin": [4, 4],
+        "layer0.tint": [24, 24, 24], 
         "layer0.opacity": 1,
-        "layer0.tint": [25, 25, 25],
-        "layer0.inner_margin": 0,
-        "content_margin": [5, 3, 0, 2]
+
+        // Border
+        "layer1.tint": [42, 42, 42],
+        "layer1.inner_margin": [0, 1, 0, 0],
+        "layer1.draw_center": false,
+        "layer1.opacity": 1.0
     },
-    {
-        // Status bar button
+    { // Status Bar Button
         "class": "status_button",
         "content_margin": [8, 0],
         "min_size": [10, 0],
 
         // Background
-        "layer0.opacity": 0,
-        "layer0.tint": [17, 17, 17],
-
-        // Border
-        "layer1.opacity": 0,
-        "layer1.tint": [34, 34, 34],
-        "layer1.inner_margin": 1,
-        "layer1.draw_center": false
+        "layer0.opacity": 0
     },
-    {
-        "class": "status_button",
-        "attributes": ["hover"],
-        "layer0.tint": [34, 34, 34],
-        "layer1.tint": [43, 43, 43]
-    },
-    {
-        // Status bar label
+    { // Status Bar Label
         "class": "label_control",
         "parents": [{"class": "status_bar"}],
-        "color": [120, 120, 120],
-        "shadow_color": [0, 0, 0],
+
+        "color": [109, 109, 109],
+        "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1]
     },
-    {
-        // Status bar label
-        "class": "label_control",
-        "parents": [{"class": "status_bar"}],
-        "attributes": ["hover"],
-        "color": [200, 200, 200]
-    },
 
-    // #######################################################
-    // # SIDEBAR
-    // #######################################################
-    {
-        // Sidebar container
-        "class": "sidebar_container",
+    // Sidebar 
+    { // Sidebar Container
+        "class": "sidebar_container"
     },
-    {
-        // Sidebar tree/background
+    { // Sidebar Background
         // TODO: Reduce row padding without moving headers?
         "class": "sidebar_tree",
-        "layer0.tint": [25, 25, 25],
+        
+        // Background
+        "layer0.tint": [24, 24, 24],
         "layer0.inner_margin": [0, 0, 1, 0],
         "layer0.opacity": 1.0,
-        "layer1.tint": [34, 34, 34],
+
+        // Border
+        "layer1.tint": [42, 42, 42], 
         "layer1.inner_margin": [0, 0, 1, 0],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "row_padding": [8, 1],
-        "indent": 12,
-        "indent_offset": 12,
+
+        "dark_content": true,
+        "row_padding": [12, 1],
         "indent_top_level": false,
-        "dark_content": true
+        "indent": 12,
+        "indent_offset": 12
     },
-    {
-        // Sidebar rows
+    { // Sidebar Rows
         "class": "tree_row",
 
         // Background
         "layer0.opacity": 1.0,
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [24, 24, 24],
 
         // Border
+        "layer1.tint": [42, 42, 42],
         "layer1.opacity": 1.0,
         "layer1.inner_margin": [0, 0, 1, 0],
-        "layer1.draw_center": false,
-        "layer1.tint": [34, 34, 34]
-        /*
+        "layer1.draw_center": false
+
+        /* 
         // BUG: (KNOWN)
-            If the sidebar's width is less than the longest tree_row, then the blue
-            right-border will not be visible.
+        If the sidebar's width is less than the longest tree_row, then the blue
+        right-border will not be visible.
         */
     },
-    {
-        // Sidebar row selected
-        "class": "tree_row",
-        "attributes": ["selected"],
-        "layer0.tint": [34, 34, 34],
-        "layer1.tint": [43, 43, 43],
-    },
-    {
-        // Sidebar row selected
-        // TODO: Don't apply this to sidebar_heading?
+    { // Sidebar Row [Hover]
+        // TODO: Don't apply this to sidebar_heading somehow?
         "class": "tree_row",
         "attributes": ["hover"],
-        "layer0.tint": [43, 43, 43],
-        "layer1.tint": [119, 255, 255],
+
+        "layer0.tint": [42, 42, 42],
+        "layer1.tint": [68, 68, 68]
     },
-    {
-        // Sidebar row dirty
+    { // Sidebar Row [Selected]
+        "class": "tree_row",
+        "attributes": ["selected"],
+
+        "layer0.tint": [42, 42, 42], 
+        "layer1.tint": [119, 255, 255]
+    },
+    { // Sidebar Row [Dirty]
         "class": "tree_row",
         "attributes": ["dirty"],
+
+        "layer0.tint": [42, 42, 42],
         "layer1.tint": [255, 119, 68]
     },
-    {
-        // Sidebar row selected dirty
-        "class": "tree_row",
-        "attributes": ["selected", "dirty"],
-        "layer0.tint": [43, 43, 43]
-    },
-    {
-        // Sidebar label
+    { // Sidebar Label
         "class": "sidebar_label",
     },
-    {
-        // Sidebar heading
+    { // Sidebar Heading
         "class": "sidebar_heading",
+
         "color": [119, 255, 255],
-        "shadow_color": [0, 0, 0],
+        "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1],
-        "font.size": 16
+        "font.size": 12
     },
-    {
-        // Sidebar heading selected
-        "class": "sidebar_heading",
-        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "color": [160, 160, 160]
-    },
-    {
-        // Sidebar entry label
+    { // Sidebar Label
         "class": "sidebar_label",
-        "color": [120, 120, 120],
-        "shadow_color": [0, 0, 0],
+
+        "color": [122, 122, 122],
+        "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1]
     },
-    {   //  Sidebar selected entry label
+    { // Sidebar Label [Selected]
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "color": [180, 180, 180],
-        "shadow_color": [0, 0, 0],
-        "shadow_offset": [0, 1]
+
+        "color": [202, 202, 202]
     },
-    {   //  Sidebar Hover entry label
+    {   //  Sidebar Label [Hover]
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "color": [240, 240, 240],
-        "shadow_color": [0, 0, 0],
-        "shadow_offset": [0, 1]
+
+        "color": [250, 250, 250],
     },
-    {   //  Sidebar Hover entry label
+    {   //  Sidebar Label [Dirty]
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["dirty"]}],
-        "color": [206, 84, 2],
-        "shadow_color": [0, 0, 0],
-        "shadow_offset": [0, 1]
+
+        "color": [250, 250, 250],
     },
 
-    // Sidebar open files
-    {
-        // Sidebar close button
+    // Sidebar Files/Folders
+    { // Sidebar Close Button
         "class": "close_button",
+        "content_margin": [8, 8, 7, 7],
+
         "layer0.texture": "Theme - Lyte/Lyte-Dark/icons/gui/x.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.3,
-        "layer0.inner_margin": 4,
-        "content_margin": [8, 8, 7, 7]
+        "layer0.inner_margin": 4
     },
-    {
-        // Sidebar close button dirty
+    { // Sidebar Close Button [Dirty]
         "class": "close_button",
         "attributes": ["dirty"],
+
         "layer0.opacity": 1,
         "layer0.tint": [255, 119, 68]
     },
-    {
-        // Sidebar close button hover
+    { // Sidebar Close Button [Hover]
         "class": "close_button",
         "attributes": ["hover"],
-        "layer0.opacity": 0.6
-    },
-    {
-        // Sidebar close button hover and dirty
-        "class": "close_button",
-        "attributes": ["hover", "dirty"],
-        "layer0.opacity": 1,
-    },
-    {
-        // Sidebar close button pressed
-        "class": "close_button",
-        "attributes": ["pressed"],
+
+        "layer0.tint": [119, 255, 255],
         "layer0.opacity": 1
     },
+    { // Sidebar Close Button [Pressed]
+        "class": "close_button",
+        "attributes": ["pressed"],
 
-    // Disable old sidebar icons
-    /* {
-        "class": "disclosure_button_control",
-        "content_margin": [0],
-        "layer0.opacity": 0,
-    }, */
-    // Sidebar FOLDERS closed
-    {
+        "layer0.opacity": 1,
+        "layer0.tint": [255, 119, 68]
+    },
+    { // Sidebar Folder Arrow
         "class": "disclosure_button_control",
         "content_margin": [9, 7, 8, 6],
+
         "layer0.texture": "Theme - Lyte/Lyte-Dark/icons/gui/arrow-right.png",
-        "layer0.opacity": 0.3,
+        "layer0.opacity": 0.3
     },
-    {
+    { // Sidebar Folder Arrow [Hover]
         "class": "disclosure_button_control",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
         "layer0.opacity": 0.6
     },
-    {
+    { // Sidebar Folder Arrow [Selected]
         "class": "disclosure_button_control",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "layer0.opacity": 0.8
-    },
 
-    // Sidebar FOLDERS open
-    {
+        "layer0.opacity": 1
+    },
+    { // Sidebar Folder Arrow [Expanded]
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
         "layer0.texture": "Theme - Lyte/Lyte-Dark/icons/gui/arrow-down.png"
     },
-    {
-        "class": "disclosure_button_control",
-        "attributes": ["expanded"],
-        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "layer0.opacity": 0.6
-    },
-    {
-        "class": "disclosure_button_control",
-        "attributes": ["expanded"],
-        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "layer0.opacity": 0.8
-    },
 
-    // Folder/File Icons
-        {
-                "class": "icon_file_type",
-                // layer0.texture is filled in by code with the relevant icon name
-                "layer0.opacity": 0.3,
-                "content_margin": [8, 8]
-        },
-        {
-                "class": "icon_file_type",
+    // Sidebar File Icons
+    { // Sidebar File Icons
+        "class": "icon_file_type",
+        "content_margin": [8, 8], 
+
+        // layer0.texture is auto-filled by relevant icon
+        "layer0.tint": [255, 255, 255], 
+        "layer0.opacity": 0.3
+    },
+    { // Sidebar File Icons [Hover]
+        "class": "icon_file_type",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+
         "layer0.opacity": 0.6
-        },
-        {
-                "class": "icon_file_type",
+    },
+    { // Sidebar File Icons [Selected]
+        "class": "icon_file_type",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "layer0.opacity": 0.8
-        },
-        {
-                "class": "icon_file_type",
+
+        "layer0.opacity": 1
+    },
+    { // Sidebar File Icons [Dirty]
+        "class": "icon_file_type",
         "parents": [{"class": "tree_row", "attributes": ["dirty"]}],
-        "layer0.opacity": 1.0
-        },
+
+        "layer0.opacity": 1, 
+        "layer0.tint": [255, 119, 68]
+    },
     {
         "class": "icon_folder",
         "content_margin": [8, 8],
@@ -744,7 +568,7 @@ Credits:
         "class": "button_control",
         "content_margin": [6, 5, 6, 6],
         "min_size": [75, 0],
-        "layer0.tint": [17, 17, 17],
+        "layer0.tint": [16, 16, 16],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [6, 6],
     },
@@ -752,7 +576,7 @@ Credits:
         // Pressed button state
         "class": "button_control",
         "attributes": ["hover"],
-        "layer0.tint": [34, 34, 34],
+        "layer0.tint": [24, 24, 24]
     },
     {
         // Pressed button state
@@ -791,7 +615,7 @@ Credits:
         // Quick panel background
         "class": "overlay_control",
         "layer0.inner_margin": [10, 5, 10, 10],
-        "layer0.tint": [34, 34, 34],
+        "layer0.tint": [24, 24, 24], 
         "layer0.opacity": 1.0,
         "content_margin": [0, 1, 1, 1]
     },
@@ -813,7 +637,7 @@ Credits:
         "layer0.tint": [25, 25, 25],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 4, 4, 4],
-        "layer1.tint": [34, 34, 34],
+        "layer1.tint": [24, 24, 24],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
         "layer1.inner_margin": [1, 0, 0, 0]
@@ -822,7 +646,7 @@ Credits:
         // Quick panel row selected
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [34, 34, 34],
+        "layer0.tint": [24, 24, 24],
         "layer1.tint": [119, 255, 255]
     },
     {
@@ -861,7 +685,7 @@ Credits:
         "layer0.tint": [25, 25, 25],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 4, 4, 4],
-        "layer1.tint": [34, 34, 34],
+        "layer1.tint": [24, 24, 24],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
         "layer1.inner_margin": [1, 0, 0, 0]
@@ -869,7 +693,7 @@ Credits:
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [34, 34, 34],
+        "layer0.tint": [24, 24, 24],
         "layer1.tint": [119, 255, 255]
     },
 
@@ -878,7 +702,7 @@ Credits:
     // #######################################################
     {
         "class": "popup_control",
-        "layer0.tint": [34, 34, 34],
+        "layer0.tint": [24, 24, 24],
         "layer0.opacity": 1.0,
         "content_margin": [0, 1, 1, 1]
     },
@@ -898,14 +722,14 @@ Credits:
         "class": "auto_complete_label",
         "fg": [200, 200, 200],
         "match_fg": [119, 255, 255],
-        "bg": [34, 34, 34],
+        "bg": [24, 24, 24],
         "selected_fg": [255, 255, 255],
         "selected_match_fg": [119, 255, 255],
         "selected_bg": [86, 86, 86]
     },
     {
         "class": "table_row",
-        "layer0.tint": [34, 34, 34],
+        "layer0.tint": [24, 24, 24],
         "layer0.opacity": 0.0,
         "layer0.inner_margin": 0,
         "layer1.tint": [43, 43, 43],
@@ -1074,5 +898,24 @@ Credits:
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
         "layer0.tint": [119, 255, 255],
         "layer0.opacity": 1.0,
+    },
+
+    // Miscellaneous 
+    { // Sheet Container
+        "class": "sheet_container_control",
+
+        "layer0.tint": [16, 16, 16],
+        "layer0.opacity": 1.0
+    },
+    { // Grid Layout
+        "class": "grid_layout_control",
+
+        "border_size": 1,
+        "border_color": [24, 24, 24]
+    },
+    { // Minimap
+        "class": "minimap_control",
+        
+        "viewport_color": [250, 250, 250, 16]
     }
 ]
