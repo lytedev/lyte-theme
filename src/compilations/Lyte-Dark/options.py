@@ -16,7 +16,7 @@ options = {
 
     # Fonts
     "font_face": "", 
-    "font_size": 12, 
+    "font_size": 11, 
     # "sidebar_heading_font_size": 16, 
 
     # Other options
