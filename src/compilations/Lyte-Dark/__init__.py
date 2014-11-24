@@ -14,8 +14,9 @@ comp = Compilation("Lyte-Dark", theme, color_scheme)
 comp.options = {
     # Colors
 
-    "bg": Color(16, 16, 16),
-    "fg": Color(250, 250, 250),
+    "bg":         Color(16, 16, 16),
+    "fg":         Color(250, 250, 250),
+    'selection':  Color("#333333"),
 
     "blue":       Color("#77aaff"),
     "red":        Color("#ff7744"),
@@ -25,7 +26,7 @@ comp.options = {
     "green":      Color("#aaff44"),
 
     # Other options
-    "sidebar_indent": 12, 
+    "sidebar_indent": 12,
 
     # Preprocessor options
     "tab_padding_x": 5,
@@ -33,17 +34,17 @@ comp.options = {
     "text_height": 15,
     "borders": True,
     "text_shadow": True,
-    "sidebar_arrows": True, 
-    "sidebar_icons": True, 
+    "sidebar_arrows": True,
+    "sidebar_icons": True,
 }
 
 def preprocessor(opts):
-    """The preprocessor for the compilation."""  
+    """The preprocessor for the compilation."""
 
     opts["tab_padding"] = "[{0}, {1}]".format(opts["tab_padding_x"], opts["tab_padding_y"])
     opts["tab_height"] = (opts["tab_padding_y"] * 2) + opts["text_height"]
 
-    if opts["borders"]: 
+    if opts["borders"]:
         opts["border_border"] = "[0, 0, 0, 1]"
         opts["border_border_top"] = "[0, 1, 0, 0]"
         opts["border_border_right"] = "[0, 0, 1, 0]"
@@ -74,14 +75,14 @@ def preprocessor(opts):
         opts["text_shadow_color"] = opts["fg"].set_alpha(0)
         opts["text_shadow_offset"] = "[0, 0]"
 
-    if opts["sidebar_arrows"]: 
+    if opts["sidebar_arrows"]:
         opts["sidebar_arrow_margin"] = [9, 7, 8, 6]
         opts["sidebar_arrow_opacity"] = 0.3
     else:
         opts["sidebar_arrow_margin"] = 0
         opts["sidebar_arrow_opacity"] = 0
 
-    if opts["sidebar_icons"]: 
+    if opts["sidebar_icons"]:
         opts["sidebar_icon_margin"] = [8, 8]
         opts["sidebar_icon_opacity"] = 0.3
     else:
