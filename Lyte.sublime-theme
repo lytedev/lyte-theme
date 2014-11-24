@@ -21,20 +21,20 @@ Credits:
         // Background
         "layer0.tint": [16, 16, 16],
         "layer0.opacity": 1.0,
-        "layer0.inner_margin": [0, 0, 0, 1],
+        "layer0.inner_margin": [0, 0],
         "layer0.draw_center": true,
 
         // Bottom Border
-        "layer1.tint": [24, 24, 24],
+        "layer1.tint": [27, 27, 27],
         "layer1.draw_center": false,
-        "layer1.inner_margin": [0, 0, 0, 1],
+        "layer1.inner_margin": [0, 0, 0, 2],
         "layer1.opacity": 1.0,
 
         // Tab Configuration
         "tab_overlap": 0,
         "tab_width": 40,
         "tab_min_width": 40,
-        "tab_height": 25,
+        "tab_height": 32,
         "mouse_wheel_switch": false
     },
 
@@ -44,19 +44,20 @@ Credits:
 
         // TODO: What is this?
         "max_margin_trim": 0,
-        "hit_test_level": 0.5,
+        "hit_test_level": 0.0,
 
         // Tab Padding
-        "content_margin": [5, 5],
+        "content_margin": [10, 5],
 
         // Tab background
         "layer0.tint": [16, 16, 16],
+        "layer0.inner_margin": [10],
         "layer0.opacity": 1.0,
 
         // Tab border
-        "layer1.tint": [24, 24, 24],
+        "layer1.tint": [27, 27, 27],
         "layer1.opacity": 1.0,
-        "layer1.inner_margin": [0, 0, 0, 1],
+        "layer1.inner_margin": [0, 0, 0, 2],
         "layer1.draw_center": false
     },
     { // Tab Show Close Buttons
@@ -67,14 +68,14 @@ Credits:
         "class": "tab_control",
         "attributes": ["hover"],
 
-        "layer0.tint": [24, 24, 24],
-        "layer1.tint": [42, 42, 42]
+        "layer0.tint": [27, 27, 27],
+        "layer1.tint": [39, 39, 39]
     },
     { // Tab [Active]
         "class": "tab_control",
         "attributes": ["selected"],
         
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [27, 27, 27],
         "layer1.tint": [119, 255, 255]
     },
     { // Tab [Dirty]
@@ -95,13 +96,16 @@ Credits:
         "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1],
 
-        "fg": [138, 138, 138]
+        "font.face": "",
+        "font.size": 12, 
+
+        "fg": [141, 141, 141]
     },
     { // Tab Label [Hover]
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["hover"]}],
 
-        "fg": [202, 202, 202]
+        "fg": [195, 195, 195]
     },
     { // Tab Label [Active]
         "class": "tab_label",
@@ -197,7 +201,7 @@ Credits:
         "class": "puck_control",
         "content_margin": 4,
 
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
     },
@@ -235,6 +239,9 @@ Credits:
     { // Label
         "class": "label_control",
 
+        "font.face": "",
+        "font.size": 12,
+
         "color": [250, 250, 250]
     },
     { // Text Field Labels
@@ -262,18 +269,21 @@ Credits:
 
         // Background
         "layer0.inner_margin": [4, 4],
-        "layer0.tint": [24, 24, 24], 
+        "layer0.tint": [27, 27, 27], 
         "layer0.opacity": 1,
 
         // Border
-        "layer1.tint": [94, 94, 94],
-        "layer1.inner_margin": [1, 1, 1, 1],
+        "layer1.tint": [62, 62, 62],
+        "layer1.inner_margin": [2, 2, 2, 2],
         "layer1.draw_center": false,
         "layer1.opacity": 1.0
     },
     { // Tooltip Content
         "class": "tool_tip_label_control",
-        "color": [202, 202, 202],
+        "color": [195, 195, 195],
+
+        "font.face": "",
+        "font.size": 12,
 
         "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1]
@@ -286,12 +296,12 @@ Credits:
 
         // Background
         "layer0.inner_margin": [4, 4],
-        "layer0.tint": [24, 24, 24], 
+        "layer0.tint": [27, 27, 27], 
         "layer0.opacity": 1,
 
         // Border
-        "layer1.tint": [42, 42, 42],
-        "layer1.inner_margin": [0, 1, 0, 0],
+        "layer1.tint": [39, 39, 39],
+        "layer1.inner_margin": [0, 2, 0, 0],
         "layer1.draw_center": false,
         "layer1.opacity": 1.0
     },
@@ -321,13 +331,13 @@ Credits:
         "class": "sidebar_tree",
         
         // Background
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [27, 27, 27],
         "layer0.inner_margin": [0, 0, 1, 0],
         "layer0.opacity": 1.0,
 
         // Border
-        "layer1.tint": [42, 42, 42], 
-        "layer1.inner_margin": [0, 0, 1, 0],
+        "layer1.tint": [39, 39, 39], 
+        "layer1.inner_margin": [0, 0, 2, 0],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
 
@@ -342,12 +352,12 @@ Credits:
 
         // Background
         "layer0.opacity": 1.0,
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [27, 27, 27],
 
         // Border
-        "layer1.tint": [42, 42, 42],
+        "layer1.tint": [39, 39, 39],
         "layer1.opacity": 1.0,
-        "layer1.inner_margin": [0, 0, 1, 0],
+        "layer1.inner_margin": [0, 0, 2, 0],
         "layer1.draw_center": false
 
         /* 
@@ -361,25 +371,28 @@ Credits:
         "class": "tree_row",
         "attributes": ["hover"],
 
-        "layer0.tint": [42, 42, 42],
-        "layer1.tint": [68, 68, 68]
+        "layer0.tint": [39, 39, 39],
+        "layer1.tint": [50, 50, 50]
     },
     { // Sidebar Row [Selected]
         "class": "tree_row",
         "attributes": ["selected"],
 
-        "layer0.tint": [42, 42, 42], 
+        "layer0.tint": [39, 39, 39], 
         "layer1.tint": [119, 255, 255]
     },
     { // Sidebar Row [Dirty]
         "class": "tree_row",
         "attributes": ["dirty"],
 
-        "layer0.tint": [42, 42, 42],
+        "layer0.tint": [39, 39, 39],
         "layer1.tint": [255, 119, 68]
     },
     { // Sidebar Label
         "class": "sidebar_label",
+
+        "font.face": "",
+        "font.size": 12,
     },
     { // Sidebar Heading
         "class": "sidebar_heading",
@@ -387,12 +400,14 @@ Credits:
         "color": [119, 255, 255],
         "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1],
-        "font.size": 12
+
+        "font.face": "",
+        "font.size": 12,
     },
     { // Sidebar Label
         "class": "sidebar_label",
 
-        "color": [122, 122, 122],
+        "color": [128, 128, 128],
         "shadow_color": [16, 16, 16, 255],
         "shadow_offset": [0, 1]
     },
@@ -400,7 +415,7 @@ Credits:
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
 
-        "color": [202, 202, 202]
+        "color": [195, 195, 195]
     },
     {   //  Sidebar Label [Hover]
         "class": "sidebar_label",
@@ -479,7 +494,7 @@ Credits:
         "content_margin": [8, 8], 
 
         // layer0.texture is auto-filled by relevant icon
-        "layer0.tint": [255, 255, 255], 
+        "layer0.tint": [250, 250, 250], 
         "layer0.opacity": 0.3
     },
     { // Sidebar File Icons [Hover]
@@ -581,13 +596,13 @@ Credits:
         // Pressed button state
         "class": "button_control",
         "attributes": ["hover"],
-        "layer0.tint": [24, 24, 24]
+        "layer0.tint": [27, 27, 27]
     },
     {
         // Pressed button state
         "class": "button_control",
         "attributes": ["pressed"],
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [27, 27, 27],
     },
 
     // #######################################################
@@ -596,11 +611,11 @@ Credits:
     {
         // Text input field item
         "class": "text_line_control",
-                "layer0.opacity": 1.0,
-                "layer0.inner_margin": [4, 5, 4, 3],
-                "layer1.opacity": 1.0,
-                "layer1.inner_margin": [4, 5, 4, 3],
-                "tint_index": 1,
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": [4, 5, 4, 3],
+        "layer0.tint": [16, 16, 16], 
+        "layer1.opacity": 0.0, 
+        "tint_index": 0,
         "content_margin": 3
     },
 
@@ -611,7 +626,7 @@ Credits:
     {
         // Bottom panel background
         "class": "panel_control",
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [27, 27, 27],
         "layer0.inner_margin": [4, 4, 4, 4],
         "layer0.opacity": 1.0
     },
@@ -620,7 +635,7 @@ Credits:
         // Quick panel background
         "class": "overlay_control",
         "layer0.inner_margin": [10, 5, 10, 10],
-        "layer0.tint": [24, 24, 24], 
+        "layer0.tint": [27, 27, 27], 
         "layer0.opacity": 1.0,
         "content_margin": [0, 1, 1, 1]
     },
@@ -632,54 +647,63 @@ Credits:
         // Quick panel
         "class": "quick_panel",
         "row_padding": [7, 2],
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 1,
         "dark_content": true
     },
     {
         // Quick panel row
         "class": "quick_panel_row",
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 4, 4, 4],
-        "layer1.tint": [24, 24, 24],
+        "layer1.tint": [27, 27, 27],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [1, 0, 0, 0]
+        "layer1.inner_margin": [2, 0, 0, 0]
     },
     {
         // Quick panel row selected
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [39, 39, 39],
         "layer1.tint": [119, 255, 255]
     },
     {
         // Quick panel row label
         "class": "quick_panel_label",
-        "fg": [200, 200, 200, 255],
-        "match_fg": [119, 255, 255, 255],
-        "bg": [34, 34, 34, 255],
-        "selected_fg": [255, 255, 255, 255],
-        "selected_match_fg": [119, 255, 255, 255],
-        "selected_bg": [134, 134, 134, 255]
+        "font.face": "",
+        "font.size": 12, 
+        
+        "fg": [222, 222, 222],
+        "match_fg": [119, 255, 255],
+        "bg": [39, 39, 39],
+        "selected_fg": [250, 250, 250],
+        "selected_match_fg": [119, 255, 255],
+        "selected_bg": [108, 108, 108]
     },
     {
         // Quick panel row path label
         "class": "quick_panel_path_label",
-        "fg": [160, 160, 160, 255],
-        "match_fg": [119, 255, 255, 255],
-        "selected_fg": [255, 255, 255, 255],
-        "selected_match_fg": [119, 255, 255, 255],
-        "bg": [41, 41, 41, 255],
-        "selected_bg": [24, 24, 255, 255]
+        "font.face": "",
+        "font.size": 12, 
+        
+        "fg": [128, 128, 128],
+        "match_fg": [119, 255, 255],
+        "selected_fg": [250, 250, 250],
+        "selected_match_fg": [119, 255, 255],
+        "bg": [50, 50, 50],
+        "selected_bg": [85, 85, 85]
     },
     {
         "class": "quick_panel_score_label",
-        "fg": [120, 120, 120, 255],
-        "bg": [41, 41, 41, 255],
-        "selected_fg": [255, 255, 255, 255],
-        "selected_bg": [24, 24, 24, 255]
+        "font.face": "",
+        "font.size": 12, 
+        
+        "fg": [128, 128, 128],
+        "bg": [50, 50, 50],
+        "selected_fg": [250, 250, 250],
+        "selected_bg": [16, 16, 16]
     },
 
     // #######################################################
@@ -687,19 +711,19 @@ Credits:
     // #######################################################
     {
         "class": "mini_quick_panel_row",
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 4, 4, 4],
-        "layer1.tint": [24, 24, 24],
+        "layer1.tint": [27, 27, 27],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [1, 0, 0, 0]
+        "layer1.inner_margin": [2, 0, 0, 0]
     },
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [24, 24, 24],
-        "layer1.tint": [119, 255, 255]
+        "layer0.tint": [27, 27, 27],
+        "layer1.tint": [119, 170, 255]
     },
 
     // #######################################################
@@ -707,14 +731,14 @@ Credits:
     // #######################################################
     {
         "class": "popup_control",
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 1.0,
         "content_margin": [0, 1, 1, 1]
     },
     {
         "class": "auto_complete",
         "row_padding": [2, 2],
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 1.0,
         "dark_content": true
     },
@@ -725,22 +749,25 @@ Credits:
     },
     {
         "class": "auto_complete_label",
-        "fg": [200, 200, 200],
+        "font.face": "",
+        "font.size": 12, 
+        
+        "fg": [209, 209, 209],
         "match_fg": [119, 255, 255],
-        "bg": [24, 24, 24],
-        "selected_fg": [255, 255, 255],
+        "bg": [27, 27, 27],
+        "selected_fg": [250, 250, 250],
         "selected_match_fg": [119, 255, 255],
-        "selected_bg": [86, 86, 86]
+        "selected_bg": [85, 85, 85]
     },
     {
         "class": "table_row",
-        "layer0.tint": [24, 24, 24],
+        "layer0.tint": [27, 27, 27],
         "layer0.opacity": 0.0,
         "layer0.inner_margin": 0,
-        "layer1.tint": [43, 43, 43],
+        "layer1.tint": [50, 50, 50],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [1, 0, 0, 0]
+        "layer1.inner_margin": [2, 0, 0, 0]
     },
     {
         "class": "table_row",
@@ -764,7 +791,7 @@ Credits:
         // Regex search button
         "class": "icon_regex",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/regex.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -778,7 +805,7 @@ Credits:
         // Case sensitive search button
         "class": "icon_case",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/case.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -792,7 +819,7 @@ Credits:
         // Match whole word search button
         "class": "icon_whole_word",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/whole-word.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -806,7 +833,7 @@ Credits:
         // Reverse search direction button
         "class": "icon_reverse",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/reverse.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -821,7 +848,7 @@ Credits:
         "class": "icon_wrap",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/wrap.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -836,7 +863,7 @@ Credits:
         "class": "icon_in_selection",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/selection.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -851,7 +878,7 @@ Credits:
         "class": "icon_preserve_case",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/preserve-case.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -866,7 +893,7 @@ Credits:
         "class": "icon_highlight",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/highlight.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -880,7 +907,7 @@ Credits:
         // Show search context button
         "class": "icon_context",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/context.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -894,7 +921,7 @@ Credits:
         // Use search buffer
         "class": "icon_use_buffer",
         "layer0.texture": "Theme - Lyte/Lyte/icons/panel/buffer.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [250, 250, 250],
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
@@ -916,7 +943,7 @@ Credits:
         "class": "grid_layout_control",
 
         "border_size": 1,
-        "border_color": [24, 24, 24]
+        "border_color": [27, 27, 27]
     },
     { // Minimap
         "class": "minimap_control",

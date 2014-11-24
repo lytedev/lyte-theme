@@ -4,4 +4,4 @@
 from theme_builder.compilation import Compilation
 
 comp = Compilation("Lyte")
-comp.inherit("Lyte-Dark")
+comp.copy_all("Lyte-Dark")

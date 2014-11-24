@@ -21,6 +21,9 @@ def main():
     # The themes to generate
     compilations = [
         "Lyte-Dark",
+        "Lyte-Light",
+        "Lyte-Solarized", 
+        "Lyte-Solarized-Light", 
         # "Lyte-Light",
         # "Lyte-Dark-NoBorder",
         # "Lyte-NoBorder-Light",

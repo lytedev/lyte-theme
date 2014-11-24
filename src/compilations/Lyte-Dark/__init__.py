@@ -6,67 +6,58 @@ from theme_builder.color_scheme import ColorScheme, basic_color_scheme_templates
 from theme_builder.color import Color
 from theme_builder.compilation import Compilation
 
-theme = Theme("Lyte-Dark", icons_dir("lyte"), theme_dir("Lyte"), basic_theme_templates("Lyte", "Lyte-Dark"))
+theme = Theme("Lyte-Dark", icons_dir("Lyte"), theme_dir("Lyte"), basic_theme_templates("Lyte", "Lyte-Dark"))
 color_scheme = ColorScheme("Lyte-Dark", color_scheme_dir("Lyte"), basic_color_scheme_templates("Lyte", "Lyte-Dark"))
 
 comp = Compilation("Lyte-Dark", theme, color_scheme)
 
-comp.options = {
-    # Colors
-
-    "bg":         Color(16, 16, 16),
-    "fg":         Color(250, 250, 250),
-    'selection':  Color("#333333"),
-
-    "blue":       Color("#77aaff"),
-    "red":        Color("#ff7744"),
-    "indigo":     Color("#aa77ff"),
-    "magenta":    Color("#ff4477"),
-    "cyan":       Color("#77ffff"),
-    "green":      Color("#aaff44"),
-
-    # Other options
-    "sidebar_indent": 12,
-
-    # Preprocessor options
-    "tab_padding_x": 5,
-    "tab_padding_y": 5,
-    "text_height": 15,
-    "borders": True,
-    "text_shadow": True,
-    "sidebar_arrows": True,
-    "sidebar_icons": True,
-}
+from .options import options
+comp.options = options
 
 def preprocessor(opts):
     """The preprocessor for the compilation."""
 
     opts["tab_padding"] = "[{0}, {1}]".format(opts["tab_padding_x"], opts["tab_padding_y"])
-    opts["tab_height"] = (opts["tab_padding_y"] * 2) + opts["text_height"]
+    opts["tab_height"] = (opts["tab_padding_y"] * 2) + opts["text_height"] + opts["borders"]
 
-    if opts["borders"]:
-        opts["border_border"] = "[0, 0, 0, 1]"
-        opts["border_border_top"] = "[0, 1, 0, 0]"
-        opts["border_border_right"] = "[0, 0, 1, 0]"
-        opts["border_border_everywhere"] = "[1, 1, 1, 1]" # Border in the ground, border in the air
+    if "tab_font_size" not in opts:
+        opts["tab_font_size"] = opts["font_size"]
+
+    if "tooltip_font_size" not in opts:
+        opts["tooltip_font_size"] = opts["font_size"]
+
+    if "sidebar_font_size" not in opts:
+        opts["sidebar_font_size"] = opts["font_size"]
+
+    if "sidebar_heading_font_size" not in opts:
+        opts["sidebar_heading_font_size"] = opts["font_size"]
+
+    if opts["borders"] > 0:
+        b = opts["borders"];
+        opts["border_border"] = "[0, 0, 0, {0}]".format(b)
+        opts["border_border_top"] = "[0, {0}, 0, 0]".format(b)
+        opts["border_border_right"] = "[0, 0, {0}, 0]".format(b)
+        opts["border_border_left"] = "[{0}, 0, 0, 0]".format(b)
+        opts["border_border_everywhere"] = "[{0}, {0}, {0}, {0}]".format(b) # Border in the ground, border in the air
         opts["border_opacity"] = "1.0"
     else:
         opts["border_border"] = "[0, 0, 0, 0]"
-        opts["border_border_top"] = "[0, 1, 0, 0]"
+        opts["border_border_top"] = "[0, 0, 0, 0]"
         opts["border_border_right"] = "[0, 0, 0, 0]"
+        opts["border_border_left"] = "[0, 0, 0, 0]"
         opts["border_border_everywhere"] = "[0, 0, 0, 0]" # Border in the ground, border in the air
         opts["border_opacity"] = "0.0"
 
-    # opts["bg" + str(i)] = opts["bg"] / 0.5
+    n_alts = 10
+    for i in range(1, n_alts):
+        opts["fg" + str(i)] = opts["fg"].blend(opts["max_fg"], i/(n_alts-1))
+        opts["bg" + str(i)] = opts["bg"].blend(opts["max_bg"], i/(n_alts-1))
 
-    opts["bg1"] = opts["bg"] + 8
-    opts["fg1"] = opts["fg"] - 8
-
-    for i in range(2, 10):
-        opts["bg" + str(i)] = opts["bg"] + (26 * (i - 1))
-        opts["fg" + str(i)] = opts["fg"] - (16 * (i - 1))
-
+    opts["selection"] = opts["bg"].blend(opts["max_bg"], 0.25)
     opts["comment"] = opts["bg"].blend(opts["fg"], 0.4)
+    opts["active"] = opts["cyan"]
+    opts["dirty"] = opts["red"]
+    opts["scrollbar_color"] = opts["active"]
 
     if opts["text_shadow"]:
         opts["text_shadow_color"] = opts["bg"].set_alpha(255)
@@ -94,4 +85,4 @@ def preprocessor(opts):
 
     return opts
 
-comp.preprocessor = preprocessor
+comp.preprocessors.append(preprocessor)

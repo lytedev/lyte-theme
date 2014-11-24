@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>name</key>
+        <string>Sublime Widgets</string>
+        <!--
+        The Widget.sublime-settings and Widgets.stTheme files are used to style
+        the text inputs as seen in the console, find menu, etc.
+        -->
+        <key>settings</key>
+        <array>
+            <dict>
+                <key>settings</key>
+                <dict>
+                    <key>background</key>
+                    <string>#fafafa</string>
+                    <key>caret</key>
+                    <string>#101010</string>
+                    <key>foreground</key>
+                    <string>#101010</string>
+                    <key>invisibles</key>
+                    <string>#ececec</string>
+                    <key>lineHighlight</key>
+                    <string>#9c9c9c</string>
+                    <key>selection</key>
+                    <string>#d1d1d1</string>
+                    <key>selectionBorder</key>
+                    <string>#c3c3c3</string>
+                    <key>inactiveSelection</key>
+                    <string>#d1d1d1</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Comment</string>
+                <key>scope</key>
+                <string>comment</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string>italic</string>
+                    <key>foreground</key>
+                    <string>#9c9c9c</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Keyword</string>
+                <key>scope</key>
+                <string>keyword, storage</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#004488</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>scope</key>
+                <string>constant</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#004488</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>scope</key>
+                <string>string</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#ff6600</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>scope</key>
+                <string>constant.character.escape</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#aa00ff</string>
+                </dict>
+            </dict>
+        </array>
+    </dict>
+</plist>

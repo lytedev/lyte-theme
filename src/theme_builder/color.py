@@ -181,6 +181,7 @@ class Color:
         self.blue = max(self.blue, 0)
         self.alpha = min(self.alpha, 255)
         self.alpha = max(self.alpha, 0)
+        return self
 
     def set_alpha(self, alpha):
         """Sets the `alpha` (or alpha value) attribute
@@ -336,21 +337,24 @@ class Color:
             length = 4
 
         hex_string = "#"
-        rgba = self.rgba()
+        rgba = self.check_color_range().rgba()
         for i in range(length):
-            hex_string = hex_string + hex(rgba[i])[2:]
+            digits = hex(rgba[i])[2:]
+            if len(digits) < 2:
+                digits = "0" + digits
+            hex_string = hex_string + digits
 
         return hex_string
 
     # Manipulations
-    def blend(self, color, ratio=0.5):
-        """Creates alpha blend between two colors.
+    def blend(self, b, ratio=0.5):
+        """Creates a blend between two colors.
 
         Args:
-            blue (Color): The color to be blended with.
-            n (float): The ratio of the blending.
+            b (Color): The color to be blended with.
+            ratio (float): The ratio of the blending.
 
-        The higher that `n` is, the close to `blue` the resulting color will be.
+        The higher that `n` is, the closer to `b` the resulting color will be.
 
         """
 
@@ -358,7 +362,7 @@ class Color:
         if self.has_alpha:
             length = 4
         self_vals = self.rgba()
-        color_vals = color.rgba()
+        color_vals = b.rgba()
         tmp_vals = ()
         for i in range(length):
             diff = color_vals[i] - self_vals[i]

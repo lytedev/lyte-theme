@@ -21,7 +21,7 @@ Credits:
         // Background
         "layer0.tint": ${bg},
         "layer0.opacity": 1.0,
-        "layer0.inner_margin": ${border_border},
+        "layer0.inner_margin": [0, 0],
         "layer0.draw_center": true,
 
         // Bottom Border
@@ -44,13 +44,14 @@ Credits:
 
         // TODO: What is this?
         "max_margin_trim": 0,
-        "hit_test_level": 0.5,
+        "hit_test_level": 0.0,
 
         // Tab Padding
         "content_margin": ${tab_padding},
 
         // Tab background
         "layer0.tint": ${bg},
+        "layer0.inner_margin": [10],
         "layer0.opacity": 1.0,
 
         // Tab border
@@ -75,7 +76,7 @@ Credits:
         "attributes": ["selected"],
         
         "layer0.tint": ${bg1},
-        "layer1.tint": ${cyan}
+        "layer1.tint": ${active}
     },
     { // Tab [Dirty]
         "class": "tab_control",
@@ -84,7 +85,7 @@ Credits:
         // Always respect user settings
         "settings": ["highlight_modified_tabs"],
 
-        "layer1.tint": ${red}
+        "layer1.tint": ${dirty}
     },
 
     // Tab Label
@@ -94,6 +95,9 @@ Credits:
         // Text Shadow
         "shadow_color": ${text_shadow_color},
         "shadow_offset": ${text_shadow_offset},
+
+        "font.face": "${font_face}",
+        "font.size": ${tab_font_size}, 
 
         "fg": ${fg8}
     },
@@ -135,20 +139,20 @@ Credits:
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
 
         "layer0.opacity": 1,
-        "layer0.tint": ${red}
+        "layer0.tint": ${dirty}
     },
     { // Tab Close Button [Hover]
         "class": "tab_close_button",
         "parents": [{"class": "tab_control", "attributes": ["hover"]}],
 
         "layer0.opacity": 1,
-        "layer0.tint": ${cyan}
+        "layer0.tint": ${active}
     },
     { // Tab Close Button
         "class": "tab_close_button",
         "attributes": ["pressed"],
 
-        "layer0.tint": ${red}
+        "layer0.tint": ${dirty}
     },
 
     // Fold Buttons
@@ -222,7 +226,7 @@ Credits:
         "content_margin": [1, 0],
         "settings": ["overlay_scroll_bars"],
 
-        "layer0.tint": ${cyan}
+        "layer0.tint": ${scrollbar_color}
     },
     { // Overlay Scrollbar Background [Horizontal]
         "class": "puck_control",
@@ -234,6 +238,9 @@ Credits:
     // Labels
     { // Label
         "class": "label_control",
+
+        "font.face": "${font_face}",
+        "font.size": ${font_size},
 
         "color": ${fg}
     },
@@ -274,6 +281,9 @@ Credits:
     { // Tooltip Content
         "class": "tool_tip_label_control",
         "color": ${fg4},
+
+        "font.face": "${font_face}",
+        "font.size": ${tooltip_font_size},
 
         "shadow_color": ${text_shadow_color},
         "shadow_offset": ${text_shadow_offset}
@@ -369,7 +379,7 @@ Credits:
         "attributes": ["selected"],
 
         "layer0.tint": ${bg2}, 
-        "layer1.tint": ${cyan}
+        "layer1.tint": ${active}
     },
     { // Sidebar Row [Dirty]
         "class": "tree_row",
@@ -380,14 +390,19 @@ Credits:
     },
     { // Sidebar Label
         "class": "sidebar_label",
+
+        "font.face": "${font_face}",
+        "font.size": ${sidebar_font_size},
     },
     { // Sidebar Heading
         "class": "sidebar_heading",
 
-        "color": ${cyan},
+        "color": ${active},
         "shadow_color": ${text_shadow_color},
         "shadow_offset": ${text_shadow_offset},
-        "font.size": 12
+
+        "font.face": "${font_face}",
+        "font.size": ${sidebar_heading_font_size},
     },
     { // Sidebar Label
         "class": "sidebar_label",
@@ -430,13 +445,13 @@ Credits:
         "attributes": ["dirty"],
 
         "layer0.opacity": 1,
-        "layer0.tint": ${red}
+        "layer0.tint": ${dirty}
     },
     { // Sidebar Close Button [Hover]
         "class": "close_button",
         "attributes": ["hover"],
 
-        "layer0.tint": ${cyan},
+        "layer0.tint": ${active},
         "layer0.opacity": 1
     },
     { // Sidebar Close Button [Pressed]
@@ -444,7 +459,7 @@ Credits:
         "attributes": ["pressed"],
 
         "layer0.opacity": 1,
-        "layer0.tint": ${red}
+        "layer0.tint": ${dirty}
     },
 
     // Sidebar Files/Folders
@@ -479,7 +494,7 @@ Credits:
         "content_margin": ${sidebar_icon_margin}, 
 
         // layer0.texture is auto-filled by relevant icon
-        "layer0.tint": [255, 255, 255], 
+        "layer0.tint": ${fg}, 
         "layer0.opacity": ${sidebar_icon_opacity}
     },
     { // Sidebar File Icons [Hover]
@@ -499,13 +514,13 @@ Credits:
         "parents": [{"class": "tree_row", "attributes": ["dirty"]}],
 
         "layer0.opacity": 1, 
-        "layer0.tint": ${red}
+        "layer0.tint": ${dirty}
     },
     {
         "class": "icon_folder",
-        "content_margin": [8, 8],
+        "content_margin": ${sidebar_icon_margin},
         "layer0.texture": "${IconsDirectory}/folder.png",
-        "layer0.opacity": 0.3
+        "layer0.opacity": ${sidebar_icon_opacity}
     },
     {
         "class": "icon_folder",
@@ -587,7 +602,7 @@ Credits:
         // Pressed button state
         "class": "button_control",
         "attributes": ["pressed"],
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": ${bg1},
     },
 
     // #######################################################
@@ -596,11 +611,11 @@ Credits:
     {
         // Text input field item
         "class": "text_line_control",
-                "layer0.opacity": 1.0,
-                "layer0.inner_margin": [4, 5, 4, 3],
-                "layer1.opacity": 1.0,
-                "layer1.inner_margin": [4, 5, 4, 3],
-                "tint_index": 1,
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": [4, 5, 4, 3],
+        "layer0.tint": ${bg}, 
+        "layer1.opacity": 0.0, 
+        "tint_index": 0,
         "content_margin": 3
     },
 
@@ -611,7 +626,7 @@ Credits:
     {
         // Bottom panel background
         "class": "panel_control",
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": ${bg1},
         "layer0.inner_margin": [4, 4, 4, 4],
         "layer0.opacity": 1.0
     },
@@ -632,54 +647,63 @@ Credits:
         // Quick panel
         "class": "quick_panel",
         "row_padding": [7, 2],
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1,
         "dark_content": true
     },
     {
         // Quick panel row
         "class": "quick_panel_row",
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 4, 4, 4],
         "layer1.tint": ${bg1},
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [1, 0, 0, 0]
+        "layer1.inner_margin": ${border_border_left}
     },
     {
         // Quick panel row selected
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": ${bg1},
-        "layer1.tint": [119, 255, 255]
+        "layer0.tint": ${bg2},
+        "layer1.tint": ${active}
     },
     {
         // Quick panel row label
         "class": "quick_panel_label",
-        "fg": [200, 200, 200, 255],
-        "match_fg": [119, 255, 255, 255],
-        "bg": [34, 34, 34, 255],
-        "selected_fg": [255, 255, 255, 255],
-        "selected_match_fg": [119, 255, 255, 255],
-        "selected_bg": [134, 134, 134, 255]
+        "font.face": "${font_face}",
+        "font.size": ${tab_font_size}, 
+        
+        "fg": ${fg2},
+        "match_fg": ${active},
+        "bg": ${bg2},
+        "selected_fg": ${fg},
+        "selected_match_fg": ${active},
+        "selected_bg": ${bg8}
     },
     {
         // Quick panel row path label
         "class": "quick_panel_path_label",
-        "fg": [160, 160, 160, 255],
-        "match_fg": [119, 255, 255, 255],
-        "selected_fg": [255, 255, 255, 255],
-        "selected_match_fg": [119, 255, 255, 255],
-        "bg": [41, 41, 41, 255],
-        "selected_bg": [24, 24, 255, 255]
+        "font.face": "${font_face}",
+        "font.size": ${tab_font_size}, 
+        
+        "fg": ${fg9},
+        "match_fg": ${active},
+        "selected_fg": ${fg},
+        "selected_match_fg": ${active},
+        "bg": ${bg3},
+        "selected_bg": ${bg6}
     },
     {
         "class": "quick_panel_score_label",
-        "fg": [120, 120, 120, 255],
-        "bg": [41, 41, 41, 255],
-        "selected_fg": [255, 255, 255, 255],
-        "selected_bg": [24, 24, 24, 255]
+        "font.face": "${font_face}",
+        "font.size": ${tab_font_size}, 
+        
+        "fg": ${fg9},
+        "bg": ${bg3},
+        "selected_fg": ${fg},
+        "selected_bg": ${bg}
     },
 
     // #######################################################
@@ -687,19 +711,19 @@ Credits:
     // #######################################################
     {
         "class": "mini_quick_panel_row",
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [4, 4, 4, 4],
         "layer1.tint": ${bg1},
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [1, 0, 0, 0]
+        "layer1.inner_margin": ${border_border_left}
     },
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         "layer0.tint": ${bg1},
-        "layer1.tint": [119, 255, 255]
+        "layer1.tint": ${blue}
     },
 
     // #######################################################
@@ -714,7 +738,7 @@ Credits:
     {
         "class": "auto_complete",
         "row_padding": [2, 2],
-        "layer0.tint": [25, 25, 25],
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1.0,
         "dark_content": true
     },
@@ -725,28 +749,31 @@ Credits:
     },
     {
         "class": "auto_complete_label",
-        "fg": [200, 200, 200],
-        "match_fg": [119, 255, 255],
+        "font.face": "${font_face}",
+        "font.size": ${tab_font_size}, 
+        
+        "fg": ${fg3},
+        "match_fg": ${active},
         "bg": ${bg1},
-        "selected_fg": [255, 255, 255],
-        "selected_match_fg": [119, 255, 255],
-        "selected_bg": [86, 86, 86]
+        "selected_fg": ${fg},
+        "selected_match_fg": ${active},
+        "selected_bg": ${bg6}
     },
     {
         "class": "table_row",
         "layer0.tint": ${bg1},
         "layer0.opacity": 0.0,
         "layer0.inner_margin": 0,
-        "layer1.tint": [43, 43, 43],
+        "layer1.tint": ${bg3},
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [1, 0, 0, 0]
+        "layer1.inner_margin": ${border_border_left}
     },
     {
         "class": "table_row",
         "attributes": ["selected"],
         "layer0.opacity": 1.0,
-        "layer1.tint": [119, 255, 255]
+        "layer1.tint": ${active}
     },
 
     // #######################################################
@@ -764,56 +791,56 @@ Credits:
         // Regex search button
         "class": "icon_regex",
         "layer0.texture": "${IconsDirectory}/panel/regex.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_regex",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
         // Case sensitive search button
         "class": "icon_case",
         "layer0.texture": "${IconsDirectory}/panel/case.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_case",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
         // Match whole word search button
         "class": "icon_whole_word",
         "layer0.texture": "${IconsDirectory}/panel/whole-word.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_whole_word",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
         // Reverse search direction button
         "class": "icon_reverse",
         "layer0.texture": "${IconsDirectory}/panel/reverse.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_reverse",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
@@ -821,14 +848,14 @@ Credits:
         "class": "icon_wrap",
         "layer0.texture": "${IconsDirectory}/panel/wrap.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_wrap",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
@@ -836,14 +863,14 @@ Credits:
         "class": "icon_in_selection",
         "layer0.texture": "${IconsDirectory}/panel/selection.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_in_selection",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
@@ -851,14 +878,14 @@ Credits:
         "class": "icon_preserve_case",
         "layer0.texture": "${IconsDirectory}/panel/preserve-case.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_preserve_case",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
@@ -866,42 +893,42 @@ Credits:
         "class": "icon_highlight",
         "layer0.texture": "${IconsDirectory}/panel/highlight.png",
 
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_highlight",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
         // Show search context button
         "class": "icon_context",
         "layer0.texture": "${IconsDirectory}/panel/context.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_context",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
     {
         // Use search buffer
         "class": "icon_use_buffer",
         "layer0.texture": "${IconsDirectory}/panel/buffer.png",
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_use_buffer",
         "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-        "layer0.tint": [119, 255, 255],
+        "layer0.tint": ${active},
         "layer0.opacity": 1.0,
     },
 

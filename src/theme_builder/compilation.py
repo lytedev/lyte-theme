@@ -28,7 +28,7 @@ class Compilation():
         self.color_scheme = color_scheme
         self.theme = theme
         self.options = {}
-        self.preprocessor = lambda x: x
+        self.preprocessors = list([lambda x: x])
 
     def export(self, directory, package, opts=None):
         """Exports the Compilation to a file."""
@@ -62,16 +62,48 @@ class Compilation():
         print()
 
     def preprocess_options(self, options=None):
-        """Check if a preprocessor function reference exists and call it."""
+        """Check if a preprocessors function reference exists and call it."""
         if options is None:
             opts = copy.copy(self.options)
         else:
             opts = copy.copy(options)
 
-        if callable(self.preprocessor):
-            return self.preprocessor(opts)
-        else:
-            return opts
+        for pp in self.preprocessors:
+            if callable(pp):
+                pp(opts)
+
+        return opts
+
+    def copy_all(self, compilation, key="comp"):
+        """Inherit all options from another compilation."""
+        if isinstance(compilation, str):
+            compilation = Compilation.get_by_name(compilation, key)
+
+        if not isinstance(compilation, Compilation):
+            raise Exception("Compilation.inherit() arg 1 must be of type" + \
+                "Compilation or a valid string referencing a submodule in " + \
+                "the `compilations` module.")
+
+        self.theme = copy.copy(compilation.theme)
+        self.color_scheme = copy.copy(compilation.color_scheme)
+
+        self.theme.icons_directory = compilation.theme.icons_directory
+        self.theme.options = copy.copy(compilation.theme.options)
+        self.color_scheme.options = copy.copy(compilation.color_scheme.options)
+        self.options = copy.copy(compilation.options)
+
+        self.color_scheme.options["ColorSchemeName"] = self.name
+        self.theme.options["ThemeName"] = self.name
+
+        self.theme.theme_templates = copy.copy(compilation.theme.theme_templates)
+        for k in self.theme.theme_templates:
+            self.theme.theme_templates[k] = self.theme.theme_templates[k].replace(compilation.theme.options["ThemeName"], self.name)
+
+        self.color_scheme.color_scheme_templates = copy.copy(compilation.color_scheme.color_scheme_templates)
+        for k in self.color_scheme.color_scheme_templates:
+            self.color_scheme.color_scheme_templates[k] = self.color_scheme.color_scheme_templates[k].replace(compilation.color_scheme.options["ColorSchemeName"], self.name)
+        
+        self.preprocessors = copy.copy(compilation.preprocessors)
 
     def inherit(self, compilation, key="comp"):
         """Inherit all options from another compilation."""
@@ -83,6 +115,7 @@ class Compilation():
                 "Compilation or a valid string referencing a submodule in " + \
                 "the `compilations` module.")
 
+        self.theme.icons_directory = compilation.theme.icons_directory
         self.theme.options = copy.copy(compilation.theme.options)
         self.color_scheme.options = copy.copy(compilation.color_scheme.options)
         self.options = copy.copy(compilation.options)
@@ -90,7 +123,7 @@ class Compilation():
         self.color_scheme.options["ColorSchemeName"] = self.name
         self.theme.options["ThemeName"] = self.name
 
-        self.preprocessor = compilation.preprocessor
+        self.preprocessors = copy.copy(compilation.preprocessors)
 
     @staticmethod
     def get_by_name(name, key="comp"):

@@ -15,7 +15,7 @@
             "cmd":
             [
                 "python",
-                "${project_path}\\..\\src\\lyte.py"
+                "${project_path}/../src/lyte.py"
             ],
         }
     ],
@@ -26,7 +26,7 @@
         "translate_tabs_to_spaces": true,
         "trim_automatic_white_space": true,
         "rulers": [
-            80,
+            // 80,
         ]
     }
 }
