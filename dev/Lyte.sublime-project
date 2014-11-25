@@ -4,9 +4,16 @@
         {
             "name": "Project Root",
             "follow_symlinks": true,
-            "folder_exclude_patterns": [ "__pycache__" ],
+            "folder_exclude_patterns": [ "__pycache__", "src" ],
             "file_exclude_patterns": [ ".no-sublime-package" ],
             "path": "../"
+        },
+        {
+            "name": "Builder Source",
+            "follow_symlinks": true,
+            "folder_exclude_patterns": [ "__pycache__" ],
+            "file_exclude_patterns": [ ".no-sublime-package" ],
+            "path": "../src"
         }
     ],
     "build_systems": [

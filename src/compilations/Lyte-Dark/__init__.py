@@ -32,6 +32,15 @@ def preprocessor(opts):
     if "sidebar_heading_font_size" not in opts:
         opts["sidebar_heading_font_size"] = opts["font_size"]
 
+    if "sidebar_indent_x" not in opts:
+        opts["sidebar_indent_x"] = 12
+
+    if "sidebar_indent_y" not in opts:
+        opts["sidebar_indent_y"] = 4
+
+    if "sidebar_heading_font_size" not in opts:
+        opts["sidebar_heading_font_size"] = opts["font_size"]
+
     if opts["borders"] > 0:
         b = opts["borders"];
         opts["border_border"] = "[0, 0, 0, {0}]".format(b)
@@ -53,6 +62,7 @@ def preprocessor(opts):
         opts["fg" + str(i)] = opts["fg"].blend(opts["max_fg"], i/(n_alts-1))
         opts["bg" + str(i)] = opts["bg"].blend(opts["max_bg"], i/(n_alts-1))
 
+    opts["sidebar_indent"] = "[{0}, {1}]".format(opts["sidebar_indent_x"], opts["sidebar_indent_y"])
     opts["selection"] = opts["bg"].blend(opts["max_bg"], 0.25)
     opts["comment"] = opts["bg"].blend(opts["fg"], 0.4)
     opts["active"] = opts["cyan"]

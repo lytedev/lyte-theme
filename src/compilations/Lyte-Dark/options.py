@@ -17,16 +17,18 @@ options = {
     # Fonts
     "font_face": "", 
     "font_size": 11, 
-    # "sidebar_heading_font_size": 16, 
+    # "sidebar_heading_font_size": 14, 
 
     # Other options
     "sidebar_indent": 12,
 
     # Preprocessor options
-    "tab_padding_x": 10,
+    "sidebar_indent_x": 10,
+    "sidebar_indent_y": 3, 
+    "tab_padding_x": 5,
     "tab_padding_y": 5,
-    "text_height": 20,
-    "borders": 2,
+    "text_height": 15,
+    "borders": 1,
     "text_shadow": True,
     "sidebar_arrows": True,
     "sidebar_icons": True,

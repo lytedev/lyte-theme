@@ -1,7 +1,7 @@
 /*
 
 `Lyte` theme for Sublime Text
-https://github.com/lytedev/lyte-theme
+Built With: https://github.com/lytedev/lyte-theme
 
 Credits:
     Nexus Theme: https://github.com/EleazarCrusader/nexus-theme
@@ -27,14 +27,14 @@ Credits:
         // Bottom Border
         "layer1.tint": [27, 27, 27],
         "layer1.draw_center": false,
-        "layer1.inner_margin": [0, 0, 0, 2],
+        "layer1.inner_margin": [0, 0, 0, 1],
         "layer1.opacity": 1.0,
 
         // Tab Configuration
         "tab_overlap": 0,
         "tab_width": 40,
         "tab_min_width": 40,
-        "tab_height": 32,
+        "tab_height": 26,
         "mouse_wheel_switch": false
     },
 
@@ -47,7 +47,7 @@ Credits:
         "hit_test_level": 0.0,
 
         // Tab Padding
-        "content_margin": [10, 5],
+        "content_margin": [5, 5],
 
         // Tab background
         "layer0.tint": [16, 16, 16],
@@ -57,7 +57,7 @@ Credits:
         // Tab border
         "layer1.tint": [27, 27, 27],
         "layer1.opacity": 1.0,
-        "layer1.inner_margin": [0, 0, 0, 2],
+        "layer1.inner_margin": [0, 0, 0, 1],
         "layer1.draw_center": false
     },
     { // Tab Show Close Buttons
@@ -274,7 +274,7 @@ Credits:
 
         // Border
         "layer1.tint": [62, 62, 62],
-        "layer1.inner_margin": [2, 2, 2, 2],
+        "layer1.inner_margin": [1, 1, 1, 1],
         "layer1.draw_center": false,
         "layer1.opacity": 1.0
     },
@@ -301,7 +301,7 @@ Credits:
 
         // Border
         "layer1.tint": [39, 39, 39],
-        "layer1.inner_margin": [0, 2, 0, 0],
+        "layer1.inner_margin": [0, 1, 0, 0],
         "layer1.draw_center": false,
         "layer1.opacity": 1.0
     },
@@ -337,15 +337,15 @@ Credits:
 
         // Border
         "layer1.tint": [39, 39, 39], 
-        "layer1.inner_margin": [0, 0, 2, 0],
+        "layer1.inner_margin": [0, 0, 1, 0],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
 
         "dark_content": true,
-        "row_padding": [12, 1],
+        "row_padding": [10, 3],
         "indent_top_level": false,
-        "indent": 12,
-        "indent_offset": 12
+        "indent": [10, 3],
+        "indent_offset": [10, 3]
     },
     { // Sidebar Rows
         "class": "tree_row",
@@ -357,12 +357,12 @@ Credits:
         // Border
         "layer1.tint": [39, 39, 39],
         "layer1.opacity": 1.0,
-        "layer1.inner_margin": [0, 0, 2, 0],
+        "layer1.inner_margin": [0, 0, 1, 0],
         "layer1.draw_center": false
 
         /* 
         // BUG: (KNOWN)
-        If the sidebar's width is less than the longest tree_row, then the blue
+        If the sidebar's width is less than the longest tree_row, then the 
         right-border will not be visible.
         */
     },
@@ -403,6 +403,7 @@ Credits:
 
         "font.face": "",
         "font.size": 11,
+        "font.bold": true
     },
     { // Sidebar Label
         "class": "sidebar_label",
@@ -660,7 +661,7 @@ Credits:
         "layer1.tint": [27, 27, 27],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [2, 0, 0, 0]
+        "layer1.inner_margin": [1, 0, 0, 0]
     },
     {
         // Quick panel row selected
@@ -672,9 +673,6 @@ Credits:
     {
         // Quick panel row label
         "class": "quick_panel_label",
-        "font.face": "",
-        "font.size": 11, 
-        
         "fg": [222, 222, 222],
         "match_fg": [119, 255, 255],
         "bg": [39, 39, 39],
@@ -685,9 +683,6 @@ Credits:
     {
         // Quick panel row path label
         "class": "quick_panel_path_label",
-        "font.face": "",
-        "font.size": 11, 
-        
         "fg": [128, 128, 128],
         "match_fg": [119, 255, 255],
         "selected_fg": [250, 250, 250],
@@ -697,9 +692,6 @@ Credits:
     },
     {
         "class": "quick_panel_score_label",
-        "font.face": "",
-        "font.size": 11, 
-        
         "fg": [128, 128, 128],
         "bg": [50, 50, 50],
         "selected_fg": [250, 250, 250],
@@ -717,13 +709,13 @@ Credits:
         "layer1.tint": [27, 27, 27],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [2, 0, 0, 0]
+        "layer1.inner_margin": [1, 0, 0, 0]
     },
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         "layer0.tint": [27, 27, 27],
-        "layer1.tint": [119, 170, 255]
+        "layer1.tint": [119, 255, 255]
     },
 
     // #######################################################
@@ -767,7 +759,7 @@ Credits:
         "layer1.tint": [50, 50, 50],
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
-        "layer1.inner_margin": [2, 0, 0, 0]
+        "layer1.inner_margin": [1, 0, 0, 0]
     },
     {
         "class": "table_row",

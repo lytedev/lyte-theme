@@ -173,6 +173,7 @@ class Color:
         return tmp_color
 
     def check_color_range(self):
+        """Ensures none of the colors values exceed their limits"""
         self.red = min(self.red, 255)
         self.red = max(self.red, 0)
         self.green = min(self.green, 255)

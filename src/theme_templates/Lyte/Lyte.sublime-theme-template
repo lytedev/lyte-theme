@@ -1,7 +1,7 @@
 /*
 
 `${ThemeName}` theme for Sublime Text
-https://github.com/lytedev/lyte-theme
+Built With: https://github.com/lytedev/lyte-theme
 
 Credits:
     Nexus Theme: https://github.com/EleazarCrusader/nexus-theme
@@ -342,7 +342,7 @@ Credits:
         "layer1.draw_center": false,
 
         "dark_content": true,
-        "row_padding": [12, 1],
+        "row_padding": ${sidebar_indent},
         "indent_top_level": false,
         "indent": ${sidebar_indent},
         "indent_offset": ${sidebar_indent}
@@ -362,7 +362,7 @@ Credits:
 
         /* 
         // BUG: (KNOWN)
-        If the sidebar's width is less than the longest tree_row, then the blue
+        If the sidebar's width is less than the longest tree_row, then the 
         right-border will not be visible.
         */
     },
@@ -403,6 +403,7 @@ Credits:
 
         "font.face": "${font_face}",
         "font.size": ${sidebar_heading_font_size},
+        "font.bold": true
     },
     { // Sidebar Label
         "class": "sidebar_label",
@@ -672,9 +673,6 @@ Credits:
     {
         // Quick panel row label
         "class": "quick_panel_label",
-        "font.face": "${font_face}",
-        "font.size": ${tab_font_size}, 
-        
         "fg": ${fg2},
         "match_fg": ${active},
         "bg": ${bg2},
@@ -685,9 +683,6 @@ Credits:
     {
         // Quick panel row path label
         "class": "quick_panel_path_label",
-        "font.face": "${font_face}",
-        "font.size": ${tab_font_size}, 
-        
         "fg": ${fg9},
         "match_fg": ${active},
         "selected_fg": ${fg},
@@ -697,9 +692,6 @@ Credits:
     },
     {
         "class": "quick_panel_score_label",
-        "font.face": "${font_face}",
-        "font.size": ${tab_font_size}, 
-        
         "fg": ${fg9},
         "bg": ${bg3},
         "selected_fg": ${fg},
@@ -723,7 +715,7 @@ Credits:
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         "layer0.tint": ${bg1},
-        "layer1.tint": ${blue}
+        "layer1.tint": ${active}
     },
 
     // #######################################################
