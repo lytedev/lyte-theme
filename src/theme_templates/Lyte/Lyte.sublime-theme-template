@@ -613,11 +613,25 @@ Credits:
         // Text input field item
         "class": "text_line_control",
         "layer0.opacity": 1.0,
-        "layer0.inner_margin": [4, 5, 4, 3],
+        "layer0.texture": "",
+        "layer0.inner_margin": [4, 5, 0, 3],
         "layer0.tint": ${bg}, 
         "layer1.opacity": 0.0, 
-        "tint_index": 0,
+        "layer1.tint": ${bg}, 
+        "layer1.inner_margin": [4, 5, 0, 3],
+        "tint_index": 1,
         "content_margin": 3
+    },
+    {
+        // Text input dropdown
+        "class": "dropdown_button_control",
+        "layer0.texture": "${IconsDirectory}/gui/arrow-down.png",
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": 0,
+        "layer0.tint": ${fg}, 
+        "layer1.tint": ${fg}, 
+        "layer1.opacity": 0.0, 
+        "content_margin": [9, 7, 8, 6]
     },
 
 
@@ -714,7 +728,7 @@ Credits:
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": ${bg1},
+        "layer0.tint": ${bg2},
         "layer1.tint": ${active}
     },
 
@@ -732,12 +746,11 @@ Credits:
         "row_padding": [2, 2],
         "layer0.tint": ${bg1},
         "layer0.opacity": 1.0,
-        "dark_content": true
     },
     {
         "class": "auto_complete",
         "attributes": ["selected"],
-        "layer1.opacity": 1.0,
+        "layer0.tint": ${bg2},
     },
     {
         "class": "auto_complete_label",
@@ -754,18 +767,13 @@ Credits:
     {
         "class": "table_row",
         "layer0.tint": ${bg1},
-        "layer0.opacity": 0.0,
+        "layer0.opacity": 1.0,
         "layer0.inner_margin": 0,
-        "layer1.tint": ${bg3},
-        "layer1.opacity": 1.0,
-        "layer1.draw_center": false,
-        "layer1.inner_margin": ${border_border_left}
     },
     {
         "class": "table_row",
         "attributes": ["selected"],
-        "layer0.opacity": 1.0,
-        "layer1.tint": ${active}
+        "layer0.tint": ${bg2},
     },
 
     // #######################################################

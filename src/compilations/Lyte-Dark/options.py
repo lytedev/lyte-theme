@@ -23,7 +23,7 @@ options = {
     "sidebar_indent": 12,
 
     # Preprocessor options
-    "sidebar_indent_x": 10,
+    "sidebar_indent_x": 12,
     "sidebar_indent_y": 3, 
     "tab_padding_x": 5,
     "tab_padding_y": 5,
