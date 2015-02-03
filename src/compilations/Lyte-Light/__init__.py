@@ -6,6 +6,8 @@ from theme_builder.compilation import Compilation
 
 comp = Compilation("Lyte-Light")
 comp.copy_all("Lyte-Dark")
+comp.theme.set_iconset("Lyte-Light")
+print(comp.theme.icons_directory)
 
 new_options = {
     # Colors

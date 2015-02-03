@@ -11,12 +11,12 @@ Credits:
 
 [
     // Tabset (Tabs Container)
-    { 
+    {
         // Tabset
         "class": "tabset_control",
 
         // Tab Margin
-        "content_margin": 0, 
+        "content_margin": 0,
 
         // Background
         "layer0.tint": ${bg},
@@ -74,7 +74,7 @@ Credits:
     { // Tab [Active]
         "class": "tab_control",
         "attributes": ["selected"],
-        
+
         "layer0.tint": ${bg1},
         "layer1.tint": ${active}
     },
@@ -97,7 +97,7 @@ Credits:
         "shadow_offset": ${text_shadow_offset},
 
         "font.face": "${font_face}",
-        "font.size": ${tab_font_size}, 
+        "font.size": ${tab_font_size},
 
         "fg": ${fg8}
     },
@@ -153,6 +153,44 @@ Credits:
         "attributes": ["pressed"],
 
         "layer0.tint": ${dirty}
+    },
+
+    // Tab Scroll Buttons
+    { // Tab Dropdown
+        "class": "show_tabs_dropdown_button",
+        "content_margin": [9, 7, 8, 6],
+        "layer0.texture": "${IconsDirectory}/gui/arrow-down.png",
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": 0
+    },
+    {
+        "class": "show_tabs_dropdown_button",
+        "attributes": ["hover"],
+        "layer0.opacity": 1.0,
+    },
+    { // Tab Scroll Left Button
+        "class": "scroll_tabs_left_button",
+        "content_margin": [9, 7, 8, 6],
+        "layer0.texture": "${IconsDirectory}/gui/arrow-left.png",
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": 0
+    },
+    {
+        "class": "scroll_tabs_left_button",
+        "attributes": ["hover"],
+        "layer0.opacity": 1.0
+    },
+    { // Tab Scroll Right Button
+        "class": "scroll_tabs_right_button",
+        "content_margin": [9, 7, 8, 6],
+        "layer0.texture": "${IconsDirectory}/gui/arrow-right.png",
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": 0
+    },
+    {
+        "class": "scroll_tabs_right_button",
+        "attributes": ["hover"],
+        "layer0.opacity": 1.0
     },
 
     // Fold Buttons
@@ -248,7 +286,7 @@ Credits:
         "class": "label_control",
         "parents": [{"class": "panel_control"}],
 
-        "color": ${fg},        
+        "color": ${fg},
         "shadow_color": ${text_shadow_color},
         "shadow_offset": ${text_shadow_offset}
     },
@@ -269,7 +307,7 @@ Credits:
 
         // Background
         "layer0.inner_margin": [4, 4],
-        "layer0.tint": ${bg1}, 
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1,
 
         // Border
@@ -296,7 +334,7 @@ Credits:
 
         // Background
         "layer0.inner_margin": [4, 4],
-        "layer0.tint": ${bg1}, 
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1,
 
         // Border
@@ -322,21 +360,21 @@ Credits:
         "shadow_offset": ${text_shadow_offset}
     },
 
-    // Sidebar 
+    // Sidebar
     { // Sidebar Container
         "class": "sidebar_container"
     },
     { // Sidebar Background
         // TODO: Reduce row padding without moving headers?
         "class": "sidebar_tree",
-        
+
         // Background
         "layer0.tint": ${bg1},
         "layer0.inner_margin": [0, 0, 1, 0],
         "layer0.opacity": 1.0,
 
         // Border
-        "layer1.tint": ${bg2}, 
+        "layer1.tint": ${bg2},
         "layer1.inner_margin": ${border_border_right},
         "layer1.opacity": 1.0,
         "layer1.draw_center": false,
@@ -360,9 +398,9 @@ Credits:
         "layer1.inner_margin": ${border_border_right},
         "layer1.draw_center": false
 
-        /* 
+        /*
         // BUG: (KNOWN)
-        If the sidebar's width is less than the longest tree_row, then the 
+        If the sidebar's width is less than the longest tree_row, then the
         right-border will not be visible.
         */
     },
@@ -378,7 +416,7 @@ Credits:
         "class": "tree_row",
         "attributes": ["selected"],
 
-        "layer0.tint": ${bg2}, 
+        "layer0.tint": ${bg2},
         "layer1.tint": ${active}
     },
     { // Sidebar Row [Dirty]
@@ -492,10 +530,10 @@ Credits:
     // Sidebar File Icons
     { // Sidebar File Icons
         "class": "icon_file_type",
-        "content_margin": ${sidebar_icon_margin}, 
+        "content_margin": ${sidebar_icon_margin},
 
         // layer0.texture is auto-filled by relevant icon
-        "layer0.tint": ${fg}, 
+        "layer0.tint": ${fg},
         "layer0.opacity": ${sidebar_icon_opacity}
     },
     { // Sidebar File Icons [Hover]
@@ -514,7 +552,7 @@ Credits:
         "class": "icon_file_type",
         "parents": [{"class": "tree_row", "attributes": ["dirty"]}],
 
-        "layer0.opacity": 1, 
+        "layer0.opacity": 1,
         "layer0.tint": ${dirty}
     },
     {
@@ -615,9 +653,9 @@ Credits:
         "layer0.opacity": 1.0,
         "layer0.texture": "",
         "layer0.inner_margin": [4, 5, 0, 3],
-        "layer0.tint": ${bg}, 
-        "layer1.opacity": 0.0, 
-        "layer1.tint": ${bg}, 
+        "layer0.tint": ${bg},
+        "layer1.opacity": 0.0,
+        "layer1.tint": ${bg},
         "layer1.inner_margin": [4, 5, 0, 3],
         "tint_index": 1,
         "content_margin": 3
@@ -628,9 +666,9 @@ Credits:
         "layer0.texture": "${IconsDirectory}/gui/arrow-down.png",
         "layer0.opacity": 0.3,
         "layer0.inner_margin": 0,
-        "layer0.tint": ${fg}, 
-        "layer1.tint": ${fg}, 
-        "layer1.opacity": 0.0, 
+        "layer0.tint": ${fg},
+        "layer1.tint": ${fg},
+        "layer1.opacity": 0.0,
         "content_margin": [9, 7, 8, 6]
     },
 
@@ -650,7 +688,7 @@ Credits:
         // Quick panel background
         "class": "overlay_control",
         "layer0.inner_margin": [10, 5, 10, 10],
-        "layer0.tint": ${bg1}, 
+        "layer0.tint": ${bg1},
         "layer0.opacity": 1.0,
         "content_margin": [0, 1, 1, 1]
     },
@@ -755,8 +793,8 @@ Credits:
     {
         "class": "auto_complete_label",
         "font.face": "${font_face}",
-        "font.size": ${tab_font_size}, 
-        
+        "font.size": ${tab_font_size},
+
         "fg": ${fg3},
         "match_fg": ${active},
         "bg": ${bg1},
@@ -832,7 +870,7 @@ Credits:
     {
         // Reverse search direction button
         "class": "icon_reverse",
-        "layer0.texture": "${IconsDirectory}/panel/reverse.png",
+        "layer0.texture": "${IconsDirectory}/panel/wrap.png",
         "layer0.tint": ${fg},
         "layer0.opacity": 0.15,
         "content_margin": [8, 8]
@@ -932,7 +970,7 @@ Credits:
         "layer0.opacity": 1.0,
     },
 
-    // Miscellaneous 
+    // Miscellaneous
     { // Sheet Container
         "class": "sheet_container_control",
 
@@ -947,7 +985,7 @@ Credits:
     },
     { // Minimap
         "class": "minimap_control",
-        
+
         "viewport_color": ${minimap_overlay}
     }
 ]

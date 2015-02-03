@@ -5,7 +5,7 @@ from theme_builder.color import Color
 from theme_builder.compilation import Compilation
 
 comp = Compilation("Lyte-Solarized-Light")
-comp.copy_all("Lyte-Dark")
+comp.copy_all("Lyte-Light")
 
 new_options = {
     # Colors
@@ -24,5 +24,3 @@ new_options = {
 
 for x in new_options:
     comp.options[x] = new_options[x]
-
-

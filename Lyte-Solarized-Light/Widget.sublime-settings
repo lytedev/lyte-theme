@@ -1,8 +1,0 @@
-{
-	/*
-		The Widget.sublime-settings and Widgets.stTheme files are used to style the
-		text inputs as seen in the console, find menu, etc.
-	*/
-	"color_scheme": "Packages/Theme - Lyte/Lyte-Solarized-Light/Widget.stTheme",
-	"draw_shadows": false
-}

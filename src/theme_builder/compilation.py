@@ -59,7 +59,6 @@ class Compilation():
         self.color_scheme.export(directory, package, opts)
 
         print("\tDone!")
-        print()
 
     def preprocess_options(self, options=None):
         """Check if a preprocessors function reference exists and call it."""
@@ -102,7 +101,7 @@ class Compilation():
         self.color_scheme.color_scheme_templates = copy.copy(compilation.color_scheme.color_scheme_templates)
         for k in self.color_scheme.color_scheme_templates:
             self.color_scheme.color_scheme_templates[k] = self.color_scheme.color_scheme_templates[k].replace(compilation.color_scheme.options["ColorSchemeName"], self.name)
-        
+
         self.preprocessors = copy.copy(compilation.preprocessors)
 
     def inherit(self, compilation, key="comp"):

@@ -1,0 +1,15 @@
+{
+	/*
+		The Widget.sublime-settings and Widgets.stTheme files are used to
+        style the text inputs as seen in the console, find menu, etc.
+
+        As far as I can tell, for this settings file to be loaded, the name
+        must be:
+            Lyte-Dark/Widgets - Lyte-Dark.sublime-settings
+
+        Also make sure the referenced widget color scheme referenced here is
+        correct!
+	*/
+	"color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Widget - Lyte-Dark.stTheme",
+	"draw_shadows": false
+}

@@ -59,8 +59,8 @@ def preprocessor(opts):
 
     n_alts = 10
     for i in range(1, n_alts):
-        opts["fg" + str(i)] = opts["fg"].blend(opts["max_fg"], i/(n_alts-1))
-        opts["bg" + str(i)] = opts["bg"].blend(opts["max_bg"], i/(n_alts-1))
+        opts["fg" + str(i)] = opts["fg"].blend(opts["max_fg"], float(i)/(n_alts-1))
+        opts["bg" + str(i)] = opts["bg"].blend(opts["max_bg"], float(i)/(n_alts-1))
 
     opts["sidebar_indent"] = "[{0}, {1}]".format(opts["sidebar_indent_x"], opts["sidebar_indent_y"])
     opts["selection"] = opts["bg"].blend(opts["max_bg"], 0.25)

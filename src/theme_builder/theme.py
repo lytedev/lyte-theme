@@ -35,6 +35,11 @@ class Theme():
             "ThemeName": self.name,
         }
 
+    def set_iconset(self, name):
+        """Changes the theme's iconset"""
+
+        self.icons_directory = icons_dir(name)
+
     def export(self, directory, package, opts=None):
         """Exports the Theme to a file."""
 
@@ -49,6 +54,9 @@ class Theme():
             shutil.rmtree(target_icons_directory)
         shutil.copytree(self.icons_directory, target_icons_directory)
         opts["IconsDirectory"] = target_icons_directory[target_icons_directory.index(package):].replace("\\", "/")
+
+        print(opts["IconsDirectory"])
+        print(self.icons_directory)
 
         sublime_theme_options = copy.copy(opts)
         for key in sublime_theme_options:
@@ -93,6 +101,6 @@ def basic_theme_templates(name, target_name=None):
                 # TODO: Remove the need for the "[]" prepended by moving the
                 # Widget files to color schemes
                 "[]" + name + ".sublime-theme-template": ".." + os.sep + target_name + ".sublime-theme",
-                name + "-Widget.sublime-settings-template": "Widget.sublime-settings",
-                name + "-Widget.stTheme-template": "Widget.stTheme"
+                name + "-Widget.sublime-settings-template": "Widget - " + target_name + ".sublime-settings",
+                name + "-Widget.stTheme-template": "Widget - " + target_name + ".stTheme"
             }
