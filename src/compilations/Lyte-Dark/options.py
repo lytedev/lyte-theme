@@ -27,10 +27,9 @@ options = {
     "bold_sidebar_heads": True,
     "bold_folder_names": True,
 
-    # Other options
-    "sidebar_indent": 12,
-
     # Preprocessor options
+    "sidebar_margin_x": 15,
+    "sidebar_margin_y": 1,
     "sidebar_indent_x": 12,
     "sidebar_indent_y": 3,
     "tab_padding_x": 5,

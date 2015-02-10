@@ -380,10 +380,10 @@ Credits:
         "layer1.draw_center": false,
 
         "dark_content": true,
-        "row_padding": [12, 3],
-        "indent_top_level": false,
-        "indent": [12, 3],
-        "indent_offset": [12, 3]
+        "row_padding": [15, 1],
+        "indent_top_level": true,
+        "indent": [50, 50],
+        "indent_offset": [50, 50]
     },
     { // Sidebar Rows
         "class": "tree_row",
@@ -431,6 +431,9 @@ Credits:
 
         "font.face": "",
         "font.size": 11,
+        "color": [128, 128, 128],
+        "shadow_color": [16, 16, 16, 255],
+        "shadow_offset": [0, 1]
     },
     { // Sidebar Heading
         "class": "sidebar_heading",
@@ -442,13 +445,6 @@ Credits:
         "font.face": "",
         "font.size": 14,
         "font.bold": true
-    },
-    { // Sidebar Label
-        "class": "sidebar_label",
-
-        "color": [128, 128, 128],
-        "shadow_color": [16, 16, 16, 255],
-        "shadow_offset": [0, 1]
     },
     { // Sidebar Label [Selected]
         "class": "sidebar_label",
