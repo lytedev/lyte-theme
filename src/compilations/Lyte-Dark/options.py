@@ -13,12 +13,14 @@ options = {
     "max_fg":     Color(128, 128, 128),
 
     # Accent Colors
-    "blue":       Color("#77aaff"),
-    "red":        Color("#ff7744"),
-    "indigo":     Color("#aa77ff"),
-    "magenta":    Color("#ff4477"),
-    "cyan":       Color("#77ffff"),
-    "green":      Color("#aaff44"),
+    "red":        Color("#fd971f"),
+    "green":      Color("#a6e22e"),
+    "indigo":     Color("#e6db74"),
+    "cyan":       Color("#66d9ef"),
+    "blue":       Color("#ae81ff"),
+    "magenta":    Color("#f92672"),
+
+    "selection":  Color("#f92672").set_alpha(100),
 
     # Fonts
     "font_face": "", # System Default

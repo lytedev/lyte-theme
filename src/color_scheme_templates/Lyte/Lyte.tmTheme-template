@@ -63,7 +63,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>${red}</string>
+                <string>${indigo}</string>
             </dict>
         </dict>
         <dict>
@@ -106,8 +106,8 @@
             <string>variable</string>
             <key>settings</key>
             <dict>
-                <key>fontStyle</key>
-                <string></string>
+                <key>foreground</key>
+                <string>${red}</string>
             </dict>
         </dict>
         <dict>
@@ -118,7 +118,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>${blue}</string>
+                <string>${cyan}</string>
             </dict>
         </dict>
         <dict>
@@ -131,7 +131,7 @@
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>${blue}</string>
+                <string>${cyan}</string>
             </dict>
         </dict>
         <dict>
@@ -209,7 +209,7 @@
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>${blue}</string>
+                <string>${magenta}</string>
             </dict>
         </dict>
         <dict>
@@ -222,7 +222,7 @@
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>${green}</string>
+                <string>${red}</string>
             </dict>
         </dict>
         <dict>
@@ -235,7 +235,7 @@
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>${cyan}</string>
+                <string>${magenta}</string>
             </dict>
         </dict>
         <dict>
@@ -271,8 +271,6 @@
             <string>support.other.variable</string>
             <key>settings</key>
             <dict>
-                <key>fontStyle</key>
-                <string></string>
             </dict>
         </dict>
         <dict>
@@ -283,7 +281,7 @@
             <key>settings</key>
             <dict>
                 <key>background</key>
-                <string>${blue}</string>
+                <string>${magenta}</string>
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
@@ -298,7 +296,7 @@
             <key>settings</key>
             <dict>
                 <key>background</key>
-                <string>${indigo}</string>
+                <string>${red}</string>
                 <key>foreground</key>
                 <string>${fg}</string>
             </dict>
@@ -334,7 +332,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>${blue}</string>
+                <string>${red}</string>
             </dict>
         </dict>
         <dict>

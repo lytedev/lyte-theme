@@ -70,7 +70,6 @@ def preprocessor(opts):
 
     opts["sidebar_indent"] = "[{0}, {1}]".format(opts["sidebar_indent_x"], opts["sidebar_indent_y"])
     opts["sidebar_margin"] = "[{0}, {1}]".format(opts["sidebar_margin_x"], opts["sidebar_margin_y"])
-    opts["selection"] = opts["bg"].blend(opts["max_bg"], 0.25)
     opts["comment"] = opts["bg"].blend(opts["fg"], 0.4)
     opts["active"] = opts["cyan"]
     opts["dirty"] = opts["red"]
