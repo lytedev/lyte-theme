@@ -14,6 +14,13 @@
             "folder_exclude_patterns": [ "__pycache__" ],
             "file_exclude_patterns": [ ".no-sublime-package" ],
             "path": "../src"
+        },
+        {
+            "name": "Rust Test",
+            "follow_symlinks": true,
+            "folder_exclude_patterns": [ "__pycache__" ],
+            "file_exclude_patterns": [ ".no-sublime-package" ],
+            "path": "~/Documents/code/personal/guessing_game/src"
         }
     ],
     "build_systems": [

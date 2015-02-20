@@ -2,17 +2,10 @@
 
 Lyte is a minimal, aesthetically-pleasing, flat, dark, misleadingly-titled theme for Sublime Text with fancy-schmancy border status indicators. Don't believe me? Check it out.
 
-![Lyte Theme clean][3]
+![Lyte Theme clean][9]
 
-Maybe you don't like fancy-schmancy border status indicators, but you like flat, dark minimalism.
-
-![Lyte Theme NoBorder][8]
-
-* **Font**: Consolas 9
+* **Font**: Monaco
 * **Color Scheme**: Lyte-Dark (included in this theme)
-* **Icons in Gutter**: [Git Gutter Plugin][7]
-
-Lyte also contains a simple Python script for constructing .tmTheme syntax highlighting files. Hopefully soon it will also contain functionality for constructing .sublime-theme Sublime theme files!
 
 ## Installation
 
@@ -24,7 +17,7 @@ If you *don't* have the Package Control plugin, well, you just should. [Here are
 
 ### Git
 
-If you'd like easier access to the code, to keep up to date faster, or customize the syntax highlighting, I highly suggest using Git to install the theme.
+If you'd like easier access to the code, to keep up to date faster, or customize the syntax highlighting or theme files, I highly suggest using Git to install the theme.
 
 Open your Packages directory with the command `Preferences: Browse Packages`. While in the Packages directory, you just need to clone the repo as follows:
 
@@ -32,15 +25,19 @@ Open your Packages directory with the command `Preferences: Browse Packages`. Wh
 
 ## Usage
 
+TODO: Explain the current theme-building system
+
 ### Theme
 
 Add this to your `Preferences: Settings - User` file:
 
     "theme": "Lyte-Dark.sublime-theme",
 
-Or, for no colorful indicator borders,
+Or, for the included alternatives,
 
-    "theme": "Lyte-Dark-NoBorder.sublime-theme",
+    "theme": "Lyte-Light.sublime-theme",
+    "theme": "Lyte-Solarized.sublime-theme",
+    "theme": "Lyte-Solarized-Light.sublime-theme",
 
 You will need to restart Sublime for all changes to take effect.
 
@@ -49,6 +46,12 @@ You will need to restart Sublime for all changes to take effect.
 Add this to your `Preferences: Settings - User` file:
 
     "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
+
+Or, for the included alternatives,
+
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Light/Lyte-Light.tmTheme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Solarized/Lyte-Solarized.tmTheme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Solarized-Light/Lyte-Solarized-Light.tmTheme",
 
 But you probably already have syntax highlighting you prefer. =) Hopefully this theme fits it well! If not, I suggest changing your syntax highlight background to `#111111`. Should make a world of difference.
 
@@ -67,12 +70,8 @@ This is just my preference, but I very much prefer a clean and dark environment.
     "draw_minimap_border": false,
     "enable_tab_scrolling": false,
     "fade_fold_buttons": false,
-    "font_face": "Consolas",
     "highlight_line": true,
-    "font_size": 9,
     "caret_style": "phase",
-
-If you don't like the colored border indicators, you can edit the theme and basically change all `layer1.opacity` values to 0. Or istead of `"theme": "Lyte-Dark.sublime-theme",`, use `"theme": "Lyte-Dark-NoBorder.sublime-theme",` in your User Settings.
 
 ## Credits
 
@@ -95,8 +94,10 @@ The following details apply to the Creative Commons license "author specified" c
 
 [1]: https://github.com/EleazarCrusader/nexus-theme
 [2]: https://github.com/vlakarados/devastate
-[3]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/lyte-theme-small-clean-file-folder-icons.png
 [4]: https://sublime.wbond.net/installation
 [6]: http://creativecommons.org/licenses/by-sa/3.0/
 [7]: https://github.com/jisaacks/GitGutter
-[8]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/lyte-theme-small-clean-file-folder-icons-noborder.png
+[9]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/dark.png
+[10]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/light.png
+[11]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/solarized-dark.png
+[12]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/solarized-light.png
