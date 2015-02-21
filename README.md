@@ -2,10 +2,14 @@
 
 Lyte is a minimal, aesthetically-pleasing, flat, dark, misleadingly-titled theme for Sublime Text with fancy-schmancy border status indicators. Don't believe me? Check it out.
 
-![Lyte Theme clean][9]
+![Lyte-Dark Theme][9]
 
 * **Font**: Monaco
 * **Color Scheme**: Lyte-Dark (included in this theme)
+
+![Lyte-Light Theme][10]
+![Lyte-Solarized][11]
+![Lyte-Solarized-Light][12]
 
 ## Installation
 
