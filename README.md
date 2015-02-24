@@ -1,6 +1,6 @@
 # Lyte Theme
 
-Lyte is a minimal, aesthetically-pleasing, flat, dark, misleadingly-titled theme for Sublime Text with fancy-schmancy border status indicators. Don't believe me? Check it out.
+Lyte is a set of themes for Sublime Text with fancy-schmancy border file status indicators that aims to be minimal, flat, and retina ready.
 
 ![Lyte-Dark Theme][9]
 
@@ -29,10 +29,6 @@ Open your Packages directory with the command `Preferences: Browse Packages`. Wh
 
 ## Usage
 
-TODO: Explain the current theme-building system
-
-### Theme
-
 Add this to your `Preferences: Settings - User` file:
 
     "theme": "Lyte-Dark.sublime-theme",
@@ -45,7 +41,7 @@ Or, for the included alternatives,
 
 You will need to restart Sublime for all changes to take effect.
 
-### Syntax Highlighting
+## Syntax Highlighting
 
 Add this to your `Preferences: Settings - User` file:
 
@@ -59,13 +55,15 @@ Or, for the included alternatives,
 
 But you probably already have syntax highlighting you prefer. =) Hopefully this theme fits it well! If not, I suggest changing your syntax highlight background to `#111111`. Should make a world of difference.
 
-### Customization
+## Customization
 
 If you're looking to customize the theme, I suggest installation via the Git method. Once you have access to the files, check out `Lyte.sublime-theme` and two python scripts in the `src` directory, `lyte.py` and `theme_builder.py`.
 
-### Recommendations
+TODO: Explain the theme-building process.
 
-This is just my preference, but I very much prefer a clean and dark environment. This theme, though made with everybody in mind, must have some bias towards my preferences. So, if you like what's in the first screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
+## Recommendations
+
+This is just my preference, but I very much prefer a clean and dark environment. This theme, though made with everybody in mind, has some bias towards my preferences. So, if you like what's in the first screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
 
     "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
     "theme": "Lyte-Dark.sublime-theme",
