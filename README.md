@@ -71,14 +71,15 @@ This is just my preference, but I very much prefer a clean and dark environment.
     "show_tab_close_buttons": false,
     "draw_minimap_border": false,
     "enable_tab_scrolling": false,
-    "fade_fold_buttons": false,
+    "fade_fold_buttons": true,
     "highlight_line": true,
     "caret_style": "phase",
+    "highlight_modified_tabs": true, 
 
-## Credits
+## Credit
 
 * Inspired by the [Nexus theme][1] and the [Devastate theme][2]
-* Icons are shameless edits of the icons in the [Nexus theme][1]
+* Most icons are shameless edits of the icons in the [Nexus theme][1]
 
 ## Changelog
 
