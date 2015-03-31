@@ -23,11 +23,11 @@
                 <key>lineHighlight</key>
                 <string>#272727</string>
                 <key>selection</key>
-                <string>#f9267264</string>
+                <string>#424242</string>
                 <key>selectionBorder</key>
-                <string>#323232</string>
+                <string>#686868</string>
                 <key>findHighlight</key>
-                <string>#323232</string>
+                <string>#f9267288</string>
                 <key>findHighlightForeground</key>
                 <string>#fafafa</string>
                 <key>activeGuide</key>
