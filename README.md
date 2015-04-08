@@ -7,6 +7,8 @@ Lyte is a set of themes for Sublime Text with fancy-schmancy border file status 
 * Other settings to get your environment to look like this can be found in the Recommendations section
 
 ![Lyte-Dark Theme][9]
+![Lyte-Solarized Theme][10]
+![Lyte-Solarized-Light Theme][11]
 
 ## Installation
 
@@ -200,6 +202,6 @@ The following details apply to the Creative Commons license "author specified" c
 [6]: http://creativecommons.org/licenses/by-sa/3.0/
 [7]: https://github.com/jisaacks/GitGutter
 [9]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/dark.png
-[10]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/light.png
-[11]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/solarized-dark.png
-[12]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/solarized-light.png
+[10]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/solarized.png
+[11]: https://raw.githubusercontent.com/lytedev/lyte-theme/master/screenshots/solarized-light.png
+
