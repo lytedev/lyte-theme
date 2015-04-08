@@ -16,11 +16,11 @@
             "path": "../src"
         },
         {
-            "name": "Rust Test",
+            "name": "Themes",
             "follow_symlinks": true,
             "folder_exclude_patterns": [ "__pycache__" ],
-            "file_exclude_patterns": [ ".no-sublime-package" ],
-            "path": "~/Documents/code/personal/guessing_game/src"
+            "file_exclude_patterns": [ ".no-sublime-package", "./__init__.py" ],
+            "path": "../src/compilations"
         }
     ],
     "build_systems": [

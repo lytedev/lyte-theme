@@ -12,17 +12,17 @@ options = {
     "max_bg":     Color(120, 120, 120),
     "max_fg":     Color(128, 128, 128),
 
-    # Accent Colors
-    "red":        Color("#fd971f"),
-    "green":      Color("#a6e22e"),
-    "indigo":     Color("#e6db74"),
-    "cyan":       Color("#66d9ef"),
-    "blue":       Color("#ae81ff"),
-    "magenta":    Color("#f92672"),
+    # Accent Colors (Base 16 Monokai, equivalent to Bases 08-0f)
+    "red": Color("#f92672"),
+    "orange": Color("#fd971f"),
+    "yellow": Color("#f4bf75"),
+    "green": Color("#a6e22e"),
+    "cyan": Color("#a1efe4"),
+    "blue": Color("#66d9ef"),
+    "indigo": Color("#ae81ff"),
+    "brown": Color("#cc6633"),
 
-    "selection":  Color("#f92672").set_alpha(100),
-
-    # Fonts
+    # Font info
     "font_face": "", # System Default
     "font_size": 11,
     "sidebar_heading_font_size": 14,

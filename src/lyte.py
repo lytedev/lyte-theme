@@ -3,7 +3,7 @@
 
 """The script for generating all Lyte Sublime theme files.
 
-See imported modules for details.
+See theme_builder/compilation.py for more information.
 
 """
 
@@ -22,8 +22,8 @@ def main():
     compilations = [
         "Lyte-Dark",
         "Lyte-Light",
-        "Lyte-Solarized", 
-        "Lyte-Solarized-Light", 
+        "Lyte-Solarized",
+        "Lyte-Solarized-Light",
         # "Lyte-Light",
         # "Lyte-Dark-NoBorder",
         # "Lyte-NoBorder-Light",

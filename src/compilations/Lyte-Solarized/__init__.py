@@ -14,12 +14,14 @@ new_options = {
     "max_bg":     Color("#657b83"),
     "max_fg":     Color("#839496"),
 
-    "blue":       Color("#268bd2"),
-    "red":        Color("#b58900"),
-    "indigo":     Color("#6c71c4"),
-    "magenta":    Color("#d33682"),
-    "cyan":       Color("#2aa198"),
-    "green":      Color("#859900"),
+    "red": Color("#dc322f"),
+    "orange": Color("#cb4b16"),
+    "yellow": Color("#b58900"),
+    "green": Color("#859900"),
+    "cyan": Color("#2aa198"),
+    "blue": Color("#268bd2"),
+    "indigo": Color("#6c71c4"),
+    "brown": Color("#d33682"),
 }
 
 for x in new_options:

@@ -2,15 +2,6 @@
 
 """
 
-Here's an example compilation script:
-
-	from ThemeBuilder.Compilation import Compilation
-
-	class Lyte(Compilation):
-		def __init__(self):
-			super().__init__("Lyte")
-
-	Compilation = Lyte()
-
+Not gonna ignore this file? Then check out Lyte-Light/__init__.py for an example theme.
 
 """

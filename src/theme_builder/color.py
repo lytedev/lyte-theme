@@ -51,7 +51,7 @@ class Color:
             if alpha < 0:
                 self.has_alpha = False
                 alpha = 255
-            else: 
+            else:
                 self.has_alpha = True
             self.red = red
             self.green = green
@@ -122,7 +122,7 @@ class Color:
                 color using `Color.convert()`. Refer to `Color.convert()` for
                 details.
 
-        If self `has_alpha`, the resulting color will never have alpha. 
+        If self `has_alpha`, the resulting color will never have alpha.
 
         Returns:
             The average of two colors.
@@ -358,6 +358,8 @@ class Color:
         The higher that `n` is, the closer to `b` the resulting color will be.
 
         """
+
+        b = self.convert(b)
 
         length = 3
         if self.has_alpha:

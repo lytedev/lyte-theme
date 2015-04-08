@@ -18,6 +18,7 @@ class Theme():
 
         self.name = name
 
+        # Default some properties based on name
         if theme_template_directory is None:
             theme_template_directory = theme_dir(self.name)
 
@@ -58,6 +59,8 @@ class Theme():
         print(opts["IconsDirectory"])
         print(self.icons_directory)
 
+        # Create an alternate version of the options data where all Colors are formatted
+        # as array strings instead of hex-strings as expected by .sublime-theme files
         sublime_theme_options = copy.copy(opts)
         for key in sublime_theme_options:
             if isinstance(sublime_theme_options[key], Color):
@@ -68,6 +71,7 @@ class Theme():
 
             current_options = opts
             key = template
+            # Our stupid way of detecting whether or not we should use array strings for colors
             if template[0:2] == "[]":
                 template = template[2:]
                 current_options = sublime_theme_options
@@ -99,7 +103,7 @@ def basic_theme_templates(name, target_name=None):
         target_name = name
     return {
                 # TODO: Remove the need for the "[]" prepended by moving the
-                # Widget files to color schemes
+                # Widget files to color schemes?
                 "[]" + name + ".sublime-theme-template": ".." + os.sep + target_name + ".sublime-theme",
                 name + "-Widget.sublime-settings-template": "Widget - " + target_name + ".sublime-settings",
                 name + "-Widget.stTheme-template": "Widget - " + target_name + ".stTheme"

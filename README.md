@@ -1,19 +1,18 @@
 # Lyte Theme
 
-Lyte is a set of themes for Sublime Text with fancy-schmancy border file status indicators that aims to be minimal, flat, and retina ready.
-
-![Lyte-Dark Theme][9]
+Lyte is a set of themes for Sublime Text with fancy-schmancy border file status indicators that aims to be minimal, flat, and super-friendly with high-DPI displays - including retina displays.
 
 * **Font**: Monaco
-* **Color Scheme**: Lyte-Dark (included in this theme)
+* **Color Scheme**: Lyte-Dark (included in this theme and based on Base16 Monokai)
+* Other settings to get your environment to look like this can be found in the Recommendations section
 
-![Lyte-Light Theme][10]
-![Lyte-Solarized][11]
-![Lyte-Solarized-Light][12]
+![Lyte-Dark Theme][9]
 
 ## Installation
 
 ### Package Controls
+
+If you're not planning on customizing the theme in any way and just want to enjoy the pre-built themes shown here (and in the Glamour Shots below), I recommend installation via Package Control.
 
 If you have the Package Control plugin installed, you can install this theme via the `Package Control: Install Package` command. Then look for the `Theme - Lyte` listing and install it!
 
@@ -53,7 +52,7 @@ Or, for the included alternatives,
     "color_scheme": "Packages/Theme - Lyte/Lyte-Solarized/Lyte-Solarized.tmTheme",
     "color_scheme": "Packages/Theme - Lyte/Lyte-Solarized-Light/Lyte-Solarized-Light.tmTheme",
 
-But you probably already have syntax highlighting you prefer. =) Hopefully this theme fits it well! If not, I suggest changing your syntax highlight background to `#111111`. Should make a world of difference.
+But you probably already have syntax highlighting you prefer. =) Hopefully this theme fits it well! If not, I suggest changing your syntax highlight background to `#111111`. Should make a world of difference. If you _really_ want to get this theme to match your syntax highlighting (or vice-versa), modify the theme to use the active border color (currently green by default) to match your syntax highlighting green. Same for the "dirty" color (currently red).
 
 ## Customization
 
@@ -74,7 +73,7 @@ This is just my preference, but I very much prefer a clean and dark environment.
     "fade_fold_buttons": true,
     "highlight_line": true,
     "caret_style": "phase",
-    "highlight_modified_tabs": true, 
+    "highlight_modified_tabs": true,
 
 ## Credit
 

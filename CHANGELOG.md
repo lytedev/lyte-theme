@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.1
+* Fell behind on changelog - sorry!
+* Added Retina icons
+* Added Solarized theme variants
+* Added to Package Control (packagecontrol.io)
+* Added Sublime input widget supprot
+* Switched to Base16-based color scheme instead of custom madness - this makes porting other color schemes much easier
+* Heavy modification of build system and codebase
+* Removed noborder themes for the moment - wouldn't be hard to generate them
+
 ## 2.0
 * ThemeBuilder overhaul
 * Added noborder and light themes

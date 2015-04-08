@@ -1,6 +1,6 @@
 # -*-  coding: utf-8 -*-
 """Contains the Color Scheme class"""
- 
+
 import os, copy
 
 from string import Template
@@ -13,6 +13,7 @@ class ColorScheme():
 
         self.name = name
 
+        # Default some properties based on the name
         if color_scheme_template_directory is None:
             color_scheme_template_directory = color_scheme_dir(self.name)
 

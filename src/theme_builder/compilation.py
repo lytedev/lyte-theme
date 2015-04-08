@@ -15,11 +15,16 @@ class Compilation():
         """Compilation constructor."""
         self.name = name
 
+        # If no color scheme or theme is provided, we'll try to load one using
+        # the current Compilation name.
         if color_scheme is None:
             color_scheme = self.name
         if theme is None:
             theme = self.name
 
+        # If we were given strings (or we're trying to autoload based on
+        # Compilation name), let's try to load 'em up.
+        # TODO: Fancy error checking?
         if isinstance(color_scheme, str):
             color_scheme = ColorScheme(color_scheme)
         if isinstance(theme, str):
@@ -32,6 +37,7 @@ class Compilation():
 
     def export(self, directory, package, opts=None):
         """Exports the Compilation to a file."""
+
         directory = os.path.abspath(directory + os.sep + self.name)
 
         # Create directory if it doesn't exist
@@ -46,15 +52,15 @@ class Compilation():
         print("\tTheme: '%s'" % self.theme.name)
         print("\tColor Scheme: '%s'" % self.color_scheme.name)
 
-        # from pprint import pprint
-        # pprint(self.options)
+        # Run the options preprocessor if they weren't given to get options
         if opts is None:
             opts = self.preprocess_options()
-        # pprint(opts)
 
+        # Apply options to the theme and export it
         opts.update(self.theme.options)
         self.theme.export(directory, package, opts)
 
+        # Apply options to the color scheme and export it
         opts.update(self.color_scheme.options)
         self.color_scheme.export(directory, package, opts)
 
@@ -62,11 +68,15 @@ class Compilation():
 
     def preprocess_options(self, options=None):
         """Check if a preprocessors function reference exists and call it."""
+
+        # Copy in any given options
         if options is None:
             opts = copy.copy(self.options)
         else:
             opts = copy.copy(options)
 
+        # Run any specified options preprocessor functions
+        # (This lets themes extend option functionality)
         for pp in self.preprocessors:
             if callable(pp):
                 pp(opts)
@@ -75,6 +85,8 @@ class Compilation():
 
     def copy_all(self, compilation, key="comp"):
         """Inherit all options from another compilation."""
+
+        # If we were given a string, try to load a Compilation using the string
         if isinstance(compilation, str):
             compilation = Compilation.get_by_name(compilation, key)
 
@@ -83,29 +95,38 @@ class Compilation():
                 "Compilation or a valid string referencing a submodule in " + \
                 "the `compilations` module.")
 
+        # Copy the theme and color scheme from the compilation
         self.theme = copy.copy(compilation.theme)
         self.color_scheme = copy.copy(compilation.color_scheme)
 
+        # Copy other important data from the compilation
         self.theme.icons_directory = compilation.theme.icons_directory
         self.theme.options = copy.copy(compilation.theme.options)
         self.color_scheme.options = copy.copy(compilation.color_scheme.options)
         self.options = copy.copy(compilation.options)
 
+        # Fake the inherited data names
         self.color_scheme.options["ColorSchemeName"] = self.name
         self.theme.options["ThemeName"] = self.name
 
+        # More name fakery
         self.theme.theme_templates = copy.copy(compilation.theme.theme_templates)
         for k in self.theme.theme_templates:
             self.theme.theme_templates[k] = self.theme.theme_templates[k].replace(compilation.theme.options["ThemeName"], self.name)
 
+        # Even more name fakery
         self.color_scheme.color_scheme_templates = copy.copy(compilation.color_scheme.color_scheme_templates)
         for k in self.color_scheme.color_scheme_templates:
             self.color_scheme.color_scheme_templates[k] = self.color_scheme.color_scheme_templates[k].replace(compilation.color_scheme.options["ColorSchemeName"], self.name)
 
+        # Copy the options preprocessors
         self.preprocessors = copy.copy(compilation.preprocessors)
 
     def inherit(self, compilation, key="comp"):
         """Inherit all options from another compilation."""
+
+        # TODO: Deprecate this function? copy_all really does the job...
+
         if isinstance(compilation, str):
             compilation = Compilation.get_by_name(compilation, key)
 
