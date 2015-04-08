@@ -42,3 +42,5 @@ options = {
     "sidebar_arrows": True,
     "sidebar_icons": True,
 }
+
+options["active"] = options["blue"]

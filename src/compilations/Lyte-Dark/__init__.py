@@ -91,13 +91,16 @@ def preprocessor(opts):
     opts["sidebar_margin"] = "[{0}, {1}]".format(opts["sidebar_margin_x"], opts["sidebar_margin_y"])
 
     # Our comment color - $bg blended with a bit of $fg is good enough contrast for comments
-    opts["comment"] = opts["bg"].blend(opts["fg"], 0.4)
+    if "comment" not in opts:
+        opts["comment"] = opts["bg"].blend(opts["fg"], 0.4)
 
     # Our "active" color - used throughout the theme heavily
-    opts["active"] = opts["green"]
+    if "active" not in opts:
+        opts["active"] = opts["green"]
 
     # Our "dirty" color - used throughout the theme
-    opts["dirty"] = opts["red"]
+    if "dirty" not in opts:
+        opts["dirty"] = opts["red"]
 
     # Scrollbars same as active color
     opts["scrollbar_color"] = opts["active"]

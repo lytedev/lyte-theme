@@ -24,6 +24,7 @@ def main():
         "Lyte-Light",
         "Lyte-Solarized",
         "Lyte-Solarized-Light",
+        "Test-New-Theme",
         # "Lyte-Light",
         # "Lyte-Dark-NoBorder",
         # "Lyte-NoBorder-Light",
