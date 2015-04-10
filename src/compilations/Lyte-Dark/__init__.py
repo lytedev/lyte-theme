@@ -10,7 +10,7 @@ from theme_builder.compilation import Compilation
 theme = Theme("Lyte-Dark", icons_dir("Lyte"), theme_dir("Lyte"), basic_theme_templates("Lyte", "Lyte-Dark"))
 
 # Initialize our color scheme - see the ColorScheme class for details
-color_scheme = ColorScheme("Lyte-Dark", color_scheme_dir("Lyte"), basic_color_scheme_templates("Lyte", "Lyte-Dark"))
+color_scheme = ColorScheme("Lyte-Dark", color_scheme_dir("Lyte-Old"), basic_color_scheme_templates("Lyte-Old", "Lyte-Dark"))
 
 # Create our compilation using the new theme and color scheme
 comp = Compilation("Lyte-Dark", theme, color_scheme)

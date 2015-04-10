@@ -3,10 +3,10 @@
 Lyte is a set of themes for Sublime Text with fancy-schmancy border file status indicators that aims to be minimal, flat, and super-friendly with high-DPI displays - including retina displays.
 
 * **Font**: Monaco
-* **Color Scheme**: Lyte-Dark (included in this theme and based on Base16 Monokai)
+* **Color Scheme**: Lyte-Monokai (included in this theme and based on Base16 Monokai)
 * Other settings to get your environment to look like this can be found in the Recommendations section
 
-![Lyte-Dark Theme][9]
+![Lyte-Monokai Theme][9]
 ![Lyte-Solarized Theme][10]
 ![Lyte-Solarized-Light Theme][11]
 
@@ -32,10 +32,11 @@ Open your Packages directory with the command `Preferences: Browse Packages`. Wh
 
 Add this to your `Preferences: Settings - User` file:
 
-    "theme": "Lyte-Dark.sublime-theme",
+    "theme": "Lyte-Monokai.sublime-theme",
 
 Or, for the included alternatives,
 
+    "theme": "Lyte-Dark.sublime-theme",
     "theme": "Lyte-Light.sublime-theme",
     "theme": "Lyte-Solarized.sublime-theme",
     "theme": "Lyte-Solarized-Light.sublime-theme",
@@ -46,10 +47,11 @@ You will need to restart Sublime for all changes to take effect.
 
 Add this to your `Preferences: Settings - User` file:
 
-    "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Monokai/Lyte-Monokai.tmTheme",
 
 Or, for the included alternatives,
 
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
     "color_scheme": "Packages/Theme - Lyte/Lyte-Light/Lyte-Light.tmTheme",
     "color_scheme": "Packages/Theme - Lyte/Lyte-Solarized/Lyte-Solarized.tmTheme",
     "color_scheme": "Packages/Theme - Lyte/Lyte-Solarized-Light/Lyte-Solarized-Light.tmTheme",
@@ -60,8 +62,8 @@ But you probably already have syntax highlighting you prefer. =) Hopefully this 
 
 This is just my preference, but I very much prefer a clean and dark environment. This theme, though made with everybody in mind, has some bias towards my preferences. So, if you like what's in the first screenshot, here are some of the more important preferences I use. Add them to your `Preferences: Settings - User`:
 
-    "color_scheme": "Packages/Theme - Lyte/Lyte-Dark/Lyte-Dark.tmTheme",
-    "theme": "Lyte-Dark.sublime-theme",
+    "color_scheme": "Packages/Theme - Lyte/Lyte-Monokai/Lyte-Monokai.tmTheme",
+    "theme": "Lyte-Monokai.sublime-theme",
     "overlay_scroll_bars": "enabled",
     "show_tab_close_buttons": false,
     "draw_minimap_border": false,
@@ -79,9 +81,9 @@ With Sublime, open the `dev/Lyte.sublime-theme` sublime project file. In your si
 
 ### Modifying Existing Themes
 
-Open the theme's `__init__.py` and modify values as you see fit. The `Lyte-Dark` keeps its options mostly in `options.py` instead, so look in there if you're modifying that one in particular. If you have a particular option you want to modify, you can see open the `src/theme_templates/Lyte/Lyte.sublime-theme-template` (or `src/color_scheme_templates/Lyte.thTheme-template`) to see which values are being used where and for what. Then you can simply add that option key to your options array.
+Open the theme's `__init__.py` and modify values as you see fit. The `Lyte-Monokai` keeps its options mostly in `options.py` instead, so look in there if you're modifying that one in particular. If you have a particular option you want to modify, you can see open the `src/theme_templates/Lyte/Lyte.sublime-theme-template` (or `src/color_scheme_templates/Lyte.thTheme-template`) to see which values are being used where and for what. Then you can simply add that option key to your options array.
 
-For example, the `Lyte-Dark` theme uses the green color as the active color (which colors the active tab border, scroll bars, popup row border, and other things). You might want to use blue instead! So open up the `Lyte-Dark/options.py` and add `options["active"] = options["blue"]`. Then you can just Build the project (using Sublime's Build since the project has the build system built-in) and the Lyte-Dark theme should then have blue active accents instead of green.
+For example, the `Lyte-Monokai` theme uses the green color as the active color (which colors the active tab border, scroll bars, popup row border, and other things). You might want to use blue instead! So open up the `Lyte-Monokai/options.py` and add `options["active"] = options["blue"]`. Then you can just Build the project (using Sublime's Build since the project has the build system built-in) and the Lyte-Monokai theme should then have blue active accents instead of green.
 
 ### Adding Your Own Themes
 
@@ -98,7 +100,7 @@ from theme_builder.color import Color
 from theme_builder.compilation import Compilation
 
 my_theme = Compilation("My-Theme-Name")
-comp.copy_all("Lyte-Dark") # Change "Lyte-Dark" to the compilation's name from whom you want to inherit
+comp.copy_all("Lyte-Monokai") # Change "Lyte-Monokai" to the compilation's name from whom you want to inherit
 
 # Modify any options you want, add your own options preprocessors, etc.
 # I recommend doing all your modifications in a preprocessor to ensure

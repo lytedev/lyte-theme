@@ -24,6 +24,7 @@ def main():
         "Lyte-Light",
         "Lyte-Solarized",
         "Lyte-Solarized-Light",
+        "Lyte-Monokai",
         # "Lyte-Light",
         # "Lyte-Dark-NoBorder",
         # "Lyte-NoBorder-Light",

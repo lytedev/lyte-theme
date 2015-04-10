@@ -8,7 +8,7 @@ from theme_builder.compilation import Compilation
 comp = Compilation("Lyte-Light")
 
 # Copy everything from the given theme name
-comp.copy_all("Lyte-Dark")
+comp.copy_all("Lyte-Monokai")
 
 # Use the light icons
 comp.theme.set_iconset("Lyte-Light")

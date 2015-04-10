@@ -85,7 +85,7 @@ Credits:
         // Always respect user settings
         "settings": ["highlight_modified_tabs"],
 
-        "layer1.tint": [249, 38, 114]
+        "layer1.tint": [253, 151, 31]
     },
 
     // Tab Label
@@ -139,7 +139,7 @@ Credits:
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
 
         "layer0.opacity": 1,
-        "layer0.tint": [249, 38, 114]
+        "layer0.tint": [253, 151, 31]
     },
     { // Tab Close Button [Hover]
         "class": "tab_close_button",
@@ -152,7 +152,7 @@ Credits:
         "class": "tab_close_button",
         "attributes": ["pressed"],
 
-        "layer0.tint": [249, 38, 114]
+        "layer0.tint": [253, 151, 31]
     },
 
     // Tab Scroll Buttons
@@ -424,7 +424,7 @@ Credits:
         "attributes": ["dirty"],
 
         "layer0.tint": [39, 39, 39],
-        "layer1.tint": [249, 38, 114]
+        "layer1.tint": [253, 151, 31]
     },
     { // Sidebar Label
         "class": "sidebar_label",
@@ -480,7 +480,7 @@ Credits:
         "attributes": ["dirty"],
 
         "layer0.opacity": 1,
-        "layer0.tint": [249, 38, 114]
+        "layer0.tint": [253, 151, 31]
     },
     { // Sidebar Close Button [Hover]
         "class": "close_button",
@@ -494,7 +494,7 @@ Credits:
         "attributes": ["pressed"],
 
         "layer0.opacity": 1,
-        "layer0.tint": [249, 38, 114]
+        "layer0.tint": [253, 151, 31]
     },
 
     // Sidebar Files/Folders
@@ -549,7 +549,7 @@ Credits:
         "parents": [{"class": "tree_row", "attributes": ["dirty"]}],
 
         "layer0.opacity": 1,
-        "layer0.tint": [249, 38, 114]
+        "layer0.tint": [253, 151, 31]
     },
     {
         "class": "icon_folder",
